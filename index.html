@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <title>Shrink Rate Calculator</title>
+    <script src="script.js"></script>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-cake.css' rel='stylesheet'>
+    <title>Shrink Rate Calculator</title>
+</head>
+<body>
+    <h1>Shrink Rate Calculator</h1>
+
+    <div id="break"></div>
+
+    <p>Input Final Dimensions</p>
+        <form id="clayShrinkRateForm"> 
+            <div id="preferredWidthInput">
+                <label for="preferredWidth">width</label><br>
+                <input type="number" id="preferredWidth" name="width"><br>
+            </div>
+            <div id="preferredLengthInput">
+                <label for="preferredLength">length</label><br>
+                <input type="number" id="preferredLength" name="length"><br>
+            </div>
+            <div id="preferredHeightInput">
+                <label for="preferredHeight">height</label><br>
+                <input type="number" id="preferredHeight" name="height"><br>
+            </div>
+            <div id="break"></div>
+        </form>
+    <p>Clay Shrinkage Rate</p>
+        <form>
+            <div id="shrinkRateInput">
+                <label for="shrinkRate">shrink rate %</label><br>
+                <input type="number" id="shrinkRate" name="shrinkRate"><br>
+            </div>
+            <div id="break"></div>
+            <button type="button" id="calculateShrinkRate">submit</button>
+        </form>
+        <div id="break"></div>
+        <div id="result"></div>
+
+    <footer></footer>
+</body>
+</html>
