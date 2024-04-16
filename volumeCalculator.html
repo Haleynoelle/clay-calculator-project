@@ -25,10 +25,27 @@
     <h1>Volume Calculator</h1>
     <div id="break"></div>
 
-    <p>Input Dimensions</p>
+    <p>Shape</p>
         <form id="volumeCalculatorForm">
-            
+            <button id="shapeChoiceRectangle">Rectangle</button>
+            <button id="shapeChoiceCylinder">Cylinder</button>
+            <button id="shapeChoiceHemisphere">Hemisphere</button>
+            <div id="break"></div>
+
+            <p>Input Dimensions</p>
         
+            <div id="rectangleInputLength">
+                <label for="rectangleLength">Length</label>
+                <input type="number" id="rectangleLength" name="length">
+            </div>
+            <div id="rectangleInputWidth">
+                <label for="rectangleWidth">Width</label>
+                <input type="number" id="rectangleWidth" name="width">
+            </div>
+            <div id="rectangleInputHeight">
+                <label for="rectangleHeight">Height</label>
+                <input type="number" id="rectangleHeight" name="height">
+            </div>
 
         </form>
     
