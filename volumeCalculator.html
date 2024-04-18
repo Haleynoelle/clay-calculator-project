@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Volume Calculator</title>
 </head>
-<body>
+<body onpageshow="defaultShapeChoice()">
+<div id="columnContainer">
     <nav>
         <ul id="myLinks">
             <li><a href="index.html">Home</a></li>
@@ -23,17 +24,17 @@
     </nav>
 
     <h1>Volume Calculator</h1>
+
     <div id="break"></div>
 
-    <p>Shape</p>
-        <form id="volumeCalculatorForm">
-            <button id="shapeChoiceRectangle">Rectangle</button>
-            <button id="shapeChoiceCylinder">Cylinder</button>
-            <button id="shapeChoiceHemisphere">Hemisphere</button>
-            <div id="break"></div>
+    <h2>Shape</h2>
+    <button id="shapeChoiceRectangle" onclick="shapeChoiceRectangleFunction()">Rectangle</button>
+    <button id="shapeChoiceCylinder" onclick="shapeChoiceCylinderFunction()">Cylinder</button>
+    <div id="break"></div>
 
-            <p>Input Dimensions</p>
-        
+    <h2>Dimensions</h2>
+    <div id="volumeForm">
+        <form id="rectangleVolumeCalculatorForm">
             <div id="rectangleInputLength">
                 <label for="rectangleLength">Length</label>
                 <input type="number" id="rectangleLength" name="length">
@@ -46,8 +47,29 @@
                 <label for="rectangleHeight">Height</label>
                 <input type="number" id="rectangleHeight" name="height">
             </div>
-
+            <div id="break"></div>
+            <button type="button" id="calculateRVolume">submit</button>
+            <div id="break"></div>
+            <div id="rectangleResult"></div>
         </form>
+        
+
+        <form id="cylinderVolumeCalculatorForm">
+            <div id="cylinderInputDiameter">
+                <label for="cylinderDiameter">Diameter</label>
+                <input type="number" id="cylinderDiameter" name="diameter">
+            </div>
+            <div id="cylinderInputHeight">
+                <label for="cylinderHeight">Height</label>
+                <input type="number" id="cylinderHeight" name="height">
+            </div>
+            <div id="break"></div>
+                <button type="button" id="calculateCVolume">submit</button>
+            <div id="break"></div>
+            <div id="cylinderResult"></div>
+        </form>
+    </div>
+</div> 
     
 </body>
 </html>

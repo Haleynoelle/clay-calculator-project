@@ -9,21 +9,79 @@ body {
     background-color: #FFFBE6;
     font-family: "Inter", sans-serif;
 }
+nav {
+    background-color: aliceblue;
+}
+h1 {
+    color: blue;
+    width: 100%;
+    align-self: center;
+}
+
+h2 {
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+li a {
+    text-decoration-line: none;
+}
+
+
+li a:hover {
+    color: #3F0DCD;
+  }
+
+#columnContainer {
+    display: flex;
+    height: 60vh;
+    align-items: center;
+
+}
+
+#myLinks {
+    flex: 30vh;
+    background-color: aliceblue;
+    height: 100%;
+}
+
+
+#rectangleVolumeCalculatorForm {
+    flex: 70vh;
+}
+
+
+
+
+
+
+/*body {
+    background-color: #FFFBE6;
+    font-family: "Inter", sans-serif;
+}
 
 header {
    color:#FD5523;
 }
+nav {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
 
 
+}
 ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-end;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /* width: 60px; */
   }
 
   li a {
@@ -31,15 +89,16 @@ ul {
     color: #FD5523;
     padding: 8px 16px;
     text-decoration: none;
-  }n
+  }
 
   li a:hover {
-        color: #3F0DCD;
+    color: #3F0DCD;
   }
 
 h1 {
     color: #FD5523;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
@@ -127,11 +186,11 @@ input {
 
 footer {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
-
+*/
 
 @media screen and (max-width: 660px) {
     form {

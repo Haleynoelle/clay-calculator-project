@@ -1,3 +1,5 @@
+/* ----- SHRINK RATE CALCULATOR ----- */
+
 document.addEventListener("DOMContentLoaded", function() {
     var calculateButton = document.getElementById("calculateShrinkRate");
     calculateButton.addEventListener("click", calculateShrink);
@@ -25,3 +27,67 @@ function calculateShrink() {
                                                      "Height: " + initialHeight.toFixed(2) + " inches<br>";
                                                      
 }
+
+/* ----- VOLUME CALCULATOR ----- */
+
+document.addEventListener("DOMContentLoaded", function() {
+    let calculateVolumeButton = document.getElementById("calculateRVolume");
+    calculateVolumeButton.addEventListener("click", calculateRectangleVol);
+});
+document.addEventListener("DOMContentLoaded", function() {
+    let calculateVolumeButton = document.getElementById("calculateCVolume");
+    calculateVolumeButton.addEventListener("click", calculateCylinderVol);
+});
+
+function defaultShapeChoice() {
+    document.getElementById('cylinderVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('rectangleVolumeCalculatorForm').style.display = 'block';
+};
+
+function shapeChoiceRectangleFunction() {
+    document.getElementById('shapeChoiceRectangle').addEventListener('click', () => {
+        document.getElementById('cylinderVolumeCalculatorForm').style.display = 'none';
+        document.getElementById('rectangleVolumeCalculatorForm').style.display = 'block';
+    });
+}
+function shapeChoiceCylinderFunction() {
+    document.getElementById('shapeChoiceCylinder').addEventListener('click', () => {
+        document.getElementById('rectangleVolumeCalculatorForm').style.display = 'none';
+        document.getElementById('cylinderVolumeCalculatorForm').style.display = 'block';
+    });
+}
+
+/* ----- RECTANGLE ----- */
+
+function calculateRectangleVol() {
+    var rectangleWidth = parseFloat(document.getElementById("rectangleWidth").value);
+    var rectangleHeight = parseFloat(document.getElementById("rectangleHeight").value);
+    var rectangleLength = parseFloat(document.getElementById("rectangleLength").value);
+
+    if (isNaN(rectangleWidth) || isNaN(rectangleHeight) || isNaN(rectangleLength)) {
+        document.getElementById("rectangleResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+
+    var rectangleVolume = ((rectangleWidth *  rectangleHeight * rectangleLength) * 0.554113);
+
+    document.getElementById("rectangleResult").innerHTML = "Volume in oz = " + rectangleVolume.toFixed(2);
+};
+
+/* ----- CYLINDER ----- */
+
+function calculateCylinderVol() {
+    var cylinderDiameter = parseFloat(document.getElementById("cylinderDiameter").value);
+    var cylinderHeight = parseFloat(document.getElementById("cylinderHeight").value);
+
+    if (isNaN(cylinderDiameter) || isNaN(cylinderHeight)) {
+        document.getElementById("cylinderResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+    var cylinderRadius = (cylinderDiameter / 2) 
+    var cylinderVolume = ((Math.PI * Math.pow(cylinderRadius, 2) * cylinderHeight) * 0.554113);
+
+    document.getElementById("cylinderResult").innerHTML = "Volume in oz = " + cylinderVolume.toFixed(2);
+};
+
+/*FIRING FEE CALCULATOR*/
