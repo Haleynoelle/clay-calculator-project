@@ -91,3 +91,44 @@ function calculateCylinderVol() {
 };
 
 /*FIRING FEE CALCULATOR*/
+
+document.addEventListener("DOMContentLoaded", function() {
+    let calculateVolumeButton = document.getElementById("calculateRVolume");
+    calculateVolumeButton.addEventListener("click", calculateRectangleVol);
+});
+document.addEventListener("DOMContentLoaded", function() {
+    let calculateVolumeButton = document.getElementById("calculateCVolume");
+    calculateVolumeButton.addEventListener("click", calculateCylinderVol);
+});
+
+function defaultStudioCalculation() {
+    document.getElementById('studioPreferenceCubicInchForm').style.display = 'none';
+    document.getElementById('studioPreferenceSquareInchForm').style.display = 'none';
+    document.getElementById('studioPreferenceWeightForm').style.display = 'block';
+};
+
+function studioPreferenceWeightFunction() {
+    document.getElementById('studioPreferenceWeight').addEventListener('click', () => {
+        document.getElementById('studioPreferenceCubicInchForm').style.display = 'none';
+        document.getElementById('studioPreferenceSquareInchForm').style.display = 'none';
+        document.getElementById('studioPreferenceWeightForm').style.display = 'block';
+    });
+}
+function studioPreferenceCubicInchFunction() {
+    document.getElementById('studioPreferenceCubicInch').addEventListener('click', () => {
+        document.getElementById('studioPreferenceWeightForm').style.display = 'none';
+        document.getElementById('studioPreferenceSquareInchForm').style.display = 'none';
+        document.getElementById('studioPreferenceCubicInchForm').style.display = 'block';
+    });
+}
+function studioPreferenceSquareInchFunction() {
+    document.getElementById('studioPreferenceSquareInch').addEventListener('click', () => {
+        document.getElementById('studioPreferenceWeightForm').style.display = 'none';
+        document.getElementById('studioPreferenceCubicInchForm').style.display = 'none';
+        document.getElementById('studioPreferenceSquareInchForm').style.display = 'block';
+    });
+}
+
+/* ----- WEIGHT ----- */
+/* ----- CUBIC INCH ----- */
+/* ----- SQUARE INCH ----- */

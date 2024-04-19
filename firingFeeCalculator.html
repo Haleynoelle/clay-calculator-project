@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
+<body onpageshow="defaultStudioCalculation()">
     <div id="columnContainer">
     <nav id="navContainer">
         <ul id="myLinks">
@@ -23,6 +23,49 @@
     </nav>
     <div id="formContainer">
     <h1>Firing Fee Calculator</h1>
+
+    <div id="break"></div>
+
+    <h2>Studio Calculation Preference</h2>
+
+    <button id="studioPreferenceWeight" onclick="studioPreferenceWeightFunction()">Weight</button>
+    <button id="studioPreferenceCubicInch" onclick="studioPreferenceCubicInchFunction()">Cubic Inch</button>
+    <button id="studioPreferenceSquareInch" onclick="studioPreferenceSquareInchFunction()">Square Inch</button>
+    <div id="break"></div>
+
+    <h2>Input</h2>
+
+        <form id="studioPreferenceWeightForm">
+            <div id="poundsInput">
+                <label for="pounds">Pounds</label>
+                <input type="number" id="pounds" name="pounds">
+            </div>
+            <div id="ouncesInput">
+                <label for="ounces">Ounces</label>
+                <input type="number" id="ounces" name="pounds">
+            </div> 
+            <div id="feePerPoundInput">
+                <label for="feePerPound">Fee Per Pound</label>
+                <input type="number" id="feePerPound" name="feePerPound">
+            </div>  
+            <div id="fixedCostsInput">
+                <label for="fixedCosts">Fixed Costs</label>
+                <input type="number" id="fixedCosts" name="fixedCosts">
+            </div>     
+            <div id="break"></div>
+                <button type="button" id="calculateFeeByWeight">submit</button>
+                <div id="break"></div>
+                <div id="feeByWeightResult"></div>
+        </form>
+
+        <form id="studioPreferenceCubicInchForm">
+            
+        </form>
+
+        <form id="studioPreferenceSquareInchForm">
+            
+        </form>
+
     </div>
     </div>
 </body>
