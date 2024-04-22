@@ -90,45 +90,98 @@ function calculateCylinderVol() {
     document.getElementById("cylinderResult").innerHTML = "Volume in oz = " + cylinderVolume.toFixed(2);
 };
 
-/*FIRING FEE CALCULATOR*/
+/* ----- FIRING FEE CALCULATOR ----- */
 
 document.addEventListener("DOMContentLoaded", function() {
-    let calculateVolumeButton = document.getElementById("calculateRVolume");
-    calculateVolumeButton.addEventListener("click", calculateRectangleVol);
+    let calculateVolumeButton = document.getElementById("calculateFeeByWeight");
+    calculateVolumeButton.addEventListener("click", calculateWeightFee);
 });
 document.addEventListener("DOMContentLoaded", function() {
-    let calculateVolumeButton = document.getElementById("calculateCVolume");
-    calculateVolumeButton.addEventListener("click", calculateCylinderVol);
+    let calculateVolumeButton = document.getElementById("calculateFeeByCubicInch");
+    calculateVolumeButton.addEventListener("click", calculateCubicInchFee);
+});
+document.addEventListener("DOMContentLoaded", function() {
+    let calculateVolumeButton = document.getElementById("calculateFeeBySquareInch");
+    calculateVolumeButton.addEventListener("click", calculateSquareInchFee);
 });
 
 function defaultStudioCalculation() {
-    document.getElementById('studioPreferenceCubicInchForm').style.display = 'none';
-    document.getElementById('studioPreferenceSquareInchForm').style.display = 'none';
-    document.getElementById('studioPreferenceWeightForm').style.display = 'block';
+    document.getElementById('cubicInchForm').style.display = 'none';
+    document.getElementById('squareInchForm').style.display = 'none';
+    document.getElementById('weightForm').style.display = 'block';
 };
 
 function studioPreferenceWeightFunction() {
-    document.getElementById('studioPreferenceWeight').addEventListener('click', () => {
-        document.getElementById('studioPreferenceCubicInchForm').style.display = 'none';
-        document.getElementById('studioPreferenceSquareInchForm').style.display = 'none';
-        document.getElementById('studioPreferenceWeightForm').style.display = 'block';
+    document.getElementById('studioPrefersWeight').addEventListener('click', () => {
+        document.getElementById('cubicInchForm').style.display = 'none';
+        document.getElementById('squareInchForm').style.display = 'none';
+        document.getElementById('weightForm').style.display = 'block';
     });
 }
 function studioPreferenceCubicInchFunction() {
-    document.getElementById('studioPreferenceCubicInch').addEventListener('click', () => {
-        document.getElementById('studioPreferenceWeightForm').style.display = 'none';
-        document.getElementById('studioPreferenceSquareInchForm').style.display = 'none';
-        document.getElementById('studioPreferenceCubicInchForm').style.display = 'block';
+    document.getElementById('studioPrefersCubicInch').addEventListener('click', () => {
+        document.getElementById('weightForm').style.display = 'none';
+        document.getElementById('squareInchForm').style.display = 'none';
+        document.getElementById('cubicInchForm').style.display = 'block';
     });
 }
 function studioPreferenceSquareInchFunction() {
-    document.getElementById('studioPreferenceSquareInch').addEventListener('click', () => {
-        document.getElementById('studioPreferenceWeightForm').style.display = 'none';
-        document.getElementById('studioPreferenceCubicInchForm').style.display = 'none';
-        document.getElementById('studioPreferenceSquareInchForm').style.display = 'block';
+    document.getElementById('studioPrefersSquareInch').addEventListener('click', () => {
+        document.getElementById('weightForm').style.display = 'none';
+        document.getElementById('cubicInchForm').style.display = 'none';
+        document.getElementById('squareInchForm').style.display = 'block';
     });
 }
 
 /* ----- WEIGHT ----- */
+function calculateWeightFee() {
+    var pounds = parseFloat(document.getElementById("pounds").value);
+    var ounces = parseFloat(document.getElementById("ounces").value);
+    var feePerPound = parseFloat(document.getElementById("feePerPound").value);
+    var fixedCosts = parseFloat(document.getElementById("fixedCosts").value);
+
+    if (isNaN(pounds) || isNaN(ounces) || isNaN(feePerPound)) {
+        document.getElementById("feeByWeightResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+
+    var ouncesToPounds = (ounces * 0.0625)
+    var firingCost = ((pounds + ouncesToPounds) * feePerPound + fixedCosts);
+
+    document.getElementById("feeByWeightResult").innerHTML = "Cost to fire = $" + firingCost.toFixed(2);
+};
 /* ----- CUBIC INCH ----- */
+function calculateCubicInchFee() {
+    var feeHeight = parseFloat(document.getElementById("feeHeight").value);
+    var feeWidth = parseFloat(document.getElementById("feeWidth").value);
+    var feeLength = parseFloat(document.getElementById("feeLength").value);
+    var feeSpace = parseFloat(document.getElementById("feeSpace").value);
+    var fireFixedCost = parseFloat(document.getElementById("fireFixedCost").value);
+
+
+    if (isNaN(feeHeight) || isNaN(feeWidth) || isNaN(feeLength) || isNaN(feeSpace) || isNaN(fireFixedCost)) {
+        document.getElementById("cubicInchResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+
+    var firingCostCI = ((feeHeight * feeWidth * feeLength) * feeSpace + fireFixedCost);
+
+    document.getElementById("cubicInchResult").innerHTML = "Cost to fire = $" + firingCostCI.toFixed(2);
+};
 /* ----- SQUARE INCH ----- */
+function calculateSquareInchFee() {
+    var siWidth = parseFloat(document.getElementById("siWidth").value);
+    var siLength = parseFloat(document.getElementById("siLength").value);
+    var siSpace = parseFloat(document.getElementById("siSpace").value);
+    var siFixedCost = parseFloat(document.getElementById("siFixedCost").value);
+
+
+    if (isNaN(siWidth) || isNaN(siLength) || isNaN(siSpace) || isNaN(siFixedCost)) {
+        document.getElementById("squareInchResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+
+    var firingCostSI = ((siWidth * siLength) * siSpace + siFixedCost);
+
+    document.getElementById("squareInchResult").innerHTML = "Cost to fire = $" + firingCostSI.toFixed(2);
+};

@@ -28,14 +28,14 @@
 
     <h2>Studio Calculation Preference</h2>
 
-    <button id="studioPreferenceWeight" onclick="studioPreferenceWeightFunction()">Weight</button>
-    <button id="studioPreferenceCubicInch" onclick="studioPreferenceCubicInchFunction()">Cubic Inch</button>
-    <button id="studioPreferenceSquareInch" onclick="studioPreferenceSquareInchFunction()">Square Inch</button>
+    <button id="studioPrefersWeight" onclick="studioPreferenceWeightFunction()">Weight</button>
+    <button id="studioPrefersCubicInch" onclick="studioPreferenceCubicInchFunction()">Cubic Inch</button>
+    <button id="studioPrefersSquareInch" onclick="studioPreferenceSquareInchFunction()">Square Inch</button>
     <div id="break"></div>
 
     <h2>Input</h2>
 
-        <form id="studioPreferenceWeightForm">
+        <form id="weightForm">
             <div id="poundsInput">
                 <label for="pounds">Pounds</label>
                 <input type="number" id="pounds" name="pounds">
@@ -58,12 +58,54 @@
                 <div id="feeByWeightResult"></div>
         </form>
 
-        <form id="studioPreferenceCubicInchForm">
-            
+        <form id="cubicInchForm">
+            <div>
+                <label for="feeHeight">Height</label>
+                <input type="number" id="feeHeight" name="feeHeight">
+            </div>
+            <div>
+                <label for="feeWidth">Width</label>
+                <input type="number" id="feeWidth" name="feeWidth">
+            </div>
+            <div>
+                <label for="feeLength">Length</label>
+                <input type="number" id="feeLength" name="feeLength">
+            </div>
+            <div>
+                <label for="feeSpace">Fee Per Cubic Inch</label>
+                <input type="number" id="feeSpace" name="feeSpace">
+            </div>
+            <div>
+                <label for="fireFixedCost">Fixed Costs</label>
+                <input type="number" id="fireFixedCost" name="fireFixedCost">
+            </div>
+            <div id="break"></div>
+            <button type="button" id="calculateFeeByCubicInch">submit</button>
+            <div id="break"></div>
+            <div id="cubicInchResult"></div>
         </form>
 
-        <form id="studioPreferenceSquareInchForm">
-            
+        <form id="squareInchForm">
+            <div>
+                <label for="siWidth">Width</label>
+                <input type="number" id="siWidth" name="siWidth">
+            </div>
+            <div>
+                <label for="siLength">Length</label>
+                <input type="number" id="siLength" name="siLength">
+            </div>
+            <div>
+                <label for="siSpace">Fee Per Square Inch</label>
+                <input type="number" id="siSpace" name="siSpace">
+            </div>
+            <div>
+                <label for="siFixedCost">Fixed Costs</label>
+                <input type="number" id="siFixedCost" name="siFixedCost">
+            </div>
+            <div id="break"></div>
+            <button type="button" id="calculateFeeBySquareInch">submit</button>
+            <div id="break"></div>
+            <div id="squareInchResult"></div>
         </form>
 
     </div>
