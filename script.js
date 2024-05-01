@@ -185,3 +185,15 @@ function calculateSquareInchFee() {
 
     document.getElementById("squareInchResult").innerHTML = "Cost to fire = $" + firingCostSI.toFixed(2);
 };
+
+
+
+
+
+/*experiments
+
+document.getElementById("volumeLink").onclick = changeLinkColor;
+
+function changeLinkColor() {
+    document.getElementById("volumeLink").style.color = "red";
+}*/

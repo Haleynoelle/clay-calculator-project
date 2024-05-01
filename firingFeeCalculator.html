@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" type="text/css" rel="stylesheet"/>
     <script src="script.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Fire Fee Calculator</title>
 </head>
 <body onpageshow="defaultStudioCalculation()">
     <div id="columnContainer">
     <nav id="navContainer">
         <ul id="myLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="volumeCalculator.html">Volume Calculator</a></li>
-            <li><a href="firingFeeCalculator.html">Firing Fee Calculator</a></li>
-            <li><a href="shrinkRateCalculator.html">Shrink Rate Calculator</a></li>
-            <li><a href="technicalDoc.html">Technical Documentation</a></li>
+            <li id="homeLink"><a href="index.html">Clay Calculator</a></li>
+            <li><a id="volumeLink" href="volumeCalculator.html">Calculate Volume</a></li>
+            <li><a id="fireFeeLink" class="active" href="firingFeeCalculator.html">Calculate Fire Fee</a></li>
+            <li><a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Shrink</a></li>
+            <li><a id="techLink" href="technicalDoc.html">Technical Doc</a></li>
         </ul>
     </nav>
     <div id="formContainer">
@@ -28,7 +28,7 @@
 
     <h2>Studio Calculation Preference</h2>
 
-    <button id="studioPrefersWeight" onclick="studioPreferenceWeightFunction()">Weight</button>
+    <button id="studioPrefersWeight" autofocus onclick="studioPreferenceWeightFunction()">Weight</button>
     <button id="studioPrefersCubicInch" onclick="studioPreferenceCubicInchFunction()">Cubic Inch</button>
     <button id="studioPrefersSquareInch" onclick="studioPreferenceSquareInchFunction()">Square Inch</button>
     <div id="break"></div>
@@ -55,7 +55,7 @@
             <div id="break"></div>
                 <button type="button" id="calculateFeeByWeight">submit</button>
                 <div id="break"></div>
-                <div id="feeByWeightResult"></div>
+                <div class="result" id="feeByWeightResult"></div>
         </form>
 
         <form id="cubicInchForm">
@@ -80,9 +80,9 @@
                 <input type="number" id="fireFixedCost" name="fireFixedCost">
             </div>
             <div id="break"></div>
-            <button type="button" id="calculateFeeByCubicInch">submit</button>
+            <button type="button" id="calculateFeeByCubicInch">Submit</button>
             <div id="break"></div>
-            <div id="cubicInchResult"></div>
+            <div class="result" id="cubicInchResult"></div>
         </form>
 
         <form id="squareInchForm">
@@ -105,10 +105,11 @@
             <div id="break"></div>
             <button type="button" id="calculateFeeBySquareInch">submit</button>
             <div id="break"></div>
-            <div id="squareInchResult"></div>
+            <div class="result" id="squareInchResult"></div>
         </form>
 
     </div>
     </div>
 </body>
+<footer></footer>
 </html>

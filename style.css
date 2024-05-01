@@ -1,35 +1,29 @@
 /* Entire Document */
-/* Home */
-/* Shrink Rate Calculator */
-/* Volume Calculator */
-/* Firing Fee Calculator */
-/* Techincal Documentation */
-
 body {
-    background-color: #FFFBE6;
-    font-family: "Inter", sans-serif;
+    background-color: #Faf8f6;
+    font-family: "Roboto Mono", monospace;
 }
 
 header {
-   color:#FD5523;
-}
-
-nav {
-    
-}
-#columnContainer {
+    color:#FD5523;
+ }
+ 
+ h1 {
+    color: #FD5523;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+ }
+ 
+ h2 {
+    color: #FD5523;
+    font-weight: bolder;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-#navContainer {
-    flex-grow: 1;
-}
-
-#formContainer {
-    flex-grow: 1;
-}
+    margin-top: 50px; 
+ }
 
 ul {
     display: flex;
@@ -40,114 +34,134 @@ ul {
     margin: 0;
     padding: 0;
   }
-
+button {
+    font-family: "Roboto Mono", monospace;
+    width: 505px;
+    background-color: #Faf8f6;
+    font-weight: normal;
+    font-size: large;
+    border: solid;
+    border-radius: 4px;
+    color: #FD5523;
+    border-color: #FD5523;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+button:focus {
+    color:#Faf8f6;
+    background-color: #FD5523;
+}
+label {
+    margin-bottom: 30px;
+   /* margin-left: 20px; */
+    margin-right: 20px;
+    flex-direction: row;
+    align-items: baseline;
+    color: #FD5523;
+}
+input {
+    width: 500px;
+    margin-bottom: 30px;
+   /* margin-left: 20px; */
+    margin-right: 20px;
+    flex-direction: row;
+    align-items: baseline;
+    color: #FD5523;
+    border-top: none;
+    border-color:#FD5523;
+    background-color: #Faf8f6;
+}
+.result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #3F0DCD;
+}
+#columnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: inherit;
+}
+#navContainer {
+    font-size: 40px;
+    font-style: regular;
+    border-right: #1f1c1c;
+    border-right-style: solid;
+    padding-bottom: 70px;
+}
+#formContainer {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 600px;
+    padding-left: 15%;
+}
+#textContainer {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 75px;
+}
 li a {
     display: flex;
-    color: #FD5523;
-    padding: 8px 16px;
+    color: #1f1c1c;
+    padding: 20px 20px;
     text-decoration: none;
   }
 
-li a:hover {
-    color: #3F0DCD;
-  }
-
-h1 {
-    color: #FD5523;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 50px;
+#homeLink {
+    border-color: #1f1c1c;
+    border-bottom: solid;
 }
-
-h2 {
-    color: #FD5523;
-    
+#fireFeeLink.active, #volumeLink.active, #shrinkLink.active {
+    color: #F5580A;
+    border-left: solid;
+    border-color: #F5580A;
+    border-left-width: 5px;
 }
-
-p {
-    color: #FD5523;
-    font-weight: bolder;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 50px;
+#fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover {
+    color: #F5580A;
 }
-
-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-} 
-
-input {
-    background: #FFFBE6;
-    border: solid;
-    border-color: #FD5523;
-}
-
-#preferredHeightInput, #preferredWidthInput {
-    margin-bottom: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
-    flex-direction: row;
-    align-items: baseline;
-    color: #FD5523;
-}
- #preferredLengthInput {
-    margin-bottom: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
-    flex-direction: row;
-    align-items: baseline;
-    color: #FD5523;
-}
-
-#shrinkRateInput {
-    margin-bottom: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
-    flex-direction: row;
-    align-items: baseline;
-    color: #FD5523;
-}
-
 #break {
     flex-basis: 100%;
     height: 0;
 }
-
-#calculateShrinkRate {
-    color: #FD5523;
-    background-color: #FFFBE6;
-    font-size: larger;
-    border: solid;
-    border-color: #FD5523;
-    flex-direction: row;
-    margin: 20px;
-}
-
-#calculateShrinkRate:focus {
-    color:#FFFBE6;
-    background-color: #FD5523;
-}
-
-
-#result {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    color: #3F0DCD;
-}
-
 footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    border-top: solid;
+    border-color: #1f1c1c;
 }
 
+/* Home */
+
+/* Shrink Rate Calculator */
+
+/* Volume Calculator */
+
+/* Firing Fee Calculator */
+
+/* Technical Documentation */
+#techLink.active {
+    color: #1f1c1c;
+    border-left: solid;
+    border-color: #1f1c1c;
+    border-left-width: 5px;
+}
+#techLink:hover {
+    color: #1f1c1c;
+    border-left: solid;
+    border-color: #1f1c1c;
+    border-left-width: 5px;
+}
+
+
+/* media queries */
 @media screen and (max-width: 660px) {
     form {
         display: flex;

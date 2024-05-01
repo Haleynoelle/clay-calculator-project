@@ -7,34 +7,34 @@
     <link href="style.css" type="text/css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Volume Calculator</title>
 </head>
 <body onpageshow="defaultShapeChoice()">
-<div id="row">
+
     <div id="columnContainer">
 
     <nav id="navContainer">
         <ul id="myLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="volumeCalculator.html">Volume Calculator</a></li>
-            <li><a href="firingFeeCalculator.html">Firing Fee Calculator</a></li>
-            <li><a href="shrinkRateCalculator.html">Shrink Rate Calculator</a></li>
-            <li><a href="technicalDoc.html">Technical Documentation</a></li>
+            <li id="homeLink"><a href="index.html">Clay Calculator</a></li>
+            <li><a id="volumeLink" class="active" href="volumeCalculator.html">Calculate Volume</a></li>
+            <li><a id="fireFeeLink" href="firingFeeCalculator.html">Calculate Fire Fee</a></li>
+            <li><a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Shrink</a></li>
+            <li><a id="techLink" href="technicalDoc.html">Technical Doc</a></li>
 
         </ul>
     </nav>
     <div id="formContainer">
-    <h1>Volume Calculator</h1>
 
+   
+    <h2>Project Shape</h2>
+    <div id="buttonContainer">
+        <button id="shapeChoiceRectangle" autofocus onclick="shapeChoiceRectangleFunction()">Rectangle</button>
+        <button id="shapeChoiceCylinder" onclick="shapeChoiceCylinderFunction()">Cylinder</button>
+    </div>
     <div id="break"></div>
 
-    <h2>Shape</h2>
-    <button id="shapeChoiceRectangle" onclick="shapeChoiceRectangleFunction()">Rectangle</button>
-    <button id="shapeChoiceCylinder" onclick="shapeChoiceCylinderFunction()">Cylinder</button>
-    <div id="break"></div>
-
-    <h2>Dimensions</h2>
+    <h2>Project Dimensions</h2>
     <div id="volumeForm">
         <form id="rectangleVolumeCalculatorForm">
             <div id="rectangleInputLength">
@@ -50,11 +50,10 @@
                 <input type="number" id="rectangleHeight" name="height">
             </div>
             <div id="break"></div>
-            <button type="button" id="calculateRVolume">submit</button>
+            <button type="button" id="calculateRVolume">Submit</button>
             <div id="break"></div>
-            <div id="rectangleResult"></div>
+            <div class="result" id="rectangleResult"></div>
         </form>
-        
 
         <form id="cylinderVolumeCalculatorForm">
             <div id="cylinderInputDiameter">
@@ -66,14 +65,15 @@
                 <input type="number" id="cylinderHeight" name="height">
             </div>
             <div id="break"></div>
-                <button type="button" id="calculateCVolume">submit</button>
+                <button type="button" id="calculateCVolume">Submit</button>
             <div id="break"></div>
-            <div id="cylinderResult"></div>
+            <div class="result" id="cylinderResult"></div>
         </form>
     </div>
     </div>
 </div> 
 </div>
-    
 </body>
+
+<footer></footer>
 </html>

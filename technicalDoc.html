@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
     <link href="style.css" type="text/css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Technical Documentation</title>
-    <script src="script.js"></script>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-cake.css' rel='stylesheet'>
 </head>
 
@@ -16,18 +16,19 @@
     <div id="columnContainer">
     <nav id="navContainer">
         <ul id="myLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="volumeCalculator.html">Volume Calculator</a></li>
-            <li><a href="firingFeeCalculator.html">Firing Fee Calculator</a></li>
-            <li><a href="shrinkRateCalculator.html">Shrink Rate Calculator</a></li>
-            <li><a href="technicalDoc.html">Technical Documentation</a></li>
+            <li id="homeLink"><a href="index.html">Clay Calculator</a></li>
+            <li><a id="volumeLink" href="volumeCalculator.html">Calculate Volume</a></li>
+            <li><a id="fireFeeLink" href="firingFeeCalculator.html">Calculate Fire Fee</a></li>
+            <li><a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Shrink</a></li>
+            <li><a id="techLink" class="active" href="technicalDoc.html">Technical Doc</a></li>
 
         </ul>
     </nav>
-
+    <div id="textContainer">
     <h1>Technical Documentation</h1>
-
+    </div>
     </div>
     
 </body>
+<footer></footer>
 </html>
