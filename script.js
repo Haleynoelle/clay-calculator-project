@@ -150,6 +150,7 @@ function calculateWeightFee() {
 
     document.getElementById("feeByWeightResult").innerHTML = "Cost to fire = $" + firingCost.toFixed(2);
 };
+
 /* ----- CUBIC INCH ----- */
 function calculateCubicInchFee() {
     var feeHeight = parseFloat(document.getElementById("feeHeight").value);
@@ -188,12 +189,19 @@ function calculateSquareInchFee() {
 
 
 
+function menuFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+}
 
-
-/*experiments
-
-document.getElementById("volumeLink").onclick = changeLinkColor;
-
-function changeLinkColor() {
-    document.getElementById("volumeLink").style.color = "red";
-}*/
+document.addEventListener("click", function(event) {
+    var dropdown = document.getElementById("myDropdown");
+    var dropdownButton = document.getElementById("dropdownButton");
+    if (!event.target.matches('.dropdown-content') && !event.target.matches('#dropdownButton')) {
+        dropdown.style.display = 'none';
+    }
+});

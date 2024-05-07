@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-grid-r.css' rel='stylesheet'>
     <script src="script.js"></script>
     <link href="style.css" type="text/css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,15 +13,23 @@
 </head>
 <body onpageshow="defaultStudioCalculation()">
     <div id="columnContainer">
-    <nav id="navContainer">
-        <ul id="myLinks">
-            <li id="homeLink"><a href="index.html">Clay Calculator</a></li>
-            <li><a id="volumeLink" href="volumeCalculator.html">Calculate Volume</a></li>
-            <li><a id="fireFeeLink" class="active" href="firingFeeCalculator.html">Calculate Fire Fee</a></li>
-            <li><a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Shrink</a></li>
-            <li><a id="techLink" href="technicalDoc.html">Technical Doc</a></li>
-        </ul>
-    </nav>
+        <nav id="navContainer">
+            <a href="home.html"><img id="homeLogo" src="Logo.png" alt="Button Image" style="width:25px;height:25px;"></a>
+            <a href="home.html" id="navTitle"><h1>Clay Calculator</h1></a>
+            <div class="dropdown">
+                
+                <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+                    <i id="openButton" class="gg-menu-grid-r"></i>
+                </a>
+              
+                <div id="myLinks" class="dropdown-content">
+                    <!--<a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a> -->
+                    <a id="volumeLink" class="active" href="volumeCalculator.html">Calculate Volume</a>
+                    <a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Shrink</a>
+                    <a id="fireFeeLink" href="firingFeeCalculator.html">Calculate Fire Fee</a>
+                </div>
+            </div>
+        </nav>
     <div id="formContainer">
     <h1>Firing Fee Calculator</h1>
 

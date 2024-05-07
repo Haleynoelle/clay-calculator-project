@@ -1,23 +1,100 @@
 /* Entire Document */
+
 body {
     background-color: #Faf8f6;
     font-family: "Roboto Mono", monospace;
 }
 
+#navContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon {
+    color: #FD5523;
+}
+#navTitle {
+    text-decoration: none;
+}
+#myLinks {
+    display: none;
+}
+
+
+
+.gg-menu-grid-r {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 16px;
+   }
+   
+   .gg-menu-grid-r::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: currentColor;
+    box-shadow:
+    0 6px 0,
+    6px 6px 0,
+    12px 6px 0,
+    6px 12px 0,
+    12px 12px 0,
+    6px 0 0,
+    12px 0 0,
+    0 12px 0
+    ;
+   } 
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown a {
+    padding: 15px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: -190px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 header {
     color:#FD5523;
  }
  
- h1 {
+h1 {
     color: #FD5523;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 50px;
  }
  
- h2 {
+h2 {
     color: #FD5523;
     font-weight: bolder;
     display: flex;
@@ -53,7 +130,6 @@ button:focus {
 }
 label {
     margin-bottom: 30px;
-   /* margin-left: 20px; */
     margin-right: 20px;
     flex-direction: row;
     align-items: baseline;
@@ -62,7 +138,6 @@ label {
 input {
     width: 500px;
     margin-bottom: 30px;
-   /* margin-left: 20px; */
     margin-right: 20px;
     flex-direction: row;
     align-items: baseline;
@@ -77,23 +152,10 @@ input {
     justify-content: center;
     color: #3F0DCD;
 }
-#columnContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    height: inherit;
-}
-#navContainer {
-    font-size: 40px;
-    font-style: regular;
-    border-right: #1f1c1c;
-    border-right-style: solid;
-    padding-bottom: 70px;
-}
 #formContainer {
     flex-grow: 1;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     max-width: 600px;
     padding-left: 15%;
@@ -111,16 +173,9 @@ li a {
     padding: 20px 20px;
     text-decoration: none;
   }
-
-#homeLink {
-    border-color: #1f1c1c;
-    border-bottom: solid;
-}
 #fireFeeLink.active, #volumeLink.active, #shrinkLink.active {
     color: #F5580A;
-    border-left: solid;
-    border-color: #F5580A;
-    border-left-width: 5px;
+    text-decoration: underline;
 }
 #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover {
     color: #F5580A;
@@ -134,19 +189,30 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    border-top: solid;
-    border-color: #1f1c1c;
+}
+/* Home */
+#card {
+    border: #FD5523;
+    background-color: #FD5523;
+    padding: 25px;
+    align-items: right;
 }
 
-/* Home */
 
+#calculatorCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+    grid-template-rows: 1fr;
+    row-gap: 25px;
+    column-gap: 25px;
+}
 /* Shrink Rate Calculator */
 
 /* Volume Calculator */
 
 /* Firing Fee Calculator */
 
-/* Technical Documentation */
+/* Technical Documentation 
 #techLink.active {
     color: #1f1c1c;
     border-left: solid;
@@ -158,26 +224,50 @@ footer {
     border-left: solid;
     border-color: #1f1c1c;
     border-left-width: 5px;
+}*/
+
+
+/* media queries 
+@media screen and (max-width: 1279px) {
 }
 
-
-/* media queries */
-@media screen and (max-width: 660px) {
-    form {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    } 
-    #myLinks {
-        display: none;
-      }
-
-} 
-
 @media screen and (min-width: 660px) {
-    .icon {
+    .gg-menu {
+        transform: scale(var(--ggs,1))
+       }
+       
+       .gg-menu,
+       .gg-menu::after,
+       .gg-menu::before {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 2px;
+        border-radius: 3px;
+        background: currentColor
+       }
+       
+       .gg-menu::after,
+       .gg-menu::before {
+        content: "";
+        position: absolute;
+        top: -6px
+       }
+       
+       .gg-menu::after {
+        top: 6px
+       } 
+}
+@media screen and (min-width:1280px) {
+    .gg-menu {
         display: none;
     }
 }
+*/
+
+@media screen and (max-width: 600px) {
+    #navContainer.responsive {
+        position: relative;
+    }
+  }

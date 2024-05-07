@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-grid-r.css' rel='stylesheet'>
+    <script src="script.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Clay Calculator</title>
+</head>
+<body>
+
+    <nav id="navContainer">
+        <a href="home.html">
+        <img id="homeLogo" src="Logo.png" alt="Button Image" style="width:25px;height:25px;"></a>
+        <a href="home.html" id="navTitle"><h1>Clay Calculator</h1></a>
+        <div class="dropdown">
+            
+            <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+                <i id="openButton" class="gg-menu-grid-r"></i>
+            </a>
+          
+            <div id="myLinks" class="dropdown-content">
+                <!--<a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a> -->
+                <a id="volumeLink" class="active" href="volumeCalculator.html">Calculate Volume</a>
+                <a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Shrink</a>
+                <a id="fireFeeLink" href="firingFeeCalculator.html">Calculate Fire Fee</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <section id="calculatorCards">
+        <article id="card" href="volumeCalculator.html">
+            <a href="volumeCalculator.html">
+            <img src="volume.png" alt="Logo" style="width:300px;height:300px;">
+            </a>
+            <div class="contentContainer">
+              <h4><b>Volume Calculator</b></h4>
+              <p>Calculate how many ounces your project can hold.</p>
+            </div>
+        </article>
+        <article id="card">
+            <a href="shrinkRateCalculator.html">
+            <img src="shrink.png" alt="Logo" style="width:300px;height:300px;">
+            </a>
+            <div class="contentContainer">
+              <h4><b>Shrink Rate Calculator</b></h4>
+              <p>Calculate the dimensions you need to build your project to.</p>
+            </div>
+        </article>
+        <article id="card">
+            <a href="firingFeeCalculator.html">
+            <img src="fire.png" alt="Logo" style="width:300px;height:300px;">
+            </a>
+            <div class="contentContainer">
+              <h4><b>Fire Fee Calculator</b></h4>
+              <p>Calculate the cost to fire your work.</p>
+            </div>
+        </article>
+    </section>
+    <footer></footer>
+</body>
+</html>
