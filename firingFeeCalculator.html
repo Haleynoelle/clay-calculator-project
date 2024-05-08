@@ -37,15 +37,14 @@
     <div id="break"></div>
 
     <h2>Studio Calculation Preference</h2>
-
-    <button id="studioPrefersWeight" autofocus onclick="studioPreferenceWeightFunction()">Weight</button>
-    <button id="studioPrefersCubicInch" onclick="studioPreferenceCubicInchFunction()">Cubic Inch</button>
-    <button id="studioPrefersSquareInch" onclick="studioPreferenceSquareInchFunction()">Square Inch</button>
+    <button class="responsive" id="studioPrefersWeight" autofocus onclick="studioPreferenceWeightFunction()">Weight</button>
+    <button class="responsive" id="studioPrefersCubicInch" onclick="studioPreferenceCubicInchFunction()">Cubic Inch</button>
+    <button class="responsive" id="studioPrefersSquareInch" onclick="studioPreferenceSquareInchFunction()">Square Inch</button>
     <div id="break"></div>
 
     <h2>Input</h2>
 
-        <form id="weightForm">
+        <form id="weightForm" class="responsive">
             <div id="poundsInput">
                 <label for="pounds">Pounds</label>
                 <input type="number" id="pounds" name="pounds">
@@ -68,7 +67,7 @@
                 <div class="result" id="feeByWeightResult"></div>
         </form>
 
-        <form id="cubicInchForm">
+        <form id="cubicInchForm" class="responsive">
             <div>
                 <label for="feeHeight">Height</label>
                 <input type="number" id="feeHeight" name="feeHeight">
@@ -95,7 +94,7 @@
             <div class="result" id="cubicInchResult"></div>
         </form>
 
-        <form id="squareInchForm">
+        <form id="squareInchForm" class="responsive">
             <div>
                 <label for="siWidth">Width</label>
                 <input type="number" id="siWidth" name="siWidth">
