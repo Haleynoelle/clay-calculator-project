@@ -191,20 +191,31 @@ footer {
     justify-content: center;
 }
 /* Home */
+#heroSection {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
 #card {
     border: #FD5523;
     background-color: #FD5523;
     padding: 25px;
-    align-items: right;
+    padding-left: 20%;
+    padding-right: 20%;
 }
-
-
 #calculatorCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);;
     grid-template-rows: 1fr;
     row-gap: 25px;
     column-gap: 25px;
+}
+.contentContainer a {
+    text-decoration: none;
+    color: #1f1c1c;
+}
+#card:hover {
+    background: rgba(253, 85, 35, 0.9);
 }
 /* Shrink Rate Calculator */
 
