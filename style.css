@@ -10,6 +10,9 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #Faf8f6;
 }
 .icon {
     color: #FD5523;
@@ -209,7 +212,9 @@ footer {
 #emailLink {
     padding-left: 10px;
     padding-right: 10px;
+    color: #FD5523;
 }
+
 #cardFilter {
     border-top: #1f1c1c;
     border-width: 2px;
