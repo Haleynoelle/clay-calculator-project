@@ -203,6 +203,21 @@ footer {
 #heroH1 {
     font-size: 60px;
 }
+#heroH2 {
+    color: #1f1c1c;
+}
+#emailLink {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#cardFilter {
+    border-top: #1f1c1c;
+    border-width: 2px;
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+}
 #card {
     border: #FD5523;
     background-color: #FD5523;
