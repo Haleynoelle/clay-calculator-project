@@ -384,6 +384,35 @@ img#visualBlock {
         font-size: 40px;
     }
 }*/
+@media screen and (max-width: 800px) {
+    #header.responsive{
+        position: relative;
+    }
+    #navContainer.responsive {
+        position: relative;
+    }
+    #formContainer.responsive {
+        position: relative;
+    }
+    #calculatorCards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #heroSection {
+        grid-template-columns: 1fr;
+    }
+    #heroSection2 {
+        display: none;
+    }
+  }
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 25px;
+    }
+    #heroH1 {
+        font-size: 40px;
+    }
 @media screen and (max-width: 900px) {
     #formContainer {
         font-size: smaller;
