@@ -405,7 +405,7 @@ img#visualBlock {
     #heroSection2 {
         display: none;
     }
-  }
+}
 @media screen and (max-width: 400px) {
     h1 {
         font-size: 25px;
@@ -413,6 +413,7 @@ img#visualBlock {
     #heroH1 {
         font-size: 40px;
     }
+}
 @media screen and (max-width: 900px) {
     #formContainer {
         font-size: smaller;
