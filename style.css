@@ -415,6 +415,10 @@ img#visualBlock {
     }
 }
 @media screen and (max-width: 900px) {
+    #navContainer {
+        padding-right: 15px;
+        width: 95vw;
+    }
     #formContainer {
         font-size: smaller;
         align-items: center;
@@ -426,5 +430,8 @@ img#visualBlock {
     }
     button {
         font-size: 12px;
+    }
+    #calculatorPage {
+        gap: 10px;
     }
 }
