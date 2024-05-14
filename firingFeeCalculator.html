@@ -40,10 +40,11 @@
     <p id="calculatorAbout">kjhfkh</p>
 
     <h2>Studio Calculation Preference</h2>
+    <div id="buttonContainer" class="responsive">
     <button class="responsive" id="studioPrefersWeight" autofocus onclick="studioPreferenceWeightFunction()">Weight</button>
     <button class="responsive" id="studioPrefersCubicInch" onclick="studioPreferenceCubicInchFunction()">Cubic Inch</button>
     <button class="responsive" id="studioPrefersSquareInch" onclick="studioPreferenceSquareInchFunction()">Square Inch</button>
-
+    </div>
     <h2 class="responsive">Input</h2>
         <form id="weightForm" class="responsive">
             <div id="poundsInput">
@@ -117,10 +118,12 @@
         </div>
         <section id="calculatorVisual">
             <div id="row">
-            <img src="fire.png" class="responsive" style="width:300px;height:300px;">
+            <img id="visualBlock" src="fire.png" class="responsive">
+            <div id="resultBlock">
             <div class="result" id="feeByWeightResult"></div>
             <div class="result" id="cubicInchResult"></div>
             <div class="result" id="squareInchResult"></div>
+            </div>
             </div>
         </section>
         

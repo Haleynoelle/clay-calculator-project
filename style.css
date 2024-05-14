@@ -1,5 +1,4 @@
 /* Entire Document */
-
 body {
     background-color: #Faf8f6;
     font-family: "Roboto Mono", monospace;
@@ -13,7 +12,8 @@ body {
     top: 0;
     background-color: #Faf8f6;
     padding-left: 1%;
-    padding-right: 1%
+    padding-right: 1%;
+    height: auto;
 }
 .icon {
     color: #FD5523;
@@ -89,11 +89,14 @@ h1 {
     justify-content: center;
 }
 h2 {
-    color: #FD5523;
+    color: #1f1c1c;
     font-weight: 300;
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px; 
+}
+p {
+    color: #1f1c1c;
 }
 ul {
     display: flex;
@@ -104,7 +107,6 @@ ul {
     margin: 0;
     padding: 0;
 }
-
 li a {
     display: flex;
     color: #1f1c1c;
@@ -122,22 +124,24 @@ li a {
     flex-basis: 100%;
     height: 0;
 }
-img {
-    max-width: 300px;
-    max-height: 300px;
-}
 footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-weight: 200;
+    height: auto;
+    position: inherit;
 }
-/* Home */
 .responsive {
     max-width: 100%;
     height: auto;
 }
+
+
+
+/* Home */
 #heroSection {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -206,20 +210,18 @@ footer {
 #space {
     padding-left: 3px;
 }
+
+
+
 /* CALCULATOR PAGE STRUCTURE */
 #calculatorTitle {
     color: #1f1c1c;
     font-weight: 300;
 }
-#calculatorAbout {
-    color: #1f1c1c;
-}
-h2 {
-    color: #1f1c1c;
-}
 #formContainer {
     background-color: #Faf8f6;
 }
+
 #calculatorVisual {
     background-color: #FD5523;
 }
@@ -230,13 +232,14 @@ h2 {
     justify-content: center;
     flex-direction: column;
     width: 50vw;
-    height: 80vh;
+    height: 90vh;
     font-weight: 300;
 }
-#weightForm, #volumeForm {
+#weightForm, #cubicInchForm, #squareInchForm, #volumeForm {
     align-items: center;
     justify-content: center;
-    width: 604px;
+    max-width: 500px;
+    height: auto;
 }
 #calculatorPage {
     display: flex;
@@ -248,32 +251,34 @@ h2 {
 }
 button {
     font-family: "Roboto Mono", monospace;
-    background-color: #FD5523;
+    background-color: #Faf8f6;
     font-weight: normal;
     font-size: large;
     border: solid;
     border-radius: 4px;
-    color: #Faf8f6;
-    border-color: #FD5523;
+    color: #FD5523;
+    border-color: solid #Faf8f6;
     margin-bottom: 10px;
 }
 button:focus {
     color:#Faf8f6;
     background-color: #FD5523;
+    border: solid #FD5523;
+}
+#buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
 }
 label {
     margin-bottom: 30px;
     margin-right: 20px;
-    flex-direction: row;
-    align-items: baseline;
     color: #1f1c1c;
 }
 input {
-    width: 500px;
+    width: 40vw;
     margin-bottom: 10px;
     margin-right: 20px;
-    flex-direction: row;
-    align-items: baseline;
     color: #1f1c1c;
     border-color:#1f1c1c;
     background-color: #Faf8f6;
@@ -284,6 +289,20 @@ input {
     justify-content: center;
     color: #1f1c1c;
 }
+#resultBlock {
+    background-color: #FD5523;
+    width: 24vw;
+    border-radius: 6px;
+}
+#visualBlock {
+    border-radius: 6px;
+    padding: 10px;
+    width: 40vw;
+}
+img#visualBlock {
+    max-width: 300px;
+    max-height: 300px;
+}
 
 /* Shrink Rate Calculator */
 
@@ -291,67 +310,17 @@ input {
 
 /* Firing Fee Calculator */
 
-/* Technical Documentation 
-#techLink.active {
-    color: #1f1c1c;
-    border-left: solid;
-    border-color: #1f1c1c;
-    border-left-width: 5px;
-}
-#techLink:hover {
-    color: #1f1c1c;
-    border-left: solid;
-    border-color: #1f1c1c;
-    border-left-width: 5px;
-}*/
-
-
-/* media queries 
-@media screen and (max-width: 1279px) {
-}
-
-@media screen and (min-width: 660px) {
-    .gg-menu {
-        transform: scale(var(--ggs,1))
-       }
-       
-       .gg-menu,
-       .gg-menu::after,
-       .gg-menu::before {
-        box-sizing: border-box;
-        position: relative;
-        display: block;
-        width: 20px;
-        height: 2px;
-        border-radius: 3px;
-        background: currentColor
-       }
-       
-       .gg-menu::after,
-       .gg-menu::before {
-        content: "";
-        position: absolute;
-        top: -6px
-       }
-       
-       .gg-menu::after {
-        top: 6px
-       } 
-}
-@media screen and (min-width:1280px) {
-    .gg-menu {
-        display: none;
+/*
+@media screen and (max-width: 800px) {
+    #weightForm, #volumeForm {
+        align-items: center;
+        justify-content: center;
+        width: 35vw;
+        flex-wrap: nowrap;
     }
-}
-*/
-@media screen and (max-width: 650px) {
     input, label {
         width: fit-content;
     }
-}
-
-@media screen and (max-width: 800px) {
-
     #header.responsive{
         position: relative;
     }
@@ -377,6 +346,8 @@ input {
     #row {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
     }
 }
   @media screen and (max-width: 1000px) {
@@ -398,10 +369,10 @@ input {
         font-weight: 300;
         flex-wrap: wrap;
     }
-    #weightForm, #volumeForm {
+   #weightForm, #volumeForm {
         align-items: center;
         justify-content: center;
-        width: auto;
+        width: 35vw;
         flex-wrap: wrap;
     }
 }
@@ -411,5 +382,19 @@ input {
     }
     #heroH1 {
         font-size: 40px;
+    }
+}*/
+@media screen and (max-width: 900px) {
+    #formContainer {
+        font-size: smaller;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+    }
+    h2 {
+        margin: 5px;
+    }
+    button {
+        font-size: 12px;
     }
 }

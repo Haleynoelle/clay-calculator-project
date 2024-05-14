@@ -36,7 +36,6 @@
         </header>
     
     <div id="calculatorPage">
-
     <div id="formContainer">
 
     <div id="break"></div>
@@ -49,9 +48,9 @@
         <button class="responsive" id="shapeChoiceCylinder" onclick="shapeChoiceCylinderFunction()">Cylinder</button>
     </div>
 
-    <h2>Project Dimensions</h2>
+    <h2 class="responsive">Project Dimensions</h2>
     <div id="volumeForm" class="responsive">
-        <form id="rectangleVolumeCalculatorForm">
+        <form class="responsive" id="rectangleVolumeCalculatorForm">
             <div id="rectangleInputLength">
                 <label for="rectangleLength">Length</label>
                 <input type="number" id="rectangleLength" name="length">
@@ -86,7 +85,7 @@
         </div>
         <section id="calculatorVisual">
             <div id="row">
-            <img src="volume.png" class="responsive" style="width:300px;height:300px;">
+            <img id="visualBlock" src="volume.png" class="responsive">
             <div id="resultBlock">
                 <div class="result" id="cylinderResult"></div>
                 <div class="result" id="rectangleResult"></div>
