@@ -25,18 +25,19 @@
             <nav>
                 <div id="myLinks" class="dropdown-content">
                     <!--<a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a> -->
-                    <a id="volumeLink" class="active" href="volumeCalculator.html">Calculate Volume</a>
-                    <a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Shrink</a>
+                    <a id="volumeLink" href="volumeCalculator.html">Calculate Volume</a>
+                    <a id="shrinkLink"  class="active" href="shrinkRateCalculator.html">Calculate Shrink</a>
                     <a id="fireFeeLink" href="firingFeeCalculator.html">Calculate Fire Fee</a>
                 </div>
             </div>
             </nav>
         </header>
-    <div id="formContainer">
-
-    <h1>Shrink Rate Calculator</h1>
-
+        <div id="calculatorPage">
+        <div id="formContainer">
     <div id="break"></div>
+    <h1 id="calculatorTitle">Shrink Rate Calculator</h1>
+    <p id="calculatorAbout">kjhfkh</p>
+
 
     <h2 class="responsive">Input Final Dimensions</h2>
         <form id="clayShrinkRateForm" class="responsive"> 
@@ -60,13 +61,19 @@
                 <label for="shrinkRate">shrink rate %</label><br>
                 <input type="number" id="shrinkRate" name="shrinkRate"><br>
             </div>
-            <div id="break"></div>
             <button class="responsive" type="button" id="calculateShrinkRate">submit</button>
         </form>
         <div id="break"></div>
+    </div>
+    <section id="calculatorVisual">
+        <img src="shrink.png" class="responsive" style="width:300px;height:300px;">
         <div class="result" id="result"></div>
+    </section>
     </div>
-    </div>
-    <footer></footer>
+
+</div>
+    <footer>
+        dfg
+    </footer>
 </body>
 </html>

@@ -25,26 +25,26 @@
             <nav>
                 <div id="myLinks" class="dropdown-content">
                     <!--<a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a> -->
-                    <a id="volumeLink" class="active" href="volumeCalculator.html">Calculate Volume</a>
+                    <a id="volumeLink" href="volumeCalculator.html">Calculate Volume</a>
                     <a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Shrink</a>
-                    <a id="fireFeeLink" href="firingFeeCalculator.html">Calculate Fire Fee</a>
+                    <a id="fireFeeLink" class="active" href="firingFeeCalculator.html">Calculate Fire Fee</a>
                 </div>
             </div>
             </nav>
         </header>
+    <div id="calculatorPage">
     <div id="formContainer">
-    <h1>Firing Fee Calculator</h1>
-
     <div id="break"></div>
+
+    <h1 id="calculatorTitle">Firing Fee Calculator</h1>
+    <p id="calculatorAbout">kjhfkh</p>
 
     <h2>Studio Calculation Preference</h2>
     <button class="responsive" id="studioPrefersWeight" autofocus onclick="studioPreferenceWeightFunction()">Weight</button>
     <button class="responsive" id="studioPrefersCubicInch" onclick="studioPreferenceCubicInchFunction()">Cubic Inch</button>
     <button class="responsive" id="studioPrefersSquareInch" onclick="studioPreferenceSquareInchFunction()">Square Inch</button>
-    <div id="break"></div>
 
-    <h2>Input</h2>
-
+    <h2 class="responsive">Input</h2>
         <form id="weightForm" class="responsive">
             <div id="poundsInput">
                 <label for="pounds">Pounds</label>
@@ -63,9 +63,8 @@
                 <input type="number" id="fixedCosts" name="fixedCosts">
             </div>     
             <div id="break"></div>
-                <button type="button" id="calculateFeeByWeight">submit</button>
+                <button class="responsive" type="button" id="calculateFeeByWeight">submit</button>
                 <div id="break"></div>
-                <div class="result" id="feeByWeightResult"></div>
         </form>
 
         <form id="cubicInchForm" class="responsive">
@@ -90,9 +89,8 @@
                 <input type="number" id="fireFixedCost" name="fireFixedCost">
             </div>
             <div id="break"></div>
-            <button type="button" id="calculateFeeByCubicInch">Submit</button>
+            <button class="responsive" type="button" id="calculateFeeByCubicInch">Submit</button>
             <div id="break"></div>
-            <div class="result" id="cubicInchResult"></div>
         </form>
 
         <form id="squareInchForm" class="responsive">
@@ -113,13 +111,22 @@
                 <input type="number" id="siFixedCost" name="siFixedCost">
             </div>
             <div id="break"></div>
-            <button type="button" id="calculateFeeBySquareInch">submit</button>
-            <div id="break"></div>
-            <div class="result" id="squareInchResult"></div>
+            <button class="responsive" type="button" id="calculateFeeBySquareInch">submit</button>
         </form>
-
+        <div id="break"></div>
+        </div>
+        <section id="calculatorVisual">
+            <img src="fire.png" class="responsive" style="width:300px;height:300px;">
+            <div class="result" id="feeByWeightResult"></div>
+            <div class="result" id="cubicInchResult"></div>
+            <div class="result" id="squareInchResult"></div>
+        </section>
+        
+        </div>
     </div>
     </div>
 </body>
-<footer></footer>
+<footer>
+    fdv
+</footer>
 </html>

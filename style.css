@@ -4,7 +4,6 @@ body {
     background-color: #Faf8f6;
     font-family: "Roboto Mono", monospace;
 }
-
 #navContainer {
     display: flex;
     flex-direction: row;
@@ -25,9 +24,6 @@ body {
 #myLinks {
     display: none;
 }
-
-
-
 .gg-menu-grid-r {
     box-sizing: border-box;
     position: relative;
@@ -35,8 +31,7 @@ body {
     transform: scale(var(--ggs,1));
     width: 16px;
     height: 16px;
-   }
-   
+}
 .gg-menu-grid-r::before {
     content: "";
     display: block;
@@ -53,10 +48,8 @@ body {
     12px 12px 0,
     6px 0 0,
     12px 0 0,
-    0 12px 0
-    ;
+    0 12px 0;
 } 
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -64,7 +57,6 @@ body {
 .dropdown a {
     padding: 15px;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -74,7 +66,6 @@ body {
     z-index: 1;
     left: -190px;
 }
-
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -89,24 +80,21 @@ body {
 }
 header {
     color:#FD5523;
- }
- 
+}
 h1 {
     color: #FD5523;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
- }
- 
+}
 h2 {
     color: #FD5523;
-    font-weight: bolder;
+    font-weight: 300;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px; 
- }
-
+    margin-top: 30px; 
+}
 ul {
     display: flex;
     flex-direction: column;
@@ -115,69 +103,14 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-button {
-    font-family: "Roboto Mono", monospace;
-    width: 505px;
-    background-color: #Faf8f6;
-    font-weight: normal;
-    font-size: large;
-    border: solid;
-    border-radius: 4px;
-    color: #FD5523;
-    border-color: #FD5523;
-    flex-direction: row;
-    margin-bottom: 10px;
 }
-button:focus {
-    color:#Faf8f6;
-    background-color: #FD5523;
-}
-label {
-    margin-bottom: 30px;
-    margin-right: 20px;
-    flex-direction: row;
-    align-items: baseline;
-    color: #FD5523;
-}
-input {
-    width: 500px;
-    margin-bottom: 30px;
-    margin-right: 20px;
-    flex-direction: row;
-    align-items: baseline;
-    color: #FD5523;
-    border-top: none;
-    border-color:#FD5523;
-    background-color: #Faf8f6;
-}
-.result {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    color: #3F0DCD;
-}
-#formContainer {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    max-width: 600px;
-    padding-left: 15%;
-}
-#textContainer {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 75px;
-}
+
 li a {
     display: flex;
     color: #1f1c1c;
     padding: 20px 20px;
     text-decoration: none;
-  }
+}
 #fireFeeLink.active, #volumeLink.active, #shrinkLink.active {
     color: #F5580A;
     text-decoration: underline;
@@ -192,7 +125,6 @@ li a {
 footer {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
 }
 /* Home */
@@ -230,12 +162,6 @@ footer {
     padding-right: 5px;
     color: #FD5523;
 }
-#nestingTop {
-    
-}
-#nestingBottom {
-
-}
 #cardFilter {
     border-top: #1f1c1c;
     border-width: 2px;
@@ -271,6 +197,88 @@ footer {
 #card:hover {
     background: rgba(253, 85, 35, 0.9);
 }
+#space {
+    padding-left: 10px;
+}
+/* CALCULATOR PAGE STRUCTURE */
+#calculatorTitle {
+    color: #1f1c1c;
+    font-weight: 300;
+}
+#calculatorAbout {
+    color: #1f1c1c;
+}
+h2 {
+    color: #1f1c1c;
+}
+#formContainer {
+    background-color: #Faf8f6;
+}
+#calculatorVisual {
+    background-color: #FD5523;
+}
+#formContainer, #calculatorVisual {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 80vh;
+    font-weight: 300;
+}
+#weightForm, #volumeForm {
+    align-items: center;
+    justify-content: center;
+    width: 604px;
+}
+#calculatorPage {
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: nowrap;
+    gap: 25px;
+    align-items: center;
+    height: auto;
+}
+button {
+    font-family: "Roboto Mono", monospace;
+    background-color: #FD5523;
+    font-weight: normal;
+    font-size: large;
+    border: solid;
+    border-radius: 4px;
+    color: #Faf8f6;
+    border-color: #FD5523;
+    margin-bottom: 10px;
+}
+button:focus {
+    color:#Faf8f6;
+    background-color: #FD5523;
+}
+label {
+    margin-bottom: 30px;
+    margin-right: 20px;
+    flex-direction: row;
+    align-items: baseline;
+    color: #1f1c1c;
+}
+input {
+    width: 500px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    flex-direction: row;
+    align-items: baseline;
+    color: #1f1c1c;
+    border-color:#1f1c1c;
+    background-color: #Faf8f6;
+}
+.result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #1f1c1c;
+}
+
 /* Shrink Rate Calculator */
 
 /* Volume Calculator */
@@ -332,6 +340,10 @@ footer {
 */
 
 @media screen and (max-width: 800px) {
+
+    #header.responsive{
+        position: relative;
+    }
     #navContainer.responsive {
         position: relative;
     }
@@ -350,3 +362,42 @@ footer {
         display: none;
     }
   }
+  @media screen and (max-width: 1000px) {
+    #calculatorPage {
+        display: flex;
+        flex-direction: column;  
+        flex-wrap: wrap;
+        align-items: center;
+        height: auto;
+    }
+    #calculatorVisual {
+        padding: 15px;
+    }
+    #formContainer, #calculatorVisual {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        font-weight: 300;
+        flex-wrap: wrap;
+
+    }
+    #weightForm, #volumeForm {
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        flex-wrap: wrap;
+
+    }
+}
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 25px;
+    }
+    #heroH1 {
+        font-size: 40px;
+    }
+}

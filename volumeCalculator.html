@@ -34,15 +34,20 @@
             </div>
             </nav>
         </header>
+    
+    <div id="calculatorPage">
+
     <div id="formContainer">
 
-   
+    <div id="break"></div>
+    <h1 id="calculatorTitle">Volume Calculator</h1>
+    <p id="calculatorAbout">kjhfkh</p>
+
     <h2>Project Shape</h2>
     <div id="buttonContainer">
         <button class="responsive" id="shapeChoiceRectangle" autofocus onclick="shapeChoiceRectangleFunction()">Rectangle</button>
         <button class="responsive" id="shapeChoiceCylinder" onclick="shapeChoiceCylinderFunction()">Cylinder</button>
     </div>
-    <div id="break"></div>
 
     <h2>Project Dimensions</h2>
     <div id="volumeForm" class="responsive">
@@ -60,9 +65,8 @@
                 <input type="number" id="rectangleHeight" name="height">
             </div>
             <div id="break"></div>
-            <button type="button" id="calculateRVolume">Submit</button>
+            <button class="responsive" type="button" id="calculateRVolume">Submit</button>
             <div id="break"></div>
-            <div class="result" id="rectangleResult"></div>
         </form>
 
         <form id="cylinderVolumeCalculatorForm">
@@ -75,15 +79,25 @@
                 <input type="number" id="cylinderHeight" name="height">
             </div>
             <div id="break"></div>
-                <button type="button" id="calculateCVolume">Submit</button>
-            <div id="break"></div>
-            <div class="result" id="cylinderResult"></div>
+                <button class="responsive" type="button" id="calculateCVolume">Submit</button>
+        </div>
         </form>
+        <div id="break"></div>
+        </div>
+        <section id="calculatorVisual">
+            <img src="volume.png" class="responsive" style="width:300px;height:300px;">
+            <div class="result" id="cylinderResult"></div>
+            <div class="result" id="rectangleResult"></div>
+
+        </section>
+    </div>
     </div>
     </div>
 </div> 
 </div>
 </body>
 
-<footer></footer>
+<footer>
+    product of <a id="space" href="http://www.claycatalog.com">Clay Catalog.</a>
+</footer>
 </html>
