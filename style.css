@@ -114,11 +114,11 @@ li a {
     text-decoration: none;
 }
 #fireFeeLink.active, #volumeLink.active, #shrinkLink.active {
-    color: #F5580A;
+    color: #FD5523;
     text-decoration: underline;
 }
 #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover {
-    color: #F5580A;
+    color: #FD5523;
 }
 #break {
     flex-basis: 100%;
