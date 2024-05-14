@@ -404,6 +404,7 @@ img#visualBlock {
     }
     button {
         font-size: 12px;
+        border-width: 1px;
     }
     #calculatorPage {
         gap: 10px;
@@ -411,6 +412,7 @@ img#visualBlock {
     #resultBlock {
         margin-left: 5px;
         font-size: smaller;
+        border-width: 1px;
     }
 
 }
