@@ -405,7 +405,7 @@ img#visualBlock {
 @media screen and (max-width: 900px) {
     #navContainer {
         padding-right: 15px;
-        width: 95vw;
+        width: 100vw;
     }
     #formContainer {
         font-size: smaller;
