@@ -220,10 +220,15 @@ footer {
 }
 #formContainer {
     background-color: #Faf8f6;
+    width: 60vw;
+    border: solid #FD5523;
+    border-width: 5px;
 }
 
 #calculatorVisual {
     background-color: #FD5523;
+    width: 40vw;
+    border: solid #FD5523;
 }
 #formContainer, #calculatorVisual {
     flex-grow: 1;
@@ -232,7 +237,7 @@ footer {
     justify-content: center;
     flex-direction: column;
     width: 50vw;
-    height: 90vh;
+    height: 80vh;
     font-weight: 300;
 }
 #weightForm, #cubicInchForm, #squareInchForm, #volumeForm {
@@ -245,9 +250,8 @@ footer {
     display: flex;
     flex-direction: row;  
     flex-wrap: nowrap;
-    gap: 25px;
-    align-items: center;
     height: auto;
+    background-color: #FD5523;
 }
 button {
     font-family: "Roboto Mono", monospace;
@@ -282,6 +286,8 @@ input {
     color: #1f1c1c;
     border-color:#1f1c1c;
     background-color: #Faf8f6;
+    border-radius: 6px;
+    border-width: 1px;
 }
 .result {
     display: flex;
@@ -292,16 +298,23 @@ input {
     background-color: #Faf8f6;
     border: solid #1f1c1c;
     width: 40vw;
-    max-width: 315px;
+    max-width: 300px;
     border-radius: 6px;
-    padding: 5px;
+    border-width: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
     align-self: center;
     justify-self: center;
+    height: 10vh;
 }
 #visualBlock {
     border-radius: 6px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 10px;
     width: 40vw;
+    border-width: 1px;
 }
 img#visualBlock {
     max-width: 300px;
@@ -407,10 +420,9 @@ img#visualBlock {
         border-width: 1px;
     }
     #calculatorPage {
-        gap: 10px;
+        gap: 5px;
     }
     #resultBlock {
-        margin-left: 5px;
         font-size: smaller;
         border-width: 1px;
     }
