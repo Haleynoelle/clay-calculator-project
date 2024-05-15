@@ -223,6 +223,7 @@ footer {
     width: 60vw;
     border: solid #FD5523;
     border-width: 5px;
+    border-right: none;
 }
 
 #calculatorVisual {
