@@ -219,11 +219,8 @@ footer {
     font-weight: 300;
 }
 #formContainer {
-    background-color: #Faf8f6;
+    background-color: hsl(30, 29%, 97%);
     width: 60vw;
-    border: solid #FD5523;
-    border-width: 5px;
-    border-right: none;
 }
 
 #calculatorVisual {
@@ -252,7 +249,6 @@ footer {
     flex-direction: row;  
     flex-wrap: nowrap;
     height: auto;
-    background-color: #FD5523;
 }
 button {
     font-family: "Roboto Mono", monospace;
