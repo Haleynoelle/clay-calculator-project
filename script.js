@@ -206,7 +206,3 @@ document.addEventListener("click", function(event) {
     }
 });
 
-
-import { inject } from '@vercel/analytics';
- 
-inject();
