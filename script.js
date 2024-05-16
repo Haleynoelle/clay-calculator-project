@@ -205,3 +205,8 @@ document.addEventListener("click", function(event) {
         dropdown.style.display = 'none';
     }
 });
+
+
+import { inject } from '@vercel/analytics';
+ 
+inject();
