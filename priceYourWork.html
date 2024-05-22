@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
         <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4NHR8NCB0"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-M4NHR8NCB0');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="ms-icon-310x310.png" type="image/icon type">
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-grid-r.css' rel='stylesheet'>
-    <script src="script.js"></script>
-    <link href="style.css" type="text/css" rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <title>Shrink Rate Calculator</title>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4NHR8NCB0"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-M4NHR8NCB0');
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="ms-icon-310x310.png" type="image/icon type">
+        <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-grid-r.css' rel='stylesheet'>
+        <script src="script.js"></script>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <title>Price Your Work</title>
 </head>
 <body>
     <div id="columnContainer">
@@ -35,10 +35,11 @@
                 <div id="myLinks" class="dropdown-content">
                     <!--<a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a> -->
                     <a id="volumeLink" href="volumeCalculator.html">Calculate Volume</a>
-                    <a id="shrinkLink"  class="active" href="shrinkRateCalculator.html">Calculate Size to Build</a>
+                    <a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Size to Build</a>
                     <a id="fireFeeLink" href="firingFeeCalculator.html">Calculate Fire Fee</a>
                     <a id="shrinkTestLink" href="shrinkTest.html">Calculate Shrink Rate</a>
                     <a id="costToFireLink" href="costToFire.html">Calculate Cost to Fire a Kiln</a>
+                    <a id="priceYourWorkLink" href="priceYourWork.html">Calculate Price of Your Work</a>
                 </div>
             </div>
             </nav>
@@ -81,10 +82,9 @@
         <div id="break"></div>
     </section>
     <section id="calculatorVisualize">
-        <img id="visualBlock" src="dimensions.png" class="responsive" style="max-width: 250px; max-height: 250px;">
+        <img id="visualBlock" src="shrink.png" class="responsive" style="max-width: 250px; max-height: 250px;">
     </section>
     <section id="results" class="responsive">
-        <p>you should build your project to the dimensions below:</p>
         <div class="result" id="result"></div>
     </section>
 </div>

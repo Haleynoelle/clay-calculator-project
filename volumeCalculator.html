@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
         <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4NHR8NCB0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4NHR8NCB0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-M4NHR8NCB0');
-</script>
+    gtag('config', 'G-M4NHR8NCB0');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="ms-icon-310x310.png" type="image/icon type">
@@ -37,28 +37,34 @@
                 <div id="myLinks" class="dropdown-content">
                     <!--<a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a> -->
                     <a id="volumeLink" class="active" href="volumeCalculator.html">Calculate Volume</a>
-                    <a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Shrink</a>
+                    <a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Size to Build</a>
                     <a id="fireFeeLink" href="firingFeeCalculator.html">Calculate Fire Fee</a>
-                </div>
+                    <a id="shrinkTestLink" href="shrinkTest.html">Calculate Shrink Rate</a>
+                    <a id="costToFireLink" href="costToFire.html">Calculate Cost to Fire a Kiln</a>
+                </div> 
             </div>
             </nav>
         </header>
     
-    <div id="calculatorPage">
-    <div id="formContainer">
+    <div id="calculatorPageGrid">
+        <section id="calculatorHeader">
+            <h1 id="calculatorTitle">Volume Calculator</h1>
+            <!-- <p id="calculatorAbout">kjhfkh</p> -->
+        </section>
 
+    <section id="formContainerGrid">
     <div id="break"></div>
-    <h1 id="calculatorTitle">Volume Calculator</h1>
-   <!-- <p id="calculatorAbout">kjhfkh</p> -->
 
-    <h2>Project Shape</h2>
     <div id="buttonContainer">
         <button class="responsive" id="shapeChoiceRectangle" autofocus onclick="shapeChoiceRectangleFunction()">Rectangle</button>
         <button class="responsive" id="shapeChoiceCylinder" onclick="shapeChoiceCylinderFunction()">Cylinder</button>
+        <button class="responsive" id="shapeChoiceFrustum" onclick="shapeChoiceFrustumFunction()">Frustum</button>
+        <button class="responsive" id="shapeChoiceHemisphere" onclick="shapeChoiceHemisphereFunction()">Hemisphere</button>
+        <button class="responsive" id="shapeChoiceEllipsoid" onclick="shapeChoiceEllipsoidFunction()">Ellipsoid</button>
     </div>
 
     <h2 class="responsive">Project Dimensions</h2>
-    <div id="volumeForm" class="responsive">
+    <section id="volumeForm" class="responsive">
         <form class="responsive" id="rectangleVolumeCalculatorForm">
             <div id="rectangleInputLength">
                 <label for="rectangleLength">Length</label>
@@ -88,27 +94,73 @@
             </div>
             <div id="break"></div>
                 <button class="responsive" type="button" id="calculateCVolume">Submit</button>
-        </div>
+        </form>
+
+        <form id="frustumVolumeCalculatorForm">
+            <div id="frustumInputHeight">
+                <label for="frustumHeight">Height</label>
+                <input type="number" id="frustumHeight" name="height">
+            </div>
+            <div id="frustumInputBaseRadius">
+                <label for="frustumBaseRadius">Base Radius</label>
+                <input type="number" id="frustumBaseRadius" name="base radius">
+            </div>
+            <div id="frustumInputTopRadius">
+                <label for="frustumTopRadius">Top Radius</label>
+                <input type="number" id="frustumTopRadius" name="top radius">
+            </div>
+            <div id="break"></div>
+                <button class="responsive" type="button" id="calculateFVolume">Submit</button>
+        </form>
+
+        <form id="hemisphereVolumeCalculatorForm">
+            <div id="hemisphereInputRadius">
+                <label for="hemisphereRadius">Radius</label>
+                <input type="number" id="hemisphereRadius" name="radius">
+            </div>
+            <div id="break"></div>
+                <button class="responsive" type="button" id="calculateHVolume">Submit</button>
+
+        </form>
+        <form id="ellipsoidVolumeCalculatorForm">
+            <div id="ellipsoidInputHeightRadius">
+                <label for="ellipsoidHeightRadius">Height Radius</label>
+                <input type="number" id="ellipsoidHeightRadius" name="height radius">
+            </div>
+            <div id="ellipsoidInputLengthRadius">
+                <label for="ellipsoidLengthRadius">Length Radius</label>
+                <input type="number" id="ellipsoidLengthRadius" name="length radius">
+            </div>
+            <div id="ellipsoidInputWidthRadius">
+                <label for="ellipsoidWidthRadius">Width Radius</label>
+                <input type="number" id="ellipsoidWidthRadius" name="width radius">
+            </div>
+            <div id="break"></div>
+                <button class="responsive" type="button" id="calculateEVolume">Submit</button>
         </form>
         <div id="break"></div>
-        </div>
-        <section id="calculatorVisual">
-            <div id="row">
-            <img id="visualBlock" src="volume.png" class="responsive">
-            <div id="resultBlock">
-                <div class="result" id="cylinderResult"></div>
-                <div class="result" id="rectangleResult"></div>
-            </div>
-            </div>
-        </section>
-    </div>
-    </div>
-    </div>
-</div> 
+    </section>
+    </section>
+
+    <section id="calculatorVisualize">
+        <img id="visualBlock" src="volume.png" class="responsive" style="max-width: 250px; max-height: 250px;">
+    </section>
+
+    <section id="results" class="responsive">
+        <p>the volume of your project is:</p>
+        <div class="result" id="cylinderResult"></div>
+        <div class="result" id="rectangleResult"></div>
+        <div class="result" id="frustumResult"></div>
+        <div class="result" id="hemisphereResult"></div>
+        <div class="result" id="ellipsoidResult"></div>
+    </section>
 </div>
+</div>
+</div>
+
 </body>
 
 <footer>
-    <p>product of <a id="space" href="http://www.claycatalog.com">Clay Catalog.</a></p>
+    <!--<p>product of <a id="space" href="http://www.claycatalog.com">Clay Catalog.</a></p>-->
 </footer>
 </html>

@@ -86,7 +86,6 @@ h1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
 }
 h2 {
     color: #1f1c1c;
@@ -113,11 +112,11 @@ li a {
     padding: 20px 20px;
     text-decoration: none;
 }
-#fireFeeLink.active, #volumeLink.active, #shrinkLink.active {
+#fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active {
     color: #FD5523;
     text-decoration: underline;
 }
-#fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover {
+#fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover {
     color: #FD5523;
 }
 #break {
@@ -191,6 +190,18 @@ footer {
 #card p {
     max-width: 250px;
 }
+#comingSoonCard {
+    border: #FD5523;
+    background-color: #FD5523;
+    padding: 10%;
+    padding-left: 20%;
+}
+#comingSoonCard p {
+    max-width: 250px;
+    filter: blur(5px);
+    image-rendering: pixelated;
+
+}
 #calculatorCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);;
@@ -220,23 +231,12 @@ footer {
 }
 #formContainer {
     background-color: hsl(30, 29%, 97%);
-    width: 60vw;
+    width: 80vw;
 }
-
 #calculatorVisual {
     background-color: #FD5523;
     width: 40vw;
     border: solid #FD5523;
-}
-#formContainer, #calculatorVisual {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 50vw;
-    height: 80vh;
-    font-weight: 300;
 }
 #weightForm, #cubicInchForm, #squareInchForm, #volumeForm {
     align-items: center;
@@ -244,20 +244,14 @@ footer {
     max-width: 500px;
     height: auto;
 }
-#calculatorPage {
-    display: flex;
-    flex-direction: row;  
-    flex-wrap: nowrap;
-    height: auto;
-}
 button {
     font-family: "Roboto Mono", monospace;
     background-color: #Faf8f6;
-    font-weight: normal;
-    font-size: large;
+    font-weight: 300;
+    font-size: small;
     border: solid;
     border-radius: 4px;
-    color: #FD5523;
+    color: #1f1c1c;
     border-color: solid #Faf8f6;
     margin-bottom: 10px;
 }
@@ -270,6 +264,7 @@ button:focus {
     display: flex;
     flex-direction: row;
     gap: 2px;
+    font-size: smaller;
 }
 label {
     margin-bottom: 30px;
@@ -277,7 +272,7 @@ label {
     color: #1f1c1c;
 }
 input {
-    width: 40vw;
+    width: 20vw;
     margin-bottom: 10px;
     margin-right: 20px;
     color: #1f1c1c;
@@ -424,4 +419,62 @@ img#visualBlock {
         border-width: 1px;
     }
 
+}
+
+
+
+
+
+#calculatorPageGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 5px;
+    height: 80vh;
+    background-color: #Faf8f6;
+    border-width: 5px;
+    border-radius: 6px;
+}
+#calculatorHeader {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #FD5523;
+    border: solid #1f1c1c;
+    border-radius: 6px;
+    padding: 10px;
+
+}
+#formContainerGrid {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: #Faf8f6;
+    border-radius: 6px;
+    border: solid #1f1c1c;
+    padding: 15px;
+}
+#calculatorVisualize {
+    grid-row-start: 2;
+    grid-row-end:3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #Faf8f6;
+    border-radius: 6px;
+    border: solid #1f1c1c;
+    padding: 10px;
+
+}
+#results {
+    grid-row-start: 2;
+    grid-row-end:3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: #Faf8f6;
+    border-radius: 6px;
+    border-width: 1px;
+    border: solid #1f1c1c;
+    padding: 10px;
 }

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4NHR8NCB0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4NHR8NCB0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-M4NHR8NCB0');
-</script>
+    gtag('config', 'G-M4NHR8NCB0');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="ms-icon-310x310.png" type="image/icon type">
@@ -35,9 +35,11 @@
         <nav>
             <div id="myLinks" class="dropdown-content">
                 <!--<a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a> -->
-                <a id="volumeLink" class="active" href="volumeCalculator.html">Calculate Volume</a>
-                <a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Shrink</a>
+                <a id="volumeLink" href="volumeCalculator.html">Calculate Volume</a>
+                <a id="shrinkLink"  class="active" href="shrinkRateCalculator.html">Calculate Size to Build</a>
                 <a id="fireFeeLink" href="firingFeeCalculator.html">Calculate Fire Fee</a>
+                <a id="shrinkTestLink" href="shrinkTest.html">Calculate Shrink Rate</a>
+                <a id="costToFireLink" href="costToFire.html">Calculate Cost to Fire a Kiln</a>
                <!-- <a id="paymentLink" href="stripepaymentlink">Grow Clay Calculator</a> -->
             </div>
         </div>
@@ -69,10 +71,10 @@
         </article>
         <article id="card">
             <a href="shrinkRateCalculator.html">
-            <img class="responsive" src="shrink.png" alt="Logo" style="width:200px;height:200px;">
+            <img class="responsive" src="dimensions.png" alt="Logo" style="width:200px;height:200px;">
             </a>
             <div class="contentContainer">
-              <a href="shrinkRateCalculator.html"><h4><b>Shrink Rate Calculator</b></h4>
+              <a href="shrinkRateCalculator.html"><h4><b>Dimensions Calculator</b></h4>
               <p>Calculate the dimensions you need to build your project to.</p>
             </a>
             </div>
@@ -88,9 +90,39 @@
               </a>
             </div>
         </article>
+        <article id="card">
+            <a href="shrinkTest.html">
+            <img class="responsive" src="shrink.png" alt="Logo" style="width:200px;height:200px;">
+            </a>
+            <div class="contentContainer">
+              <a href="shrinkTest.html"><h4><b>Shrink Rate Calculator</b></h4>
+              <p>Calculate the shrink rate of your clay</p>
+            </a>
+            </div>
+        </article>
+        <article id="card">
+            <a href="costToFire.html">
+            <img class="responsive" src="fire.png" alt="Logo" style="width:200px;height:200px;">
+            </a>
+            <div class="contentContainer">
+              <a href="costToFire.html"><h4><b>Cost to Fire a Kiln Calculator</b></h4>
+              <p>Calculate the cost to fire a kiln</p>
+            </a>
+            </div>
+        </article>
+        <article id="comingSoonCard">
+            <a>
+            <img class="responsive" src="priceSheet.png" alt="Logo" style="width:200px;height:200px;">
+            </a>
+            <div class="contentContainer">
+              <a><h4><b>CALCULATOR IN PROGRESS...</b></h4>
+              <p>Calculate a Price for Your Work</p>
+            </a>
+            </div>
+        </article>
     </section>
     <footer>
-        <p>product of <a id="space" href="http://www.claycatalog.com">Clay Catalog</a></p>
+       <!-- <p>product of <a id="space" href="http://www.claycatalog.com" style="color: #004225;">Clay Catalog</a></p> -->
        <!-- <p>support the page/me so i can keep building ceramic apps for you </p> -->
     </footer>
 </body>

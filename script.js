@@ -1,8 +1,7 @@
-/* ----- SHRINK RATE CALCULATOR ----- */
+/* ----- SHRINK RATE CALCULATORS ----- */
 
 document.addEventListener("DOMContentLoaded", function() {
-    var calculateButton = document.getElementById("calculateShrinkRate");
-    calculateButton.addEventListener("click", calculateShrink);
+    document.getElementById("calculateShrinkRate").addEventListener("click", calculateShrink);
 });
 
 function calculateShrink() {
@@ -21,43 +20,93 @@ function calculateShrink() {
     var initialHeight = preferredHeight / (1 - (shrinkRate / 100));
     var initialLength = preferredLength / (1 - (shrinkRate / 100));
     
-    document.getElementById("result").innerHTML = "Build to these dimensions before firing: <br>" +
+    document.getElementById("result").innerHTML =
                                                      "Width: " + initialWidth.toFixed(2) + " inches<br>" +
                                                      "Length: " + initialLength.toFixed(2) + " inches<br>" +
                                                      "Height: " + initialHeight.toFixed(2) + " inches<br>";
                                                      
 }
 
-/* ----- VOLUME CALCULATOR ----- */
-
 document.addEventListener("DOMContentLoaded", function() {
-    let calculateVolumeButton = document.getElementById("calculateRVolume");
-    calculateVolumeButton.addEventListener("click", calculateRectangleVol);
+    document.getElementById("calculateShrinkTest").addEventListener("click", calculateShrinkTest);
 });
+function calculateShrinkTest() {
+    var plasticClayStage = parseFloat(document.getElementById("plasticClayStage").value);
+    var glazewareClayStage = parseFloat(document.getElementById("glazewareClayStage").value);
+
+    if (isNaN(plasticClayStage) || isNaN(glazewareClayStage)) {
+        document.getElementById("shrinkTestResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+
+    var shrinkRateTest = ((plasticClayStage - glazewareClayStage) / plasticClayStage * 100);
+    document.getElementById("shrinkTestResult").innerHTML = shrinkRateTest.toFixed(2) + "%";
+}
+
+/* ----- VOLUME CALCULATOR ----- */
 document.addEventListener("DOMContentLoaded", function() {
-    let calculateVolumeButton = document.getElementById("calculateCVolume");
-    calculateVolumeButton.addEventListener("click", calculateCylinderVol);
+    document.getElementById("calculateRVolume").addEventListener("click", calculateRectangleVol);
+    document.getElementById("calculateCVolume").addEventListener("click", calculateCylinderVol);
+    document.getElementById("calculateFVolume").addEventListener("click", calculateFrustumVol);
+    document.getElementById("calculateHVolume").addEventListener("click", calculateHemisphereVol);
+    document.getElementById("calculateEVolume").addEventListener("click", calculateEllipsoidVol);
+    defaultShapeChoice();
+
+    document.getElementById('shapeChoiceRectangle').addEventListener('click', shapeChoiceRectangleFunction);
+    document.getElementById('shapeChoiceCylinder').addEventListener('click', shapeChoiceCylinderFunction);
+    document.getElementById('shapeChoiceFrustum').addEventListener('click', shapeChoiceFrustumFunction);
+    document.getElementById('shapeChoiceHemisphere').addEventListener('click', shapeChoiceHemisphereFunction);
+    document.getElementById('shapeChoiceEllipsoid').addEventListener('click', shapeChoiceEllipsoidFunction);
 });
 
 function defaultShapeChoice() {
     document.getElementById('cylinderVolumeCalculatorForm').style.display = 'none';
     document.getElementById('rectangleVolumeCalculatorForm').style.display = 'block';
-};
+    document.getElementById('frustumVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('hemisphereVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('ellipsoidVolumeCalculatorForm').style.display = 'none';
+}
 
 function shapeChoiceRectangleFunction() {
-    document.getElementById('shapeChoiceRectangle').addEventListener('click', () => {
-        document.getElementById('cylinderVolumeCalculatorForm').style.display = 'none';
-        document.getElementById('rectangleVolumeCalculatorForm').style.display = 'block';
-    });
-}
-function shapeChoiceCylinderFunction() {
-    document.getElementById('shapeChoiceCylinder').addEventListener('click', () => {
-        document.getElementById('rectangleVolumeCalculatorForm').style.display = 'none';
-        document.getElementById('cylinderVolumeCalculatorForm').style.display = 'block';
-    });
+    document.getElementById('cylinderVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('frustumVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('hemisphereVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('ellipsoidVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('rectangleVolumeCalculatorForm').style.display = 'block';
 }
 
-/* ----- RECTANGLE ----- */
+function shapeChoiceCylinderFunction() {
+    document.getElementById('rectangleVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('frustumVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('hemisphereVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('ellipsoidVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('cylinderVolumeCalculatorForm').style.display = 'block';
+}
+
+function shapeChoiceFrustumFunction() {
+    document.getElementById('rectangleVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('cylinderVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('hemisphereVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('ellipsoidVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('frustumVolumeCalculatorForm').style.display = 'block';
+}
+
+function shapeChoiceHemisphereFunction() {
+    document.getElementById('rectangleVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('cylinderVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('frustumVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('ellipsoidVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('hemisphereVolumeCalculatorForm').style.display = 'block';
+}
+function shapeChoiceEllipsoidFunction() {
+    document.getElementById('rectangleVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('cylinderVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('frustumVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('ellipsoidVolumeCalculatorForm').style.display = 'block';
+    document.getElementById('hemisphereVolumeCalculatorForm').style.display = 'none';
+}
+
+
 
 function calculateRectangleVol() {
     var rectangleWidth = parseFloat(document.getElementById("rectangleWidth").value);
@@ -74,8 +123,6 @@ function calculateRectangleVol() {
     document.getElementById("rectangleResult").innerHTML = "Volume in oz = " + rectangleVolume.toFixed(2);
 };
 
-/* ----- CYLINDER ----- */
-
 function calculateCylinderVol() {
     var cylinderDiameter = parseFloat(document.getElementById("cylinderDiameter").value);
     var cylinderHeight = parseFloat(document.getElementById("cylinderHeight").value);
@@ -90,19 +137,64 @@ function calculateCylinderVol() {
     document.getElementById("cylinderResult").innerHTML = "Volume in oz = " + cylinderVolume.toFixed(2);
 };
 
+function calculateFrustumVol() {
+    var frustumHeight = parseFloat(document.getElementById("frustumHeight").value);
+    var frustumBaseRadius = parseFloat(document.getElementById("frustumBaseRadius").value);
+    var frustumTopRadius = parseFloat(document.getElementById("frustumTopRadius").value);
+
+    if (isNaN(frustumHeight) || isNaN(frustumBaseRadius) || isNaN(frustumTopRadius)) {
+        document.getElementById("frustumResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+    var frustumVolume = ((1/3) * Math.PI * frustumHeight * (Math.pow(frustumTopRadius, 2) + frustumTopRadius * frustumBaseRadius + Math.pow(frustumBaseRadius, 2)) * 0.554113);
+
+    document.getElementById("frustumResult").innerHTML = "Volume in oz = " + frustumVolume.toFixed(2);
+};
+
+function calculateHemisphereVol() {
+    var hemisphereRadius = parseFloat(document.getElementById("hemisphereRadius").value);
+
+    if (isNaN(hemisphereRadius)) {
+        document.getElementById("hemisphereResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+    
+    var hemisphereVolume = (2/3 * Math.PI * Math.pow(hemisphereRadius, 3) * 0.554113);
+
+    document.getElementById("hemisphereResult").innerHTML = "Volume in oz = " + hemisphereVolume.toFixed(2);
+
+}
+
+function calculateEllipsoidVol() {
+    var ellipsoidHeightRadius = parseFloat(document.getElementById("ellipsoidHeightRadius").value);
+    var ellipsoidLengthRadius = parseFloat(document.getElementById("ellipsoidLengthRadius").value);
+    var ellipsoidWidthRadius = parseFloat(document.getElementById("ellipsoidWidthRadius").value);
+
+    if (isNaN(ellipsoidHeightRadius) || isNaN(ellipsoidLengthRadius) || isNaN(ellipsoidWidthRadius)) {
+        document.getElementById("ellipsoidResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+
+    var ellipsoidVolume = ((4/3 * Math.PI * ellipsoidHeightRadius * ellipsoidLengthRadius * ellipsoidWidthRadius) * 0.554113);
+    var halfEllipsoidVolume = ((4/3 * Math.PI * ellipsoidHeightRadius * ellipsoidLengthRadius * ellipsoidWidthRadius) * 0.554113/2);
+
+
+    document.getElementById("ellipsoidResult").innerHTML = "Full ellipsoid volume in oz = " + ellipsoidVolume.toFixed(2) +
+                                                            " <br> Half ellipsoid volume in oz = " + halfEllipsoidVolume.toFixed(2);
+
+};
+
 /* ----- FIRING FEE CALCULATOR ----- */
 
 document.addEventListener("DOMContentLoaded", function() {
-    let calculateVolumeButton = document.getElementById("calculateFeeByWeight");
-    calculateVolumeButton.addEventListener("click", calculateWeightFee);
-});
-document.addEventListener("DOMContentLoaded", function() {
-    let calculateVolumeButton = document.getElementById("calculateFeeByCubicInch");
-    calculateVolumeButton.addEventListener("click", calculateCubicInchFee);
-});
-document.addEventListener("DOMContentLoaded", function() {
-    let calculateVolumeButton = document.getElementById("calculateFeeBySquareInch");
-    calculateVolumeButton.addEventListener("click", calculateSquareInchFee);
+    document.getElementById("calculateFeeByWeight").addEventListener("click", calculateWeightFee);
+    document.getElementById("calculateFeeByCubicInch").addEventListener("click", calculateCubicInchFee);
+    document.getElementById("calculateFeeBySquareInch").addEventListener("click", calculateSquareInchFee);
+    defaultShapeChoice();
+
+    document.getElementById('studioPrefersWeight').addEventListener('click', studioPreferenceWeightFunction);
+    document.getElementById('studioPrefersCubicInch').addEventListener('click', studioPreferenceCubicInchFunction);
+    document.getElementById('studioPrefersSquareInch').addEventListener('click', studioPreferenceSquareInchFunction);
 });
 
 function defaultStudioCalculation() {
@@ -112,25 +204,19 @@ function defaultStudioCalculation() {
 };
 
 function studioPreferenceWeightFunction() {
-    document.getElementById('studioPrefersWeight').addEventListener('click', () => {
         document.getElementById('cubicInchForm').style.display = 'none';
         document.getElementById('squareInchForm').style.display = 'none';
         document.getElementById('weightForm').style.display = 'block';
-    });
 }
 function studioPreferenceCubicInchFunction() {
-    document.getElementById('studioPrefersCubicInch').addEventListener('click', () => {
         document.getElementById('weightForm').style.display = 'none';
         document.getElementById('squareInchForm').style.display = 'none';
         document.getElementById('cubicInchForm').style.display = 'block';
-    });
 }
 function studioPreferenceSquareInchFunction() {
-    document.getElementById('studioPrefersSquareInch').addEventListener('click', () => {
         document.getElementById('weightForm').style.display = 'none';
         document.getElementById('cubicInchForm').style.display = 'none';
         document.getElementById('squareInchForm').style.display = 'block';
-    });
 }
 
 /* ----- WEIGHT ----- */
@@ -148,7 +234,7 @@ function calculateWeightFee() {
     var ouncesToPounds = (ounces * 0.0625)
     var firingCost = ((pounds + ouncesToPounds) * feePerPound + fixedCosts);
 
-    document.getElementById("feeByWeightResult").innerHTML = "Cost to fire = $" + firingCost.toFixed(2);
+    document.getElementById("feeByWeightResult").innerHTML = "$" + firingCost.toFixed(2);
 };
 
 /* ----- CUBIC INCH ----- */
@@ -187,7 +273,24 @@ function calculateSquareInchFee() {
     document.getElementById("squareInchResult").innerHTML = "Cost to fire = $" + firingCostSI.toFixed(2);
 };
 
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("calculateCostToFire").addEventListener("click", calculateCostToFire);
+});
+function calculateCostToFire() {
+    var kilnWatts = parseFloat(document.getElementById("kilnWatts").value);
+    var costPerKilowattHour = parseFloat(document.getElementById("costPerKilowattHour").value);
+    var adjustmentFactor = parseFloat(document.getElementById("adjustmentFactor").value);
+    var hoursOfFiring = parseFloat(document.getElementById("hoursOfFiring").value);
 
+
+    if (isNaN(kilnWatts) || isNaN(costPerKilowattHour) || isNaN(adjustmentFactor) || isNaN(hoursOfFiring)) {
+        document.getElementById("costToFireResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+
+    var costToFire = ((kilnWatts / 1000) * costPerKilowattHour * adjustmentFactor * hoursOfFiring);
+    document.getElementById("costToFireResult").innerHTML = "Your cost to fire is $" + costToFire.toFixed(2);
+}
 
 function menuFunction() {
     var x = document.getElementById("myLinks");

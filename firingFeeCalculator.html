@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
         <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4NHR8NCB0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4NHR8NCB0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-M4NHR8NCB0');
-</script>
+    gtag('config', 'G-M4NHR8NCB0');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="ms-icon-310x310.png" type="image/icon type">
@@ -35,25 +35,28 @@
                 <div id="myLinks" class="dropdown-content">
                     <!--<a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a> -->
                     <a id="volumeLink" href="volumeCalculator.html">Calculate Volume</a>
-                    <a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Shrink</a>
-                    <a id="fireFeeLink" class="active" href="firingFeeCalculator.html">Calculate Fire Fee</a>
+                    <a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Size to Build</a>
+                    <a id="fireFeeLink" class="active"  href="firingFeeCalculator.html">Calculate Fire Fee</a>
+                    <a id="shrinkTestLink" href="shrinkTest.html">Calculate Shrink Rate</a>
+                    <a id="costToFireLink" href="costToFire.html">Calculate Cost to Fire a Kiln</a>
                 </div>
             </div>
             </nav>
         </header>
-    <div id="calculatorPage">
-    <div id="formContainer">
-    <div id="break"></div>
+    <div id="calculatorPageGrid">
+       <section id="calculatorHeader">
+        <h1 id="calculatorTitle">Firing Fee Calculator</h1>
+        <!-- <p id="calculatorAbout">kjhfkh</p> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+       </section> 
 
-    <h1 id="calculatorTitle">Firing Fee Calculator</h1>
-    <!-- <p id="calculatorAbout">kjhfkh</p> -->
-
-    <h2>Studio Calculation Preference</h2>
-    <div id="buttonContainer" class="responsive">
-    <button class="responsive" id="studioPrefersWeight" autofocus onclick="studioPreferenceWeightFunction()">Weight</button>
-    <button class="responsive" id="studioPrefersCubicInch" onclick="studioPreferenceCubicInchFunction()">Cubic Inch</button>
-    <button class="responsive" id="studioPrefersSquareInch" onclick="studioPreferenceSquareInchFunction()">Square Inch</button>
-    </div>
+    <section id="formContainerGrid">
+        <div id="break"></div>
+        <div id="buttonContainer" class="responsive">
+        <button class="responsive" id="studioPrefersWeight" autofocus onclick="studioPreferenceWeightFunction()">Weight</button>
+        <button class="responsive" id="studioPrefersCubicInch" onclick="studioPreferenceCubicInchFunction()">Cubic Inch</button>
+        <button class="responsive" id="studioPrefersSquareInch" onclick="studioPreferenceSquareInchFunction()">Square Inch</button>
+        </div>
     <h2 class="responsive">Input</h2>
         <form id="weightForm" class="responsive">
             <div id="poundsInput">
@@ -124,23 +127,22 @@
             <button class="responsive" type="button" id="calculateFeeBySquareInch">submit</button>
         </form>
         <div id="break"></div>
-        </div>
-        <section id="calculatorVisual">
-            <div id="row">
-            <img id="visualBlock" src="fire.png" class="responsive">
-            <div id="resultBlock">
+    </section>
+
+    <section id="calculatorVisualize">
+            <img id="visualBlock" src="fire.png" class="responsive" style="max-width: 250px; max-height: 250px;">
+    </section>
+    <section id="results" class="responsive">
+            <p>your cost to fire:</p>
             <div class="result" id="feeByWeightResult"></div>
             <div class="result" id="cubicInchResult"></div>
             <div class="result" id="squareInchResult"></div>
-            </div>
-            </div>
-        </section>
+    </section>
         
-        </div>
     </div>
     </div>
 </body>
 <footer>
-    <p>product of <a id="space" href="http://www.claycatalog.com">Clay Catalog.</a></p>
+    <!--<p>product of <a id="space" href="http://www.claycatalog.com">Clay Catalog.</a></p>-->
 </footer>
 </html>
