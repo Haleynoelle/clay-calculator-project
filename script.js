@@ -65,6 +65,11 @@ function defaultShapeChoice() {
     document.getElementById('frustumVolumeCalculatorForm').style.display = 'none';
     document.getElementById('hemisphereVolumeCalculatorForm').style.display = 'none';
     document.getElementById('ellipsoidVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('rectangleVolume').style.display = 'block';
+    document.getElementById('cylinderVolume').style.display = 'none';
+    document.getElementById('ellipsoidVolume').style.display = 'none';
+    document.getElementById('frustumVolume').style.display = 'none';
+    document.getElementById('hemisphereVolume').style.display = 'none';
 }
 
 function shapeChoiceRectangleFunction() {
@@ -73,6 +78,11 @@ function shapeChoiceRectangleFunction() {
     document.getElementById('hemisphereVolumeCalculatorForm').style.display = 'none';
     document.getElementById('ellipsoidVolumeCalculatorForm').style.display = 'none';
     document.getElementById('rectangleVolumeCalculatorForm').style.display = 'block';
+    document.getElementById('rectangleVolume').style.display = 'block';
+    document.getElementById('cylinderVolume').style.display = 'none';
+    document.getElementById('ellipsoidVolume').style.display = 'none';
+    document.getElementById('frustumVolume').style.display = 'none';
+    document.getElementById('hemisphereVolume').style.display = 'none';
 }
 
 function shapeChoiceCylinderFunction() {
@@ -81,6 +91,11 @@ function shapeChoiceCylinderFunction() {
     document.getElementById('hemisphereVolumeCalculatorForm').style.display = 'none';
     document.getElementById('ellipsoidVolumeCalculatorForm').style.display = 'none';
     document.getElementById('cylinderVolumeCalculatorForm').style.display = 'block';
+    document.getElementById('cylinderVolume').style.display = 'block';
+    document.getElementById('ellipsoidVolume').style.display = 'none';
+    document.getElementById('frustumVolume').style.display = 'none';
+    document.getElementById('rectangleVolume').style.display = 'none';
+    document.getElementById('hemisphereVolume').style.display = 'none';
 }
 
 function shapeChoiceFrustumFunction() {
@@ -89,6 +104,11 @@ function shapeChoiceFrustumFunction() {
     document.getElementById('hemisphereVolumeCalculatorForm').style.display = 'none';
     document.getElementById('ellipsoidVolumeCalculatorForm').style.display = 'none';
     document.getElementById('frustumVolumeCalculatorForm').style.display = 'block';
+    document.getElementById('frustumVolume').style.display = 'block';
+    document.getElementById('ellipsoidVolume').style.display = 'none';
+    document.getElementById('cylinderVolume').style.display = 'none';
+    document.getElementById('rectangleVolume').style.display = 'none';
+    document.getElementById('hemisphereVolume').style.display = 'none';
 }
 
 function shapeChoiceHemisphereFunction() {
@@ -97,6 +117,12 @@ function shapeChoiceHemisphereFunction() {
     document.getElementById('frustumVolumeCalculatorForm').style.display = 'none';
     document.getElementById('ellipsoidVolumeCalculatorForm').style.display = 'none';
     document.getElementById('hemisphereVolumeCalculatorForm').style.display = 'block';
+    document.getElementById('hemisphereVolume').style.display = 'block';
+    document.getElementById('frustumVolume').style.display = 'none';
+    document.getElementById('ellipsoidVolume').style.display = 'none';
+    document.getElementById('cylinderVolume').style.display = 'none';
+    document.getElementById('rectangleVolume').style.display = 'none';
+
 }
 function shapeChoiceEllipsoidFunction() {
     document.getElementById('rectangleVolumeCalculatorForm').style.display = 'none';
@@ -104,6 +130,11 @@ function shapeChoiceEllipsoidFunction() {
     document.getElementById('frustumVolumeCalculatorForm').style.display = 'none';
     document.getElementById('ellipsoidVolumeCalculatorForm').style.display = 'block';
     document.getElementById('hemisphereVolumeCalculatorForm').style.display = 'none';
+    document.getElementById('ellipsoidVolume').style.display = 'block';
+    document.getElementById('frustumVolume').style.display = 'none';
+    document.getElementById('cylinderVolume').style.display = 'none';
+    document.getElementById('rectangleVolume').style.display = 'none';
+    document.getElementById('hemisphereVolume').style.display = 'none';
 }
 
 
