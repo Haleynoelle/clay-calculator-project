@@ -340,3 +340,37 @@ document.addEventListener("click", function(event) {
     }
 });
 
+/* SHARE FUNCTION */
+document.addEventListener("DOMContentLoaded", function() {
+    const viewBtn = document.querySelector(".view-modal"),
+          popup = document.querySelector(".popup"),
+          close = popup.querySelector(".close"),
+          field = popup.querySelector(".field"),
+          input = field.querySelector("input"),
+          copy = field.querySelector("button");
+
+    const openModal = () => {
+        popup.classList.add("show");
+    };
+
+    const closeModal = () => {
+        popup.classList.remove("show");
+    };
+
+    viewBtn.onclick = openModal;
+    close.onclick = closeModal;
+
+    copy.onclick = async () => {
+        try {
+            await navigator.clipboard.writeText(input.value); // Copy the input value to the clipboard
+            field.classList.add("active");
+            copy.innerText = "Copied";
+            setTimeout(() => {
+                field.classList.remove("active");
+                copy.innerText = "Copy";
+            }, 3000);
+        } catch (err) {
+            console.error('Failed to copy text: ', err);
+        }
+    };
+});
