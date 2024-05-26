@@ -20,6 +20,9 @@ body {
 .icon {
     color: #FD5523;
 }
+.icon:focus {
+    color: #1f1c1c;
+}
 #navTitle {
     text-decoration: none;
 }
@@ -169,7 +172,7 @@ footer {
 #heroSection2 {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     width: auto;
     height: 300px;
     padding: 10%;
@@ -507,7 +510,7 @@ img#visualBlock {
   }
   .view-modal:hover {
     color: #Faf8f6;
-    background-color: #08563b;
+    background-color: #334eac;
   }
   .popup {
     position: absolute;
@@ -519,9 +522,9 @@ img#visualBlock {
 
 .view-modal {
     position: relative;
-    color: #08563b;
+    color: #334eac;
     background-color: #Faf8f6;
-    border-color: #08563b;
+    border-color: #334eac;
     font-weight: bold;
     font-size: 18px;
     padding: 5px 10px;
