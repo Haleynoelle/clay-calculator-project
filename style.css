@@ -63,12 +63,13 @@ body {
     position: absolute;
     border: solid black;
     border-top: none;
-    background-color: rgba(249, 249, 249, .9);
-    backdrop-filter: blur(15px);
     min-width: 200px;
     z-index: 1;
     left: -209px;
     top: 42px;
+    background-color: rgba(249, 249, 249, .6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
 }
 
 .dropdown-content a {
