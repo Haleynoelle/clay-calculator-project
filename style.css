@@ -15,6 +15,7 @@ body {
     padding-right: 1%;
     height: auto;
     width: auto;
+    z-index: 100;
 }
 .icon {
     color: #FD5523;
@@ -62,7 +63,9 @@ body {
     display: block;
     position: absolute;
     border: solid black;
+    border-width: 1.5px;
     border-top: none;
+    border-radius: 0px 0px 6px 6px;
     min-width: 200px;
     z-index: 1;
     left: -209px;
@@ -116,8 +119,8 @@ li a {
     text-decoration: none;
 }
 #fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active {
-    color: #FD5523;
-    background-color: rgba(249, 249, 249, .8);
+    color: #Faf8f6;
+    background-color: #FD5523;
     backdrop-filter: blur(5px);
 }
 #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover {
@@ -299,7 +302,7 @@ footer {
 #weightForm, #cubicInchForm, #squareInchForm, #volumeForm {
     align-items: center;
     justify-content: center;
-    max-width: 500px;
+    max-width: 400px;
     height: auto;
 }
 button {
@@ -329,16 +332,19 @@ label {
     margin-bottom: 30px;
     margin-right: 20px;
     color: #1f1c1c;
+    padding-right: 100px;
 }
 input {
-    width: 20vw;
+    width: 25vw;
     margin-bottom: 10px;
-    margin-right: 20px;
+    margin-right: 30px;
     color: #1f1c1c;
     border-color:#1f1c1c;
     background-color: #Faf8f6;
     border-radius: 6px;
     border-width: 1px;
+    font-family: "Roboto Mono", monospace;
+    padding: 10px;
 }
 .result {
     display: flex;
@@ -518,7 +524,7 @@ img#visualBlock {
     border-color: #08563b;
     font-weight: bold;
     font-size: 18px;
-    padding: 10px 25px;
+    padding: 5px 10px;
     margin: 0px;
     cursor: pointer;
     transition: background 0.1s linear, border-color 0.1s linear, color 0.1s linear;
@@ -529,7 +535,8 @@ img#visualBlock {
     padding: 25px;
     border-radius: 15px;
     top: 10%;
-    max-width: 380px;
+    max-width: 300px;
+    height: 250px;
     width: 100%;
     opacity: 0;
     pointer-events: none;
@@ -545,6 +552,7 @@ img#visualBlock {
     pointer-events: auto;
     transform: translateY(-90%) scale(1);
     width: 40vw;
+    z-index: 101;
   }
   .popup :is(header, .icons, .field){
     display: flex;

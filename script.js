@@ -375,4 +375,9 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('Failed to copy text: ', err);
         }
     };
+    document.addEventListener("click", function(event) {
+        if (!popup.contains(event.target) && !viewBtn.contains(event.target)) {
+            closeModal();
+        }
+    });
 });
