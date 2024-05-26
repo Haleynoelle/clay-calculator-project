@@ -63,7 +63,8 @@ body {
     position: absolute;
     border: solid black;
     border-top: none;
-    backdrop-filter: blur(25px);
+    background-color: rgba(249, 249, 249, .6);
+    backdrop-filter: blur(20px);
     min-width: 200px;
     z-index: 1;
     left: -209px;
