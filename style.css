@@ -335,12 +335,12 @@ label {
     margin-bottom: 30px;
     margin-right: 20px;
     color: #1f1c1c;
-    padding-right: 100px;
+    padding-right: 125px;
 }
 input {
-    width: 25vw;
+    width: 30vw;
     margin-bottom: 10px;
-    margin-right: 30px;
+    margin-right: 50px;
     color: #1f1c1c;
     border-color:#1f1c1c;
     background-color: #Faf8f6;
@@ -503,7 +503,7 @@ img#visualBlock {
 
 ::selection{
     color: #fff;
-    background: #7d2ae8;
+    background: #334eac;
   }
   .view-modal{
     position: relative;
@@ -657,7 +657,7 @@ img#visualBlock {
     border: 1px solid #757171;
   }
   .field.active{
-    border-color: #08563b;
+    border-color: #334eac;
   }
   .field i{
     width: 50px;
@@ -665,7 +665,7 @@ img#visualBlock {
     text-align: center;
   }
   .field.active i{
-    color: #08563b;
+    color: #334eac;
   }
   .field input{
     width: 100%;
@@ -681,8 +681,8 @@ img#visualBlock {
     color: #fff;
     padding: 10px;
     margin: 0px;
-    background: #08563b;
+    background: #334eac;
   }
   .field button:hover{
-    background: #08563b;
+    background: #334eac;
   }
