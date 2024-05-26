@@ -324,21 +324,23 @@ function calculateCostToFire() {
 }
 
 function menuFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+    var links = document.getElementById("myLinks");
+    if (links.style.display === "block") {
+        links.style.display = "none";
     } else {
-      x.style.display = "block";
+        links.style.display = "block";
     }
 }
 
 document.addEventListener("click", function(event) {
-    var dropdown = document.getElementById("myDropdown");
-    var dropdownButton = document.getElementById("dropdownButton");
-    if (!event.target.matches('.dropdown-content') && !event.target.matches('#dropdownButton')) {
-        dropdown.style.display = 'none';
+    var dropdown = document.getElementById("myLinks");
+    var button = document.querySelector(".icon");
+
+    if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+        dropdown.style.display = "none";
     }
 });
+
 
 /* SHARE FUNCTION */
 document.addEventListener("DOMContentLoaded", function() {
