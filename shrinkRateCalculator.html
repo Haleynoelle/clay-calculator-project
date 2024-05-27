@@ -112,8 +112,12 @@
                 <label for="shrinkRate">shrink rate %</label><br>
                 <input type="number" id="shrinkRate" name="shrinkRate"><br>
             </div>
-            <button class="responsive" type="button" id="calculateShrinkRate">submit</button>
+            <div id="calculatorButtons" class="responsive">
+                <button class="responsive" type="button" id="calculateShrinkRate">submit</button>
+                <button class="responsive" type="button" id="clearCalculatorButton">CLEAR</button>
+            </div>
         </form>
+
         <div id="break"></div>
     </section>
     <section id="calculatorVisualize">
@@ -121,7 +125,7 @@
     </section>
     <section id="results" class="responsive">
         <p>you should build your project to the dimensions below:</p>
-        <div class="result" id="result"></div>
+        <div class="result" id="dimensionResult"></div>
     </section>
 </div>
 </div>

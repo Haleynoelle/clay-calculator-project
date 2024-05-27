@@ -16,19 +16,22 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
 
-            function clearInputs() {
-                const inputs = document.querySelectorAll('input[type="number"]');
-                inputs.forEach(input => {
-                    input.value = "";
-                });
-                const resultDiv = document.getElementById("costToFireResult");
-                if (resultDiv) {
-                    resultDiv.innerHTML = ""; // Set innerHTML to empty string
-                }
-            }
-        
-            document.getElementById("clearCalculatorButton").addEventListener("click", clearInputs);
-        });
+        function clearInputs() {
+            const inputs = document.querySelectorAll('input[type="number"]');
+            inputs.forEach(input => {
+                input.value = ""; 
+            });
+            
+            // Clear the content of elements with the specified class name
+            const resultDivs = document.querySelectorAll('.result');
+            resultDivs.forEach(div => {
+                div.innerHTML = "";
+            });
+        }
+    
+        document.getElementById("clearCalculatorButton").addEventListener("click", clearInputs);
+
+});
 
 
 
@@ -56,7 +59,7 @@ function calculateShrink() {
     var shrinkRate = parseFloat(document.getElementById("shrinkRate").value);
     
     if (isNaN(preferredWidth) || isNaN(preferredHeight) || isNaN(preferredLength) || isNaN(shrinkRate)) {
-        document.getElementById("result").innerHTML = "Please enter valid numbers for all fields.";
+        document.getElementById("dimensionResult").innerHTML = "Please enter valid numbers for all fields.";
         return;
     }
     
@@ -65,7 +68,7 @@ function calculateShrink() {
     var initialHeight = preferredHeight / (1 - (shrinkRate / 100));
     var initialLength = preferredLength / (1 - (shrinkRate / 100));
     
-    document.getElementById("result").innerHTML =
+    document.getElementById("dimensionResult").innerHTML =
                                                      "Width: " + initialWidth.toFixed(2) + " inches<br>" +
                                                      "Length: " + initialLength.toFixed(2) + " inches<br>" +
                                                      "Height: " + initialHeight.toFixed(2) + " inches<br>";
@@ -106,13 +109,34 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("calculateHVolume").addEventListener("click", calculateHemisphereVol);
     document.getElementById("calculateEVolume").addEventListener("click", calculateEllipsoidVol);
     defaultShapeChoice();
+    
 
-    const inputs = document.querySelectorAll('#cylinderVolumeCalculatorForm input, #rectangleVolumeCalculatorForm input, #frustumVolumeCalculatorForm input, #hemisphereVolumeCalculatorForm input, #ellipsoidVolumeCalculatorForm');
+    function clearInputs() {
+        const inputs = document.querySelectorAll('input[type="number"]');
+        inputs.forEach(input => {
+            input.value = ""; // Set value to empty string
+        });
+        
+        // Clear the content of elements with the specified class name
+        const resultDivs = document.querySelectorAll('.result');
+        resultDivs.forEach(div => {
+            div.innerHTML = ""; // Set innerHTML to empty string
+        });
+    }
+
+    // Event listener for the clear buttons
+    document.getElementById("clearRectangleCalculatorButton").addEventListener("click", clearInputs);
+    document.getElementById("clearCylinderCalculatorButton").addEventListener("click", clearInputs);
+    document.getElementById("clearFrustumCalculatorButton").addEventListener("click", clearInputs);
+    document.getElementById("clearHemisphereCalculatorButton").addEventListener("click", clearInputs);
+    document.getElementById("clearEllipsoidCalculatorButton").addEventListener("click", clearInputs);
+
+    const inputs = document.querySelectorAll('#cylinderVolumeCalculatorForm input, #rectangleVolumeCalculatorForm input, #frustumVolumeCalculatorForm input, #hemisphereVolumeCalculatorForm input, #ellipsoidVolumeCalculatorForm input');
 
     inputs.forEach(input => {
         input.addEventListener('keydown', function(event) {
             if (event.key === 'Enter') {
-                event.preventDefault(); // Prevent the default action
+                event.preventDefault(); 
                 switch (input.form.id) {
                     case 'rectangleVolumeCalculatorForm':
                         calculateRectangleVol();
@@ -307,6 +331,22 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("calculateFeeBySquareInch").addEventListener("click", calculateSquareInchFee);
     defaultStudioCalculation();
 
+    function clearInputs() {
+        const inputs = document.querySelectorAll('input[type="number"]');
+        inputs.forEach(input => {
+            input.value = ""; // Set value to empty string
+        });
+        
+        const resultDivs = document.querySelectorAll('.result');
+        resultDivs.forEach(div => {
+            div.innerHTML = "";
+        });
+    }
+    
+    document.getElementById("clearWeightCalculatorButton").addEventListener("click", clearInputs);
+    document.getElementById("clearSquareInchCalculatorButton").addEventListener("click", clearInputs);
+    document.getElementById("clearCubicInchCalculatorButton").addEventListener("click", clearInputs);
+
     const inputs = document.querySelectorAll('#cubicInchForm input, #squareInchForm input, #weightForm input');
 
     inputs.forEach(input => {
@@ -368,7 +408,7 @@ function calculateWeightFee() {
     var feePerPound = parseFloat(document.getElementById("feePerPound").value);
     var fixedCosts = parseFloat(document.getElementById("fixedCosts").value);
 
-    if (isNaN(pounds) || isNaN(ounces) || isNaN(feePerPound)) {
+    if (isNaN(pounds) || isNaN(ounces) || isNaN(feePerPound) || isNaN(fixedCosts)) {
         document.getElementById("feeByWeightResult").innerHTML = "Please enter valid numbers for all fields.";
         return;
     }
