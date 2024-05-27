@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-        // Restrict input to numbers only
         const numberInputs = document.querySelectorAll('input[type="number"]');
         numberInputs.forEach(input => {
             input.addEventListener('input', function() {
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
             input.addEventListener('keydown', function(event) {
                 if (event.key === 'Enter') {
                     event.preventDefault();
-                    // Find the form this input belongs to and submit it
                     const form = input.form;
                     if (form) {
                         form.dispatchEvent(new Event('submit', { cancelable: true }));
@@ -17,7 +15,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
         });
-    });
+
+            function clearInputs() {
+                const inputs = document.querySelectorAll('input[type="number"]');
+                inputs.forEach(input => {
+                    input.value = "";
+                });
+                const resultDiv = document.getElementById("costToFireResult");
+                if (resultDiv) {
+                    resultDiv.innerHTML = ""; // Set innerHTML to empty string
+                }
+            }
+        
+            document.getElementById("clearCalculatorButton").addEventListener("click", clearInputs);
+        });
+
 
 
 /* ----- SHRINK RATE CALCULATORS ----- */

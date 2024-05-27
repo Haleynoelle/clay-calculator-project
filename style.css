@@ -308,16 +308,33 @@ footer {
     max-width: 400px;
     height: auto;
 }
+#calculatorButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+#clearCalculatorButton {
+    justify-self: end;
+    background-color: #Faf8f6;
+    color: #FD5523;
+    font-weight: 600;
+    margin-right: 20px;
+}
+#clearCalculatorButton:hover {
+    background-color: #FD5523;
+    color: #Faf8f6;
+}
 button {
     font-family: "Roboto Mono", monospace;
     background-color: #Faf8f6;
-    font-weight: 300;
+    font-weight: 400;
     font-size: small;
-    border: solid;
+    border: solid #FD5523;
     border-radius: 4px;
-    color: #1f1c1c;
-    border-color: solid #Faf8f6;
+    color: #FD5523;
     margin-bottom: 10px;
+    width: fit-content;
 }
 button:focus {
     color:#Faf8f6;
