@@ -1,7 +1,40 @@
+document.addEventListener("DOMContentLoaded", function() {
+    
+        // Restrict input to numbers only
+        const numberInputs = document.querySelectorAll('input[type="number"]');
+        numberInputs.forEach(input => {
+            input.addEventListener('input', function() {
+                this.value = this.value.replace(/[^0-9.]/g, '');
+            });
+            input.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    // Find the form this input belongs to and submit it
+                    const form = input.form;
+                    if (form) {
+                        form.dispatchEvent(new Event('submit', { cancelable: true }));
+                    }
+                }
+            });
+        });
+    });
+
+
 /* ----- SHRINK RATE CALCULATORS ----- */
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("calculateShrinkRate").addEventListener("click", calculateShrink);
+
+    const inputs = document.querySelectorAll('#clayShrinkRateForm input, #shrinkRateForm input');
+
+    inputs.forEach(input => {
+        input.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent the default action
+                calculateShrink(); // Call the calculateShrink function
+            }
+        });
+    });
 });
 
 function calculateShrink() {
@@ -29,6 +62,16 @@ function calculateShrink() {
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("calculateShrinkTest").addEventListener("click", calculateShrinkTest);
+    const inputs = document.querySelectorAll('#clayShrinkRateTestForm input');
+
+    inputs.forEach(input => {
+        input.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent the default action
+                calculateShrinkTest(); // Call the calculateShrink function
+            }
+        });
+    });
 });
 function calculateShrinkTest() {
     var plasticClayStage = parseFloat(document.getElementById("plasticClayStage").value);
@@ -51,6 +94,35 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("calculateHVolume").addEventListener("click", calculateHemisphereVol);
     document.getElementById("calculateEVolume").addEventListener("click", calculateEllipsoidVol);
     defaultShapeChoice();
+
+    const inputs = document.querySelectorAll('#cylinderVolumeCalculatorForm input, #rectangleVolumeCalculatorForm input, #frustumVolumeCalculatorForm input, #hemisphereVolumeCalculatorForm input, #ellipsoidVolumeCalculatorForm');
+
+    inputs.forEach(input => {
+        input.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent the default action
+                switch (input.form.id) {
+                    case 'rectangleVolumeCalculatorForm':
+                        calculateRectangleVol();
+                        break;
+                    case 'cylinderVolumeCalculatorForm':
+                        calculateCylinderVol();
+                        break;
+                    case 'frustumVolumeCalculatorForm':
+                        calculateFrustumVol();
+                        break;
+                    case 'hemisphereVolumeCalculatorForm':
+                        calculateHemisphereVol();
+                        break;
+                    case 'ellipsoidVolumeCalculatorForm':
+                        calculateEllipsoidVol();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+    });
 
     document.getElementById('shapeChoiceRectangle').addEventListener('click', shapeChoiceRectangleFunction);
     document.getElementById('shapeChoiceCylinder').addEventListener('click', shapeChoiceCylinderFunction);
@@ -221,7 +293,32 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("calculateFeeByWeight").addEventListener("click", calculateWeightFee);
     document.getElementById("calculateFeeByCubicInch").addEventListener("click", calculateCubicInchFee);
     document.getElementById("calculateFeeBySquareInch").addEventListener("click", calculateSquareInchFee);
-    defaultShapeChoice();
+    defaultStudioCalculation();
+
+    const inputs = document.querySelectorAll('#cubicInchForm input, #squareInchForm input, #weightForm input');
+
+    inputs.forEach(input => {
+        input.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent the default action
+
+                // Identifying the form and calling the appropriate function
+                switch (input.form.id) {
+                    case 'cubicInchForm':
+                        calculateCubicInchFee();
+                        break;
+                    case 'squareInchForm':
+                        calculateSquareInchFee();
+                        break;
+                    case 'weightForm':
+                        calculateWeightFee();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+    });
 
     document.getElementById('studioPrefersWeight').addEventListener('click', studioPreferenceWeightFunction);
     document.getElementById('studioPrefersCubicInch').addEventListener('click', studioPreferenceCubicInchFunction);
@@ -232,22 +329,24 @@ function defaultStudioCalculation() {
     document.getElementById('cubicInchForm').style.display = 'none';
     document.getElementById('squareInchForm').style.display = 'none';
     document.getElementById('weightForm').style.display = 'block';
-};
+}
 
 function studioPreferenceWeightFunction() {
-        document.getElementById('cubicInchForm').style.display = 'none';
-        document.getElementById('squareInchForm').style.display = 'none';
-        document.getElementById('weightForm').style.display = 'block';
+    document.getElementById('cubicInchForm').style.display = 'none';
+    document.getElementById('squareInchForm').style.display = 'none';
+    document.getElementById('weightForm').style.display = 'block';
 }
+
 function studioPreferenceCubicInchFunction() {
-        document.getElementById('weightForm').style.display = 'none';
-        document.getElementById('squareInchForm').style.display = 'none';
-        document.getElementById('cubicInchForm').style.display = 'block';
+    document.getElementById('weightForm').style.display = 'none';
+    document.getElementById('squareInchForm').style.display = 'none';
+    document.getElementById('cubicInchForm').style.display = 'block';
 }
+
 function studioPreferenceSquareInchFunction() {
-        document.getElementById('weightForm').style.display = 'none';
-        document.getElementById('cubicInchForm').style.display = 'none';
-        document.getElementById('squareInchForm').style.display = 'block';
+    document.getElementById('weightForm').style.display = 'none';
+    document.getElementById('cubicInchForm').style.display = 'none';
+    document.getElementById('squareInchForm').style.display = 'block';
 }
 
 /* ----- WEIGHT ----- */
@@ -262,11 +361,11 @@ function calculateWeightFee() {
         return;
     }
 
-    var ouncesToPounds = (ounces * 0.0625)
+    var ouncesToPounds = (ounces * 0.0625);
     var firingCost = ((pounds + ouncesToPounds) * feePerPound + fixedCosts);
 
     document.getElementById("feeByWeightResult").innerHTML = "$" + firingCost.toFixed(2);
-};
+}
 
 /* ----- CUBIC INCH ----- */
 function calculateCubicInchFee() {
@@ -276,7 +375,6 @@ function calculateCubicInchFee() {
     var feeSpace = parseFloat(document.getElementById("feeSpace").value);
     var fireFixedCost = parseFloat(document.getElementById("fireFixedCost").value);
 
-
     if (isNaN(feeHeight) || isNaN(feeWidth) || isNaN(feeLength) || isNaN(feeSpace) || isNaN(fireFixedCost)) {
         document.getElementById("cubicInchResult").innerHTML = "Please enter valid numbers for all fields.";
         return;
@@ -285,14 +383,14 @@ function calculateCubicInchFee() {
     var firingCostCI = ((feeHeight * feeWidth * feeLength) * feeSpace + fireFixedCost);
 
     document.getElementById("cubicInchResult").innerHTML = "Cost to fire = $" + firingCostCI.toFixed(2);
-};
+}
+
 /* ----- SQUARE INCH ----- */
 function calculateSquareInchFee() {
     var siWidth = parseFloat(document.getElementById("siWidth").value);
     var siLength = parseFloat(document.getElementById("siLength").value);
     var siSpace = parseFloat(document.getElementById("siSpace").value);
     var siFixedCost = parseFloat(document.getElementById("siFixedCost").value);
-
 
     if (isNaN(siWidth) || isNaN(siLength) || isNaN(siSpace) || isNaN(siFixedCost)) {
         document.getElementById("squareInchResult").innerHTML = "Please enter valid numbers for all fields.";
@@ -302,11 +400,24 @@ function calculateSquareInchFee() {
     var firingCostSI = ((siWidth * siLength) * siSpace + siFixedCost);
 
     document.getElementById("squareInchResult").innerHTML = "Cost to fire = $" + firingCostSI.toFixed(2);
-};
+}
+
+/* ----- COST TO FIRE KILN ----- */
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("calculateCostToFire").addEventListener("click", calculateCostToFire);
+    const inputs = document.querySelectorAll('#costToFireForm input');
+
+    inputs.forEach(input => {
+        input.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                calculateCostToFire(); 
+            }
+        });
+    });
 });
+
 function calculateCostToFire() {
     var kilnWatts = parseFloat(document.getElementById("kilnWatts").value);
     var costPerKilowattHour = parseFloat(document.getElementById("costPerKilowattHour").value);
