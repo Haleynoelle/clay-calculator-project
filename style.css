@@ -423,6 +423,8 @@ img#visualBlock {
 @media screen and (min-width: 801px) { 
     #calculatorName {
         display: none;
+        margin: 0px;
+        padding: 0px;
     }
 }
 
