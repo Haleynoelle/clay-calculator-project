@@ -303,7 +303,9 @@ footer {
     border-radius: 6px;
     border: solid #1f1c1c;
     padding: 10px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #results {
     grid-row-start: 2;
@@ -315,6 +317,9 @@ footer {
     border-width: 1px;
     border: solid #1f1c1c;
     padding: 10px;
+}
+#results p {
+    margin-top: 30px;
 }
 #calculatorTitle {
     color: #1f1c1c;
@@ -614,6 +619,14 @@ img#visualBlock {
     height: 33px;
     width: 33px;
     cursor: pointer;
+  }
+  cursor {
+    background: rgba(255, 255, 255, 0.27);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
   }
   header .close:hover{
     background: #ebedf9;
