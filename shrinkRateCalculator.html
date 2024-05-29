@@ -50,14 +50,10 @@
         <div id="calculatorPageGrid">
             <section id="calculatorHeader">
                 <h1 id="calculatorTitle">Dimensions Calculator</h1>
-                <!--<p id="calculatorAbout"></p> -->
-                <br>
-                <br>
-                <br>
-                <br>
+                <p id="calculatorAbout">When working on your ceramic projects, knowing which dimensions to build to for your desired outcome is crucial. This calculator factors in clay shrinkage to tell you the dimensions you need to build your project. Enter the width, height, and length that you want your final piece to be then input the shrink rate percentage. Click submit to see the dimensions you need to build your project to in its plastic stage to achieve the perfect size after firing. Focus more on your creative work and less on guesswork.</p> 
                 <br>
                 <div class="share-container">
-                    <button class="view-modal">Share</button>
+                    <button class="view-modal">Share this calculator</button>
                     <div class="popup">
                        <div class="close"><i class="uil uil-times"></i></div>
                        <div class="content">
@@ -90,7 +86,7 @@
 
 
 
-    <h2 class="responsive">Input Final Dimensions</h2>
+    <p class="responsive">enter your desired width, height, and length</p>
         <form id="clayShrinkRateForm" class="responsive"> 
             <div id="preferredWidthInput">
                 <label for="preferredWidth">width</label><br>
@@ -106,7 +102,6 @@
             </div>
             <div id="break"></div>
         </form>
-    <h2 class="responsive">Clay Shrinkage Rate</h2>
         <form id="shrinkRateForm" class="responsive">
             <div id="shrinkRateInput">
                 <label for="shrinkRate">shrink rate %</label><br>
@@ -124,7 +119,7 @@
         <img id="visualBlock" src="dimensions.png" class="responsive" style="max-width: 250px; max-height: 250px;">
     </section>
     <section id="results" class="responsive">
-        <p>you should build your project to the dimensions below:</p>
+        <p>build your project to the dimensions below:</p>
         <div class="result" id="dimensionResult"></div>
     </section>
 </div>

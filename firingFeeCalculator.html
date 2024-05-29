@@ -50,20 +50,17 @@
     <div id="calculatorPageGrid">
        <section id="calculatorHeader">
         <h1 id="calculatorTitle">Firing Fee Calculator</h1>
-        <!-- <p id="calculatorAbout">kjhfkh</p> 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
-        <br>
-        <br>
-        <br>
-        <br>
-
+         <p id="calculatorAbout">When firing your ceramic projects, studios may charge you by weight, cubic inches, or square inches. 
+            This calculator allows you to easily figure out the costs involved. Choose the measurement unit you need, 
+            provide the relevant information (using 0 for any non-applicable fields), and press submit to get your cost. 
+            This tool streamlines the process of calculating your costs, freeing up a little more time for you to focus on your work.</p> 
         <br>
         <div class="share-container">
-            <button class="view-modal">Share</button>
+            <button class="view-modal">Share this calculator</button>
             <div class="popup">
                <div class="close"><i class="uil uil-times"></i></div>
                <div class="content">
-                   <p>Share the fire fee calculator via:</p>
+                   <p>Share the firing fee calculator via:</p>
                    <ul class="icons">
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://claycalculators.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="fb-messenger://share/?link=https://claycalculators.com" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
@@ -94,8 +91,9 @@
         <button class="responsive" id="studioPrefersCubicInch" onclick="studioPreferenceCubicInchFunction()">Cubic Inch</button>
         <button class="responsive" id="studioPrefersSquareInch" onclick="studioPreferenceSquareInchFunction()">Square Inch</button>
         </div>
-    <h2 class="responsive">Input</h2>
         <form id="weightForm" class="responsive">
+            <h2 class="responsive"></h2>
+
             <div id="poundsInput">
                 <label for="pounds">Pounds</label>
                 <input type="number" id="pounds" name="pounds">
@@ -114,7 +112,7 @@
             </div>     
             <div id="break"></div>
             <div id="calculatorButtons" class="responsive">
-                <button class="responsive" type="button" id="calculateFeeByWeight">submit</button>
+                <button class="responsive" type="button" id="calculateFeeByWeight">Submit</button>
                 <button class="responsive" type="button" id="clearWeightCalculatorButton">CLEAR</button>
             </div>
             <div id="break"></div>
@@ -172,7 +170,6 @@
                 <button class="responsive" type="button" id="clearSquareInchCalculatorButton">CLEAR</button>
             </div>
         </form>
-        
         <div id="break"></div>
     </section>
 

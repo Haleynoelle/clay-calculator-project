@@ -9,6 +9,7 @@ body {
     align-items: center;
     justify-content: space-between;
     position: sticky;
+    border-bottom: solid 2px #1f1c1c;
     top: 0;
     background-color: #Faf8f6;
     padding-left: 1%;
@@ -134,14 +135,21 @@ li a {
     height: 0;
 }
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight: 200;
     height: auto;
     position: inherit;
+    margin-top: 20px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+#footerLinks {
+    justify-self: end;
+    text-align: right;
 }
 .responsive {
     max-width: 100%;
@@ -155,29 +163,28 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Mono", sans-serif;
     font-weight: 300;
     font-style: normal;
     padding-bottom: 5%;
+    padding-top: 2%;
 }
 #heroH1 {
-    font-size: 60px;
-    padding-left: 1%;
+    font-size: 56px;
+    padding-left: 10%;
+    justify-self: end;
+    text-align: start;
 }
-#heroH2 {
-    color: #1f1c1c;
-    font-size: larger;
-    width: auto;
-}
+
 #heroSection2 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     width: auto;
     height: 300px;
-    padding: 10%;
-    padding-left: 25%;
+    justify-items: center;
 }
+
 #emailLink {
     padding-right: 5px;
     color: #FD5523;
@@ -221,6 +228,7 @@ footer {
     column-gap: 25px;
     padding-left: 1%;
     padding-right: 1%;
+    border-bottom: solid 2px #1f1c1c;
 }
 .contentContainer a {
     text-decoration: none;
@@ -232,7 +240,21 @@ footer {
 #space {
     padding-left: 3px;
 }
-
+#homeShareButton {
+    border: none;
+    color:#334eac;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: underline;
+    padding: 5px;
+    text-align: left;
+}
+#homeShareButton:hover {
+    border: none;
+    color:#FD5523;
+    font-weight: 400;
+    background-color: #Faf8f6;
+}
 
 
 /* CALCULATOR PAGE STRUCTURE */
@@ -256,6 +278,11 @@ footer {
     border-radius: 6px;
     padding: 10px;
 
+}
+
+#calculatorAbout {
+    padding-left: 10px;
+    max-width: 70vw;
 }
 #formContainerGrid {
     grid-row-start: 2;
@@ -291,7 +318,8 @@ footer {
 }
 #calculatorTitle {
     color: #1f1c1c;
-    font-weight: 300;
+    font-weight: 400;
+    padding: 10px;
 }
 #formContainer {
     background-color: hsl(30, 29%, 97%);
@@ -307,17 +335,6 @@ footer {
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     padding-top: 15px;
-}
-#clearCalculatorButton {
-    justify-self: end;
-    background-color: #Faf8f6;
-    color: #FD5523;
-    font-weight: 600;
-    margin-right: 20px;
-}
-#clearCalculatorButton:hover {
-    background-color: #FD5523;
-    color: #Faf8f6;
 }
 button {
     font-family: "Roboto Mono", monospace;
@@ -350,6 +367,7 @@ label {
 }
 input {
     width: 30vw;
+    height: .2vh;
     margin-bottom: 10px;
     margin-right: 50px;
     color: #1f1c1c;
@@ -520,8 +538,9 @@ img#visualBlock {
     position: relative;
   }
   .view-modal:hover {
-    color: #Faf8f6;
-    background-color: #334eac;
+    color: #1f1c1c;
+    border-color: #1f1c1c;
+    font-weight: 600;
   }
   .popup {
     position: absolute;
@@ -533,17 +552,16 @@ img#visualBlock {
 
 .view-modal {
     position: relative;
-    color: #334eac;
+    color: #1f1c1c;
     background-color: #Faf8f6;
-    border-color: #334eac;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 5px 10px;
-    margin: 0px;
-    cursor: pointer;
+    border-color: #1f1c1c;
+    font-weight: 400;
+    font-size: small;
+    padding: 1px 6px;
+    margin: 10px;
     transition: background 0.1s linear, border-color 0.1s linear, color 0.1s linear;
 }
-  .popup{
+.popup {
     display: none;
     background: rgb(255, 254, 254);
     padding: 25px;
@@ -691,9 +709,10 @@ img#visualBlock {
   .field button{
     color: #fff;
     padding: 10px;
-    margin: 0px;
-    background: #334eac;
+    margin: 10px;
+    background: #FD5523;
+    border: none;
   }
   .field button:hover{
-    background: #334eac;
+    background: #FD5523;
   }
