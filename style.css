@@ -520,12 +520,13 @@ img#visualBlock {
         height: 20vh;
     }
 }
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 500px) {
     h1 {
         font-size: 25px;
     }
     #heroH1 {
-        font-size: 40px;
+        font-size: 38px;
     }
 }
 @media screen and (max-width: 900px) {
