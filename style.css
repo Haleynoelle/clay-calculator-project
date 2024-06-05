@@ -449,11 +449,6 @@ img#visualBlock {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
-    card:active {
-        border-left: solid #FD5523;
-        background-color: #8c9eff;
-        transition: background-color 0.2s ease-in-out;
-    }
     #heroSection {
         grid-template-columns: 1fr;
     }
