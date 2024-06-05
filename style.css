@@ -241,7 +241,6 @@ footer {
     border-left: solid #FD5523;
     background-color: #8c9eff;
     transition: background-color 0.4s ease-in-out;
-
 }
 #space {
     padding-left: 3px;
@@ -527,6 +526,10 @@ img#visualBlock {
     }
     #heroH1 {
         font-size: 38px;
+    }
+    #card:hover {
+        border-left: solid #FD5523;
+        background-color: #Faf8f6;
     }
 }
 @media screen and (max-width: 900px) {
