@@ -256,9 +256,8 @@ footer {
     text-align: left;
 }
 #homeShareButton:hover {
-    border: none;
-    color:#FD5523;
-    font-weight: 400;
+    color:#8c9eff;
+    font-weight: 600;
     background-color: #Faf8f6;
 }
 
@@ -565,7 +564,7 @@ img#visualBlock {
   }
 .view-modal:hover {
     color: #FD5523;
-    border-color: #1f1c1c;
+    border-color: #8c9eff;
     font-weight: 600;
   }
 .popup {
@@ -578,9 +577,9 @@ img#visualBlock {
 
 .view-modal {
     position: relative;
-    color: #FD5523;
+    color: #8c9eff;
     background-color: #Faf8f6;
-    border-color: #FD5523;
+    border-color: #8c9eff;
     font-weight: 400;
     font-size: small;
     padding: 1px 6px;
