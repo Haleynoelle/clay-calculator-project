@@ -235,8 +235,8 @@ footer {
     color: #1f1c1c;
 }
 #card:hover {
-    border-left: solid #FD5523;
-    background-color: #8c9eff;
+    border: solid #8c9eff;
+    background-color: #caf74e;
     transition: background-color 0.4s ease-in-out;
 }
 #space {
@@ -564,7 +564,7 @@ img#visualBlock {
   }
 .view-modal:hover {
     color: #FD5523;
-    border-color: #8c9eff;
+    border-color: #FD5523;
     font-weight: 600;
   }
 .popup {
