@@ -126,6 +126,7 @@ li a {
     color: #Faf8f6;
     background-color: #FD5523;
     backdrop-filter: blur(5px);
+    border-radius: 6px;
 }
 #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover {
     text-decoration: underline;
@@ -205,6 +206,7 @@ footer {
     padding: 5%;
     padding-left: 15%;
     justify-content: center;
+    border-radius: 6px;
 }
 
 #comingSoonCard {
@@ -236,7 +238,7 @@ footer {
 }
 #card:hover {
     border: solid #8c9eff;
-    background-color: #caf74e;
+    background-color: #d6f74c;
     transition: background-color 0.4s ease-in-out;
 }
 #space {
@@ -250,6 +252,7 @@ footer {
     text-decoration: underline;
     padding: 5px;
     text-align: left;
+    cursor: pointer;
 }
 #homeShareButton:hover {
     color:#8c9eff;
@@ -350,6 +353,7 @@ button {
     color: #FD5523;
     margin-bottom: 10px;
     width: fit-content;
+    cursor: pointer;
 }
 button:focus {
     color:#Faf8f6;
@@ -566,6 +570,7 @@ img#visualBlock {
     color: #FD5523;
     border-color: #FD5523;
     font-weight: 600;
+    cursor: pointer;
   }
 .popup {
     position: absolute;
