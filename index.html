@@ -64,58 +64,65 @@
         <p>Choose a Calculator & Run the Numbers:</p>
     </section>
     <section id="calculatorCards">
-        <article id="card">
-            <a href="volumeCalculator.html">
-            <img class="responsive" src="images/volume.png" style="width:200px;height:200px;">
-            </a>
-            <div class="contentContainer">
-              <a href="volumeCalculator.html"><h4><b>Volume Calculator</b></h4>
-              <p>Calculate how many ounces your project can hold.</p>
-            </a>
-            </div>
-        </article>
-    </a>
-        <article id="card">
-            <a href="shrinkRateCalculator.html">
-            <img class="responsive" src="images/dimensions.png" style="width:200px;height:200px;">
-            </a>
-            <div class="contentContainer">
-              <a href="shrinkRateCalculator.html"><h4><b>Dimensions Calculator</b></h4>
-              <p>Calculate the dimensions you need to build your project to.</p>
-            </a>
-            </div>
-        </article>
-        <article id="card">
-            <a href="firingFeeCalculator.html">
-            <img class="responsive" src="images/fire.png" style="width:200px;height:200px;">
-            </a>
-            <div class="contentContainer">
-              <a href="firingFeeCalculator.html">
-              <h4><b>Fire Fee Calculator</b></h4>
-              <p>Calculate the cost to fire your work.</p>
-              </a>
-            </div>
-        </article>
-        <article id="card">
-            <a href="shrinkTest.html">
-            <img class="responsive" src="images/shrink.png" style="width:200px;height:200px;">
-            </a>
-            <div class="contentContainer">
-              <a href="shrinkTest.html"><h4><b>Shrink Rate Calculator</b></h4>
-              <p>Calculate the shrink rate of your clay.</p>
-            </a>
-            </div>
-        </article>
-        <article id="card">
-            <a href="costToFire.html">
-            <img class="responsive" src="images/kiln.png" style="width:200px;height:200px;">
-            </a>
-            <div class="contentContainer">
-              <a href="costToFire.html"><h4><b>Cost to Fire a Kiln Calculator</b></h4>
-              <p>Calculate the cost to fire a kiln.</p>
-            </a>
-            </div>
-        </article>
+        <a href="volumeCalculator.html" id="card">
+            <article>
+                    <img class="responsive" src="images/volume.png" style="width:200px;height:200px;">
+                    <div class="contentContainer">
+                        <h4><b>Volume Calculator</b></h4>
+                        <p>Calculate how many ounces your project can hold.
+                        </p>
+                    </div>
+                    <div id="arrow">&#8608;</div>
+            </article>
+        </a>
+
+
+        <a href="shrinkRateCalculator.html" id="card">
+            <article>
+                    <img class="responsive" src="images/dimensions.png" style="width:200px;height:200px;">
+                    <div class="contentContainer">
+                        <h4><b>Dimensions Calculator</b></h4>
+                        <p>Calculate the dimensions you need to build your project to.</p>
+                    </div>
+                    <div id="arrow">&#8608;</div>
+            </article>
+        </a>
+
+        <a href="firingFeeCalculator.html" id="card">
+            <article>
+                    <img class="responsive" src="images/fire.png" style="width:200px;height:200px;">
+                    <div class="contentContainer">
+                        <h4><b>Fire Fee Calculator</b></h4>
+                        <p>Calculate the cost to fire your work.</p>
+                    </div>
+                    <div id="arrow">&#8608;</div>
+            </article>
+        </a>
+
+
+        <a href="shrinkTest.html" id="card">
+            <article>
+                    <img class="responsive" src="images/shrink.png" style="width:200px;height:200px;">
+                    <div class="contentContainer">
+                        <h4><b>Shrink Rate Calculator</b></h4>
+                        <p>Calculate the shrink rate of your clay.</p>
+                    </div>
+                    <div id="arrow">&#8608;</div>
+            </article>
+        </a>
+
+        
+        <a href="costToFire.html" id="card">
+            <article>
+                    <img class="responsive" src="images/kiln.png" style="width:200px;height:200px;">
+                    <div class="contentContainer">
+                        <h4><b>Cost to Fire a Kiln Calculator</b></h4>
+                        <p>Calculate the cost to fire a kiln.</p>
+                    </div>
+                    <div id="arrow">&#8608;</div>
+            </article>
+        </a>
+
         <article id="comingSoonCard">
             <a>
             <img class="responsive" src="images/priceSheet.png" style="width:200px;height:200px;">
@@ -130,6 +137,11 @@
     <footer>
        <!-- <p>product of <a id="space" href="http://www.claycatalog.com" style="color: #004225;">Clay Catalog</a></p> -->
        <!-- <p>support the page/me so i can keep building ceramic apps for you </p> -->
+       <div id="footerLinks">
+        <p>&copy; 2024 Clay Calculator</p>
+        <a href="termsOfUse.html"><p>Terms of Use</p></a>
+        <a href="privacyPolicy.html"><p>Privacy Policy</p></a>
+   </div>
       <div class="share-container">
         <button id="homeShareButton" class="view-modal">share clay calculator</button>
         <div class="popup">
@@ -157,11 +169,6 @@
        </div>
        </div> 
        <script src="script.js"></script>
-       <!--<div id="footerLinks">
-            <a><p>Terms</p></a>
-            <a href=""><p>Privacy</p></a>
-            <a><p>Cookies</p></a>
-       </div>-->
     </footer>
 
 </body>
