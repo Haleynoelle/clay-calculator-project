@@ -18,6 +18,7 @@ body {
     width: auto;
     z-index: 100;
 }
+
 .icon {
     color: #FD5523;
 }
@@ -155,6 +156,7 @@ footer {
     text-decoration: none;
 }
 
+
 .responsive {
     max-width: 100%;
     height: auto;
@@ -288,7 +290,7 @@ footer {
 #calculatorPageGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
     gap: 5px;
     height: 80vh;
     background-color: #Faf8f6;
@@ -306,7 +308,12 @@ footer {
     border-radius: 0px 0px 6px 6px;
     padding: 10px;
 }
-
+#calcPageFooter {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
 #calculatorAbout {
     padding-left: 10px;
     max-width: 70vw;
@@ -498,6 +505,7 @@ img#visualBlock {
         border-radius: 6px;
         padding: 10px;
     }
+
     #calculatorHeader {
         grid-row-start: 6;
         grid-row-end: 7;
@@ -507,6 +515,12 @@ img#visualBlock {
         border: solid #1f1c1c;
         border-radius: 6px;
         padding: 10px;
+    }
+    #calcPageFooter {
+        grid-row-start: 7;
+        grid-row-end: 8;
+        grid-column-start: 1;
+        grid-column-end: 4;
     }
     #formContainerGrid {
         grid-row-start: 4;
@@ -541,6 +555,7 @@ img#visualBlock {
         padding: 10px;
         height: 20vh;
     }
+
 }
 
 @media screen and (max-width: 500px) {
