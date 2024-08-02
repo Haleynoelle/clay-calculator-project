@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function() {
     inputs.forEach(input => {
         input.addEventListener('keydown', function(event) {
             if (event.key === 'Enter') {
-                event.preventDefault(); // Prevent the default action
-                calculateShrink(); // Call the calculateShrink function
+                event.preventDefault(); 
+                calculateShrink(); 
             }
         });
     });
