@@ -343,7 +343,8 @@ footer {
 #aboutSection1 {
     grid-column-start: 1;
     grid-column-end: 2;
-    padding: 10%;
+    padding: 20%;
+    padding-top: 6%;
 }
 
 #aboutSection2 {

@@ -50,7 +50,18 @@
     </header>
     <div id="aboutSection">
         <section id="aboutSection1" class="responsive">
-            <img class="responsive" src="aboutMe.JPG"/>
+            <img style="padding-bottom: 2%;" class="responsive" src="images/aboutMe.JPG" loading="lazy"/>
+            <div id="stripeBuyButton">
+                <script async
+                  src="https://js.stripe.com/v3/buy-button.js">
+                </script>
+                
+                <stripe-buy-button
+                  buy-button-id="buy_btn_1Pnji8RtvVHHdNoMdk4BCFHY"
+                  publishable-key="pk_live_51PIN90RtvVHHdNoMPnoJ1JoD1DZrgs8GRnHaYWrBJBV1hYk5q0dhYQrT1GFAPbrnf8tNlXmWZq9V0RZfhdqTqYnP00KkVXMIhr"
+                >
+                </stripe-buy-button>
+            </div>
         </section>
         <section id="aboutSection2" class="responsive">
             <p style="border: solid; padding: 10px;"><a style="font-weight: bolder;">tl;dr</a> - I’m creating digital 
@@ -88,17 +99,7 @@
             <div id="lineup"><div class="blueCircle"></div><h3>Ceramic Shop</h3>
             <p>coming soon, 2024</p></div>
         
-            <div id="stripeBuyButton">
-                <script async
-                  src="https://js.stripe.com/v3/buy-button.js">
-                </script>
-                
-                <stripe-buy-button
-                  buy-button-id="buy_btn_1Pnji8RtvVHHdNoMdk4BCFHY"
-                  publishable-key="pk_live_51PIN90RtvVHHdNoMPnoJ1JoD1DZrgs8GRnHaYWrBJBV1hYk5q0dhYQrT1GFAPbrnf8tNlXmWZq9V0RZfhdqTqYnP00KkVXMIhr"
-                >
-                </stripe-buy-button>
-            </div>
+
         </section>
     </div>
     <footer id="calcPageFooter">
