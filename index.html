@@ -19,6 +19,14 @@
     <link rel="icon" href="images/ms-icon-310x310.png" type="image/icon type">
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-grid-r.css' rel='stylesheet'>
     <script src="script.js"></script>
+    <script async
+    src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+    <script>
+        function openWin() {
+          window.open("/Users/haleynoelle/Desktop/clay-calculator-project/donate.html");
+        }
+    </script>
     <link href="style.css" type="text/css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,6 +63,11 @@
     <div id="heroSection">
     <section id="heroSection1">
         <h1 id="heroH1">Digital tools to help you build ceramics with accuracy.</h1>
+        <div id="homeTagline">
+            <p>Created By:</p>
+            <input type="button" value="Haley Noelle" onclick="openWin()" id="bmacbutton">    
+        </div>
+
     </section>
     <section id="heroSection2" class="responsive">
         <img class="responsive" id="heroIllustration" src="images/clayportal.png" style="width:300px;height:430px;">
@@ -169,7 +182,9 @@
                </div>
            </div>
        </div>
-       </div> 
+     
+    </div> 
+       
        <script src="script.js"></script>
     </footer>
 

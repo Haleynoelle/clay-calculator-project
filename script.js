@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    
+
         const numberInputs = document.querySelectorAll('input[type="number"]');
         numberInputs.forEach(input => {
             input.addEventListener('input', function() {

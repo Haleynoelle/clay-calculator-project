@@ -18,7 +18,16 @@ body {
     width: auto;
     z-index: 100;
 }
-
+#bmacbutton {
+    background-color: #8c9eff;
+    color: #Faf8f6;
+    padding: 7px;
+    height: fit-content;
+    width: fit-content;
+}
+#bmacbutton:hover {
+    cursor: pointer;
+}
 .icon {
     color: #FD5523;
 }
@@ -181,6 +190,13 @@ footer {
     justify-self: end;
     text-align: start;
 }
+#homeTagline {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 5px;
+    padding-left: 10%;
+}
 
 #heroSection2 {
     display: grid;
@@ -276,15 +292,80 @@ footer {
     color:#FD5523;
     font-size: 16px;
     text-decoration: underline;
-    padding: 5px;
-    text-align: left;
     cursor: pointer;
 }
 #homeShareButton:hover {
     color:#8c9eff;
     background-color: #Faf8f6;
 }
+/* ABOUT PAGE STRUCTURE */
+#aboutSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+@keyframes glowing {
+    0% {
+      background-color: #FD5523;
+      box-shadow: 0 0 10px #FD5523;
+    }
+    50% {
+      background-color: #fd5623c7;
+      box-shadow: 0 0 5px #fd5623c7;
+      
 
+    }
+    100% {
+      background-color: #FD5523;
+      box-shadow: 0 0 10px #FD5523;
+
+    }
+  }
+.orangeCircle {
+        background: #FD5523;
+        animation: glowing 1000ms infinite;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+}
+.greenCircle {
+    background: #34623F;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+.blueCircle {
+    background: #2368fd;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+#aboutSection1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 10%;
+}
+
+#aboutSection2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 3%;
+    font-size: 14px;
+}
+#lineup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    border-bottom: solid;
+}
+#stripeBuyButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid;
+}
 
 /* CALCULATOR PAGE STRUCTURE */
 #calculatorPageGrid {
@@ -557,6 +638,18 @@ img#visualBlock {
     }
 
 }
+@media screen and (max-width: 650px) { 
+    #aboutSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    #aboutSection1 {
+        width: 300px;
+        padding: 20px;
+    }
+}
 
 @media screen and (max-width: 500px) {
     h1 {
@@ -614,7 +707,9 @@ img#visualBlock {
   }
 .share-container {
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .view-modal {
@@ -622,8 +717,6 @@ img#visualBlock {
     color: #8c9eff;
     background-color: #Faf8f6;
     border-color: #8c9eff;
-    padding: 1px 6px;
-    margin: 10px;
     transition: background 0.1s linear, border-color 0.1s linear, color 0.1s linear;
 }
 .popup {
