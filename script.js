@@ -544,3 +544,57 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+/* TRACK SUBMIT FUNCTION */
+function updateClickCount() {
+    // Retrieve the current count from local storage, or start at 0 if it doesn't exist
+    let clickCount = localStorage.getItem('submitClickCount') || 0;
+    clickCount = parseInt(clickCount, 10);
+
+    // Increment the count
+    clickCount++;
+
+    // Store the updated count back in local storage
+    localStorage.setItem('submitClickCount', clickCount);
+
+    // Display the updated count to the user
+    document.getElementById('clickCountDisplay').textContent = 
+        `${clickCount}x`;
+}
+
+// Function to attach event listeners to specific buttons
+function attachButtonClickListeners() {
+    // IDs of the buttons you want to track
+    const buttonIds = [
+        'calculateRVolume',
+        'calculateCVolume',
+        'calculateFVolume',
+        'calculateHVolume',
+        'calculateEVolume',
+        'calculateShrinkRate',
+        'calculateFeeBySquareInch',
+        'calculateFeeByCubicInch',
+        'calculateFeeByWeight',
+        'calculateShrinkRate',
+        'calculateCostToFire',
+        'calculateShrinkTest'
+    ];
+
+    // Attach the updateClickCount function to each button
+    buttonIds.forEach(buttonId => {
+        const button = document.getElementById(buttonId);
+        if (button) {
+            button.addEventListener('click', updateClickCount);
+        }
+    });
+}
+
+// Display the current count on page load
+document.addEventListener('DOMContentLoaded', () => {
+    let clickCount = localStorage.getItem('submitClickCount') || 0;
+    document.getElementById('clickCountDisplay').textContent = 
+        `${clickCount}x`;
+
+    // Attach event listeners to the buttons
+    attachButtonClickListeners();
+});

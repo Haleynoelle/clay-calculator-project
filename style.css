@@ -28,6 +28,38 @@ body {
 #bmacbutton:hover {
     cursor: pointer;
 }
+#clickCountContainer {
+    display: grid;
+    grid-template-columns: .5fr .5fr;
+    grid-template-rows: 1fr;
+    border: solid #1f1c1c;
+    padding: 5px;
+    margin: 14px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 14px;
+    background: #8c9dff;
+    justify-self: end;
+
+}
+#clickCountSection1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-weight: bolder;
+    background: #8c9dff;
+
+}
+#clickCountSection2 {
+    grid-column-start: 2;
+    border: solid #1f1c1c;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    background: #efedea;
+}
 .icon {
     color: #FD5523;
 }
@@ -711,6 +743,7 @@ img#visualBlock {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-self: end;
 }
 
 .view-modal {
