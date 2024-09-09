@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4NHR8NCB0"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-M4NHR8NCB0');
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="ceramics, clay, ceramics calculator, pottery, shrink rate, kiln cost, reference guide, pottery calculator">
+        <meta name="description" content="Ceramics Guide">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+        <link rel="icon" href="images/ms-icon-310x310.png" type="image/icon type">
+        <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-grid-r.css' rel='stylesheet'>
+        <script src="script.js"></script>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <title>Your Reference Guide</title>
+        <script>
+            function toggleTable(id) {
+                const table = document.getElementById(id);
+                table.style.display = (table.style.display === 'none' || table.style.display === '') ? 'table' : 'none';
+            }
+        </script>
+</head>
+<body>
+    <header id="navContainer">
+        <a href="index.html"><img id="homeLogo" src="images/Logo.png" alt="Button Image" style="width:25px;height:25px;"></a>
+        <a href="index.html" id="navTitle"><h1>Clay Calculator</h1></a>
+        <div class="dropdown">
+            
+            <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+                <i id="openButton" class="gg-menu-grid-r"></i>
+            </a>
+        <nav>
+            <div id="myLinks" class="dropdown-content">
+                <!--<a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a> -->
+                <a id="volumeLink" href="volumeCalculator.html">Calculate Volume</a>
+                <a id="shrinkLink"  href="shrinkRateCalculator.html">Calculate Size to Build</a>
+                <a id="fireFeeLink" href="firingFeeCalculator.html">Calculate Fire Fee</a>
+                <a id="shrinkTestLink" href="shrinkTest.html">Calculate Shrink Rate</a>
+                <a id="costToFireLink" href="costToFire.html">Calculate Cost to Fire a Kiln</a>
+                <a id="projectReferenceGuideLink" class="active" href="projectReferenceGuide.html">Project Reference Guide</a>
+            </div>
+        </div>
+        </nav>
+    </header>
+
+    <div id="about-section">
+        <h2>A Reference Guide for Getting Started</h2>
+        <p>This reference guide was designed to help jump-start the creation process. It provides standard dimensions, weight, wall thickness, and estimated 
+            clay amounts needed for various ceramic items. It serves as a helpful starting point when you're trying to figure out what size a project needs to be and how much clay you'll need for said project. Click on any item 
+            name and the relevant information will appear below. The data is based on typical sizes for porcelain, stoneware, and earthenware, allowing 
+            you to adjust how much clay you need according to your preferred material. <br> <a href="https://www.claycalculators.com/shrinkRateCalculator" style="color: #8c9eff; font-size: smaller;"> Make sure to consider your clay's shrink rate before building! </a>
+        </p>
+    </div>
+    
+    <div>
+        <span class="toggle-button" onclick="toggleTable('americanButterDish')">American Butter Dish</span>
+        <table id="americanButterDish" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>4-6 inches (10-15 cm) diameter (base) <br>5-7 inches (12-18 cm) diameter (lid)</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>1-2 lbs (450-900 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 2-2.5 lbs (900-1150 g) <br>stoneware: 2.5-3 lbs (1150-1350 g) <br>earthenware: 3-3.5 lbs (1350-1600 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('beerGlass')">Beer Glass</span>
+        <table id="beerGlass" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>3-4 inches (8-10 cm) diameter, 6-8 inches (15-20 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.5-1 lbs (225-450 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 1-1.5 lbs (450-680 g) <br>stoneware: 1.5-2 lbs (680-900 g) <br>earthenware: 2-2.5 lbs (900-1150 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('cerealBowl')">Cereal Bowl</span>
+        <table id="cerealBowl" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>5-7 inches (12-18 cm) diameter, 2.5-4 inches (6-10 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.75-1.5 lbs (340-680 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 1.5-2 lbs (680-900 g) <br>stoneware: 2-2.5 lbs (900-1150 g) <br>earthenware: 2.5-3 lbs (1150-1360 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('coasters')">Coasters</span>
+        <table id="coasters" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>3.5-4 inches (9-10 cm) diameter, 0.25-0.5 inches (0.6-1.3 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.1-0.15 lbs (45-70 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8 inch (3 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 0.2-0.3 lbs (90-140 g) <br>stoneware: 0.25-0.35 lbs (115-160 g) <br>earthenware: 0.3-0.4 lbs (140-180 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('mug')">Coffee Mug</span>
+        <table id="mug" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>3-4 inches (8-10 cm) diameter, 3.5-4.5 inches (9-11.5 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.75-1.25 lbs (340-570 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 1.5-2 lbs (680-900 g) <br>stoneware: 2-2.5 lbs (900-1150 g) <br>earthenware: 2.5-3 lbs (1150-1360 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('dessertPlate')">Dessert Plate</span>
+        <table id="dessertPlate" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>6-8 inches (15-20 cm) diameter, 0.5-1 inch (1.5-2.5 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.5-1 lbs (225-450 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 1-1.5 lbs (450-680 g) <br>stoneware: 1.5-2 lbs (680-900 g) <br>earthenware: 2-2.5 lbs (900-1150 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('dinnerPlate')">Dinner Plate</span>
+        <table id="dinnerPlate" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>8-10 inches (20-25 cm) diameter, 0.75-1 inch (2-2.5 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>1-2 lbs (450-900 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 2-3 lbs (900-1360 g) <br>stoneware: 2.5-3 lbs (1150-1360 g) <br>earthenware: 3-3.5 lbs (1360-1600 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('espressoCup')">Espresso Cup</span>
+        <table id="espressoCup" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>2.5-3 inches (6-8 cm) diameter, 2-2.5 inches (5-6 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.25-0.4 lbs (110-180 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 0.5-0.75 lbs (225-340 g) <br>stoneware: 0.75-1 lb (340-450 g) <br>earthenware: 1-1.25 lbs (450-570 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('frenchButterDish')">French Butter Dish</span>
+        <table id="frenchButterDish" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>4-6 inches (10-15 cm) diameter, 2-3 inches (5-7.5 cm) height (base) <br>5-7 inches (12-18 cm) diameter (lid)</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>1-2 lbs (450-900 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 2-2.5 lbs (900-1150 g) <br>stoneware: 2.5-3 lbs (1150-1350 g) <br>earthenware: 3-3.5 lbs (1350-1600 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('pitcher')">Pitcher</span>
+        <table id="pitcher" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>5-7 inches (12-18 cm) diameter, 6-8 inches (15-20 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>1-2 lbs (450-900 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 2-3 lbs (900-1360 g) <br>stoneware: 3-4 lbs (1360-1800 g) <br>earthenware: 4-5 lbs (1800-2250 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('saladPlate')">Salad Plate</span>
+        <table id="saladPlate" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>6-8 inches (15-20 cm) diameter, 0.5-1 inch (1.5-2.5 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.75-1.5 lbs (340-680 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 1.5-2 lbs (680-900 g) <br>stoneware: 2-2.5 lbs (900-1150 g) <br>earthenware: 2.5-3 lbs (1150-1360 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('servingBowl')">Serving Bowl</span>
+        <table id="servingBowl" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>8-10 inches (20-25 cm) diameter, 4-6 inches (10-15 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>2-3 lbs (900-1360 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 4-5 lbs (1800-2250 g) <br>stoneware: 5-6 lbs (2250-2700 g) <br>earthenware: 6-7 lbs (2700-3150 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('soupBowl')">Soup Bowl</span>
+        <table id="soupBowl" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>5-7 inches (12-18 cm) diameter, 2.5-4 inches (6-10 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.75-1.5 lbs (340-680 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 1.5-2 lbs (680-900 g) <br>stoneware: 2-2.5 lbs (900-1150 g) <br>earthenware: 2.5-3 lbs (1150-1360 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('teaCup')">Tea Cup</span>
+        <table id="teaCup" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>2.5-3 inches (6-8 cm) diameter, 2.5-3 inches (6-8 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.25-0.5 lbs (110-225 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 0.5-0.75 lbs (225-340 g) <br>stoneware: 0.75-1 lb (340-450 g) <br>earthenware: 1-1.25 lbs (450-570 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('tumbler')">Tumbler</span>
+        <table id="tumbler" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>3-4 inches (8-10 cm) diameter, 4-5 inches (10-13 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.5-1 lbs (225-450 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 1-1.5 lbs (450-680 g) <br>stoneware: 1.5-2 lbs (680-900 g) <br>earthenware: 2-2.5 lbs (900-1150 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('vase')">Vase</span>
+        <table id="vase" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>4-6 inches (10-15 cm) diameter, 6-12 inches (15-30 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>1-3 lbs (450-1360 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 3-4 lbs (1360-1800 g) <br>stoneware: 4-5 lbs (1800-2250 g) <br>earthenware: 5-6 lbs (2250-2700 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('wineGlass')">Wine Glass</span>
+        <table id="wineGlass" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>3-4 inches (8-10 cm) diameter, 7-9 inches (18-23 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.75-1.5 lbs (340-680 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 1.5-2 lbs (680-900 g) <br>stoneware: 2-2.5 lbs (900-1150 g) <br>earthenware: 2.5-3 lbs (1150-1360 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('yunomi')">Yunomi</span>
+        <table id="yunomi" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>3-4 inches (8-10 cm) diameter, 4-5 inches (10-13 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.5-1 lbs (225-450 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 1-1.5 lbs (450-680 g) <br>stoneware: 1.5-2 lbs (680-900 g) <br>earthenware: 2-2.5 lbs (900-1150 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('more')">+ more coming soon</span>
+        <table id="more" class="item-table">
+            <tr>
+                <td><a href="mailto:claycalculator@gmail.com" style="color: #8c9eff;">make a suggestion</a></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
