@@ -264,6 +264,21 @@ footer {
     position: relative;
 }
 
+#resourcesCard {
+    border: solid #8c9eff;
+    background-color: #Faf8f6;
+    padding: 5%;
+    padding-left: 15%;
+    justify-content: center;
+    text-decoration: none;
+    color: #1f1c1c;
+    position: relative;
+}
+
+#resourcesCard a {
+    border-bottom: solid 1px #1f1c1c;
+}
+
 #comingSoonCard {
     border: solid #1f1c1c;
     background-color: #Faf8f6;
