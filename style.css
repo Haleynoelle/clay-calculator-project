@@ -164,12 +164,12 @@ li a {
     padding: 20px 20px;
     text-decoration: none;
 }
-#fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active, #projectReferenceGuideLink.active {
+#fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active, #projectReferenceGuideLink.activ, #priceYourWorkLink.active {
     color: #Faf8f6;
     background-color: #FD5523;
     backdrop-filter: blur(5px);
 }
-#fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover, #projectReferenceGuideLink:hover {
+#fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover, #projectReferenceGuideLink:hover, #priceYourWorkLink:hover {
     text-decoration: underline;
 }
 #break {
@@ -331,26 +331,32 @@ footer {
 }
 
 /* REFERENCE GUIDE PAGE */
+#about-section {
+    padding: 6px;
+}
 .item-table {
     display: none;
-    margin-top: 10px;
     border-collapse: collapse;
-    width: 100%;
+    width: 95%;
+    margin-left: 5%;
 }
 .item-table th, .item-table td {
-    border: 1px solid #1f1c1c;
-    padding: 8px;
+    border: 1px solid #FD5523;
+    border-left: none;
+    border-right: none;
+    padding: 5px;
+    border-top: none;
 }
-.item-table th {
-    background-color:#Faf8f6;
-}
+
 .toggle-button {
     cursor: pointer;
     padding: 10px;
     background-color: #Faf8f6;
     border-bottom: 1px solid #8c9eff;
-    margin-top: 10px;
     display: block;
+}
+.toggle-button:hover {
+    background-color: #8c9eff;
 }
 
 /* ABOUT PAGE STRUCTURE */

@@ -33,6 +33,46 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+/* --- PRICE YO WORK CALCULATOR --- */
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("calculatePriceOfWork").addEventListener("click", calculatePrice);
+    const inputs = document.querySelectorAll('#pricingForm input');
+
+    inputs.forEach(input => {
+        input.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                calculatePrice(); 
+            }
+        });
+    });
+});
+
+function calculatePrice() {
+    const materialCost = parseFloat(document.getElementById('materialCost').value);
+    const laborHours = parseFloat(document.getElementById('laborHours').value);
+    const hourlyRate = parseFloat(document.getElementById('hourlyRate').value);
+    const overheadCost = parseFloat(document.getElementById('overheadCost').value);
+    const profitMargin = parseFloat(document.getElementById('profitMargin').value) / 100;
+
+    if (isNaN(materialCost) || isNaN(laborHours) || isNaN(hourlyRate) || isNaN(profitMargin) || isNaN(overheadCost)) {
+        document.getElementById("priceWorkResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+
+    const laborCost = laborHours * hourlyRate;
+    const totalCost = materialCost + laborCost + overheadCost;
+    const price = totalCost / (1 - profitMargin);
+
+    document.getElementById('priceWorkResult').innerHTML = 
+        "Your Cost: $" + totalCost.toFixed(2) + " <br>" +
+        "Suggested Retail Price: $" +  price.toFixed(2) + " <br>" +
+        "Profit: $" + (price - totalCost).toFixed(2) + " <br>"
+    ;
+}
+
+
 
 
 /* ----- SHRINK RATE CALCULATORS ----- */
