@@ -18,15 +18,48 @@ body {
     width: auto;
     z-index: 100;
 }
+.antiSocialModal {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-180%, 400%);
+    background-color: #Faf8f6;
+    padding: 20px;
+    border: 1px solid #1f1c1c;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.antiSocialModal-content {
+    color: #8c9dff;
+    font-style: italic;
+}
+.antiSocialModal-close {
+    color: #d6f74c;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.antiSocialModal-close:hover {
+    color: #1f1c1c;
+}
+
 #bmacbutton {
     background-color: #8c9eff;
     color: #Faf8f6;
     padding: 7px;
     height: fit-content;
     width: fit-content;
+    box-shadow: 6px 6px #d6f74c;
+
 }
+
 #bmacbutton:hover {
     cursor: pointer;
+    color: #1f1c1c;
+    background-color: #Faf8f6;
 }
 #clickCountContainer {
     display: grid;

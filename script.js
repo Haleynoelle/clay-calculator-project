@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
 
         const numberInputs = document.querySelectorAll('input[type="number"]');
@@ -325,7 +326,7 @@ function calculateFrustumVol() {
         document.getElementById("frustumResult").innerHTML = "Please enter valid numbers for all fields.";
         return;
     }
-    var frustumVolume = ((1/3) * Math.PI * frustumHeight * (Math.pow(frustumTopRadius, 2) + frustumTopRadius * frustumBaseRadius + Math.pow(frustumBaseRadius, 2)) * 0.554113);
+    var frustumVolume = ((1/3) * Math.PI * frustumHeight * (Math.pow(frustumTopRadius, 2) + frustumTopRadius * frustumBaseRadius + Math.pow(frustumBaseRadius, 2)) * 0.554112);
 
     document.getElementById("frustumResult").innerHTML = "Volume in oz = " + frustumVolume.toFixed(2);
 };
@@ -544,7 +545,13 @@ document.addEventListener("click", function(event) {
     }
 });
 
+function showAntiSocialModal() {
+    document.getElementById('antiSocialModal').style.display = 'block';
+}
 
+function closeAntiSocialModal() {
+    document.getElementById('antiSocialModal').style.display = 'none';
+}
 /* SHARE FUNCTION */
 document.addEventListener("DOMContentLoaded", function() {
     const viewBtn = document.querySelector(".view-modal"),
