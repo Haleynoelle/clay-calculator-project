@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         function clearInputs() {
-            const inputs = document.querySelectorAll('input[type="number"]');
+            const inputs = document.querySelectorAll('input[type="text"]');
             inputs.forEach(input => {
                 input.value = ""; 
             });
@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 div.innerHTML = "";
             });
         }
-    
+        document.getElementById("clearPlasticCalculatorButton").addEventListener("click", clearInputs);
+
         document.getElementById("clearCalculatorButton").addEventListener("click", clearInputs);
 
 });
@@ -78,20 +79,66 @@ function calculatePrice() {
 
 /* ----- SHRINK RATE CALCULATORS ----- */
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
+    // Event listener for the fired-to-plastic calculation
     document.getElementById("calculateShrinkRate").addEventListener("click", calculateShrink);
-
-    const inputs = document.querySelectorAll('#clayShrinkRateForm input, #shrinkRateForm input');
-
+    
+    // Event listener for the plastic-to-fired calculation
+    document.getElementById("calculatePlasticToFired").addEventListener("click", calculatePlasticToFired);
+    
+    // Add event listeners to inputs for 'Enter' key submission
+    const inputs = document.querySelectorAll('#clayShrinkRateForm input, #shrinkRateForm input, #plasticDimensionsForm input, #shrinkRateForm2 input');
     inputs.forEach(input => {
         input.addEventListener('keydown', function(event) {
             if (event.key === 'Enter') {
                 event.preventDefault(); 
-                calculateShrink(); 
+                calculatePlasticToFired(); 
             }
         });
     });
 });
+
+function defaultShapeChoice2() {
+    document.getElementById('dimensionForm2').style.display = 'none';
+    document.getElementById('dimensionForm1').style.display = 'block';
+}
+
+function firedToPlasticDimensionFunction() {
+    document.getElementById('dimensionForm2').style.display = 'none';
+    document.getElementById('dimensionForm1').style.display = 'block';
+}
+
+function plasticToFiredDimensionFunction() {
+    document.getElementById('dimensionForm1').style.display = 'none';
+    document.getElementById('dimensionForm2').style.display = 'block';
+
+}
+
+function calculatePlasticToFired() {
+    var plasticWidth = parseFloat(document.getElementById("plasticWidth").value);
+    var plasticHeight = parseFloat(document.getElementById("plasticHeight").value);
+    var plasticLength = parseFloat(document.getElementById("plasticLength").value);
+    var shrinkRate = parseFloat(document.getElementById("shrinkRate2").value);
+    
+    if (isNaN(plasticWidth) || isNaN(plasticHeight) || isNaN(plasticLength) || isNaN(shrinkRate)) {
+        document.getElementById("dimensionResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+
+    // Calculate the fired dimensions based on the plastic dimensions and shrink rate
+    var firedWidth = plasticWidth * (1 - (shrinkRate / 100));
+    var firedHeight = plasticHeight * (1 - (shrinkRate / 100));
+    var firedLength = plasticLength * (1 - (shrinkRate / 100));
+
+    document.getElementById("dimensionResult").innerHTML =
+                                                     "Your project will shrink to these dimensions:<br>" +
+                                                     "<br>" +
+                                                     "Fired Width: " + firedWidth.toFixed(2) + " inches<br>" +
+                                                     "Fired Length: " + firedLength.toFixed(2) + " inches<br>" +
+                                                     "Fired Height: " + firedHeight.toFixed(2) + " inches<br>";
+}
 
 function calculateShrink() {
     var preferredWidth = parseFloat(document.getElementById("preferredWidth").value);
@@ -110,11 +157,14 @@ function calculateShrink() {
     var initialLength = preferredLength / (1 - (shrinkRate / 100));
     
     document.getElementById("dimensionResult").innerHTML =
+                                                     "Build to these dimensions:<br>" +
+                                                     "<br>" +
                                                      "Width: " + initialWidth.toFixed(2) + " inches<br>" +
                                                      "Length: " + initialLength.toFixed(2) + " inches<br>" +
                                                      "Height: " + initialHeight.toFixed(2) + " inches<br>";
-                                                     
 }
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("calculateShrinkTest").addEventListener("click", calculateShrinkTest);

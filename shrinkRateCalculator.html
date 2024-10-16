@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Dimensions Calculator</title>
 </head>
-<body>
+<body onpageshow="defaultShapeChoice2()">
     <div id="columnContainer">
         <header id="navContainer">
             <a href="index.html"><img id="homeLogo" src="images/Logo.png" alt="Button Image" style="width:25px;height:25px;"></a>
@@ -53,7 +53,7 @@
         <div id="calculatorPageGrid">
             <section id="calculatorHeader">
                 <h1 id="calculatorTitle">Dimensions Calculator</h1>
-                <p id="calculatorAbout">When working on your ceramic projects, knowing which dimensions to build to for your desired outcome is crucial. This calculator factors in clay shrinkage to tell you the dimensions you need to build your project. Enter the width, height, and length that you want your final piece to be then input the shrink rate percentage. Click submit to see the dimensions you need to build your project to in its plastic stage to achieve the perfect size after firing. Focus more on your creative work and less on guesswork.</p> 
+                <p id="calculatorAbout">This calculator helps you easily determine how your clay projects will shrink or expand during the firing process. By inputting the dimensions of a piece in its fired or plastic state, this tool calculates the equivalent size in the other form. This allows you to accurately plan for size changes, ensuring your ceramics turn out just the way you envision them, whether you're starting with the fired or plastic form.</p> 
                 <br>
                 <div class="share-container">
                     <button class="view-modal">Share this calculator</button>
@@ -87,27 +87,31 @@
         <section id="formContainerGrid">
         <div id="break"></div>
 
+        <div id="buttonContainer">
+            <button class="responsive" id="shapeChoiceRectangle" autofocus onclick="firedToPlasticDimensionFunction()">Fired to Plastic</button>
+            <button class="responsive" id="shapeChoiceCylinder" onclick="plasticToFiredDimensionFunction()">Plastic to Fired</button>
+        </div>
 
-
-    <p class="responsive">enter the dimensions for the final fired piece</p>
+        <div id="dimensionForm1">
+    <p class="responsive">enter the dimensions you would like your work to be after firing</p>
         <form id="clayShrinkRateForm" class="responsive"> 
             <div id="preferredWidthInput">
-                <label for="preferredWidth">width <a style="font-size: smaller;">[in]</a></label><br>
+                <label for="preferredWidth">Width <a style="font-size: smaller;">[in]</a></label><br>
                 <input type="text" id="preferredWidth" name="width"><br>
             </div>
             <div id="preferredLengthInput">
-                <label for="preferredLength">length <a style="font-size: smaller;">[in]</a></label><br>
+                <label for="preferredLength">Length <a style="font-size: smaller;">[in]</a></label><br>
                 <input type="text" id="preferredLength" name="length"><br>
             </div>
             <div id="preferredHeightInput">
-                <label for="preferredHeight">height <a style="font-size: smaller;">[in]</a></label><br>
+                <label for="preferredHeight">Height <a style="font-size: smaller;">[in]</a></label><br>
                 <input type="text" id="preferredHeight" name="height"><br>
             </div>
             <div id="break"></div>
         </form>
         <form id="shrinkRateForm" class="responsive">
             <div id="shrinkRateInput">
-                <label for="shrinkRate">shrink rate %</label><br>
+                <label for="shrinkRate">Shrink Rate %</label><br>
                 <input type="text" id="shrinkRate" name="shrinkRate"><br>
             </div>
             <div id="calculatorButtons" class="responsive">
@@ -115,6 +119,37 @@
                 <button class="responsive" type="button" id="clearCalculatorButton">CLEAR</button>
             </div>
         </form> 
+    </div>
+
+
+<div id="dimensionForm2">
+        <p class="responsive">enter the dimensions of your pre-fired work</p>
+<form id="plasticDimensionsForm" class="responsive"> 
+    <div id="plasticWidthInput">
+        <label for="plasticWidth">Width <a style="font-size: smaller;">[in]</a></label><br>
+        <input type="text" id="plasticWidth" name="plasticWidth"><br>
+    </div>
+    <div id="plasticLengthInput">
+        <label for="plasticLength">Length <a style="font-size: smaller;">[in]</a></label><br>
+        <input type="text" id="plasticLength" name="plasticLength"><br>
+    </div>
+    <div id="plasticHeightInput">
+        <label for="plasticHeight">Height <a style="font-size: smaller;">[in]</a></label><br>
+        <input type="text" id="plasticHeight" name="plasticHeight"><br>
+    </div>
+    <div id="break"></div>
+</form>
+<form id="shrinkRateForm2" class="responsive">
+    <div id="shrinkRateInput2">
+        <label for="shrinkRate2">Shrink Rate %</label><br>
+        <input type="text" id="shrinkRate2" name="shrinkRate2"><br>
+    </div>
+    <div id="calculatorButtons" class="responsive">
+        <button class="responsive" type="button" id="calculatePlasticToFired">Submit</button>
+        <button class="responsive" type="button" id="clearPlasticCalculatorButton">CLEAR</button>
+    </div>
+</form> 
+</div>
         
 
         <div id="break"></div>
@@ -123,7 +158,6 @@
         <img id="visualBlock" src="images/dimensions.png" class="responsive" style="max-width: 250px; max-height: 250px;">
     </section>
     <section id="results" class="responsive">
-        <p>build your project to the dimensions below:</p>
         <div class="result" id="dimensionResult"></div>
     </section>
     <footer id="calcPageFooter">
