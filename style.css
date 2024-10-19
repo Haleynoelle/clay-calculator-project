@@ -75,6 +75,9 @@ body {
     justify-self: end;
 
 }
+#clickContainer {
+    justify-self: end;
+}
 #clickCountSection1 {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -856,7 +859,6 @@ img#visualBlock {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-self: end;
 }
 
 .view-modal {
