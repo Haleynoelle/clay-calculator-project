@@ -20,8 +20,9 @@ body {
 .activeCircle {
     background: #6cafe1;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    animation: activeGlow 1000ms infinite;
+    width: 10px;
+    height: 10px;
 }
 
 .gradient-container {
@@ -540,6 +541,20 @@ footer {
 
     }
   }
+  @keyframes activeGlow {
+    0% {
+      background-color: #6cafe1;
+      box-shadow: 0 0 10px #6cafe1;
+    }
+    50% {
+      background-color: #6cafe1c7;
+      box-shadow: 0 0 5px #6cafe1c7;
+    }
+    100% {
+      background-color: #6cafe1;
+      box-shadow: 0 0 10px #6cafe1;
+    }
+  }
 .orangeCircle {
         background: #FD5523;
         animation: glowing 1000ms infinite;
@@ -581,6 +596,13 @@ footer {
     gap: 10px;
     margin-bottom: 10px;
     border-bottom: solid;
+}
+#lineup2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 #stripeBuyButton {
     display: flex;
