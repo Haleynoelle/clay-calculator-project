@@ -3,6 +3,79 @@ body {
     background-color: #Faf8f6;
     font-family: "Roboto Mono", monospace;
 }
+
+.babyFace {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    padding-top: 20%;
+    padding-left: 1%;
+    padding-right: 2%;
+    height: auto;
+    width: auto;
+    top: 0;
+}
+.activeCircle {
+    background: #6cafe1;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.gradient-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #Faf8f6;
+    overflow: hidden;
+  }
+  
+  .blur-shape {
+    position: absolute;
+    border-radius: 90%;
+    filter: blur(80px);
+    opacity: 0.7;
+    background: #285340;
+    transition: all 2s ease;
+  }
+  
+  .shape1 {
+    width: 400px;
+    height: 400px;
+    top: 20%;
+    left: 30%;
+    background-color: #6cafe1;
+  }
+  
+  .shape2 {
+    width: 300px;
+    height: 300px;
+    top: 40%;
+    left: 45%;
+    opacity: 0.5;
+  }
+  .shape3 {
+    width: 250px;
+    height: 250px;
+    top: 10%;
+    left: 55%;
+    opacity: 0.3;
+    background: #1a472a;
+    margin: -20%;
+  }
+
+  .shape4 {
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 20%;
+    opacity: 0.4;
+    background: #385741;
+    margin: 20%;
+  }
+
 #navContainer {
     display: flex;
     flex-direction: row;
@@ -690,6 +763,15 @@ img#visualBlock {
         display: none;
         margin: 0px;
         padding: 0px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .babyFace {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: sticky;
     }
 }
 
