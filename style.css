@@ -453,6 +453,17 @@ footer {
     color: #8c9eff;
   }
 
+  #arrow2 {
+    font-size: 40px;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    transform: rotate(180deg); 
+    transform-origin: center;
+    transition: font-size 0.8s ease;
+    color: #FD5523;
+  }
+
 .contentContainer a {
     text-decoration: none;
     color: #1f1c1c;
@@ -601,8 +612,8 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
     margin-bottom: 10px;
+    justify-content: space-evenly;
 }
 #stripeBuyButton {
     display: flex;
