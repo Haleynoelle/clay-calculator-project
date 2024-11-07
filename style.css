@@ -650,12 +650,6 @@ footer {
     grid-column-start: 1;
     grid-column-end: 4;
 }
-#calcPageFooter {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
 #calculatorAbout {
     padding-left: 10px;
     max-width: 70vw;
