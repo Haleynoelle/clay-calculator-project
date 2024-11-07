@@ -63,9 +63,13 @@ function calculateSalaryGoal() {
         return;
     }
 
-    // Calculate weekly and monthly hours
+    // Calculate weekly, monthly, and annual hours
     const weeklyHours = hoursPerDay * daysPerWeek;
     const monthlyHours = weeklyHours * 4;
+    const annualHours = weeklyHours * 52;
+
+    // Calculate hourly rate based on desired salary
+    const hourlyRate = desiredSalary / annualHours;
 
     // Calculate weekly and monthly target based on desired salary
     const weeklyTarget = desiredSalary / 52;
@@ -79,6 +83,7 @@ function calculateSalaryGoal() {
 
     // Display results
     document.getElementById('salaryGoalResult').innerHTML = 
+        "Hourly Rate: $" + hourlyRate.toFixed(2) + "<br><br>" +
         "Weekly Target: $" + weeklyTarget.toFixed(2) + "<br>" +
         "Monthly Target: $" + monthlyTarget.toFixed(2) + "<br><br>" +
         "Suggested Items to Sell Per Week:<br>" +
@@ -89,6 +94,7 @@ function calculateSalaryGoal() {
         "- " + itemsPerMonthLow + " item(s) at $" + avgPriceLow.toFixed(2) + " (low price)"
     ;
 }
+
 
 // Function to clear form inputs and result
 function clearForm() {
