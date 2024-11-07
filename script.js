@@ -34,6 +34,67 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("clearCalculatorButton").addEventListener("click", clearInputs);
 
 });
+/* --- REACH YO GOALS --- */
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("calculateSalaryGoal").addEventListener("click", calculateSalaryGoal);
+    const inputs = document.querySelectorAll('#salaryForm input');
+
+    inputs.forEach(input => {
+        input.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                calculateSalaryGoal(); 
+            }
+        });
+    });
+});
+
+function calculateSalaryGoal() {
+    const desiredSalary = parseFloat(document.getElementById('desiredSalary').value);
+    const hoursPerDay = parseFloat(document.getElementById('hoursPerDay').value);
+    const daysPerWeek = parseFloat(document.getElementById('daysPerWeek').value);
+    const avgPriceHigh = parseFloat(document.getElementById('avgPriceHigh').value);
+    const avgPriceMid = parseFloat(document.getElementById('avgPriceMid').value);
+    const avgPriceLow = parseFloat(document.getElementById('avgPriceLow').value);
+
+    if (isNaN(desiredSalary) || isNaN(hoursPerDay) || isNaN(daysPerWeek) || isNaN(avgPriceHigh) || isNaN(avgPriceMid) || isNaN(avgPriceLow)) {
+        document.getElementById("salaryGoalResult").innerHTML = "Please enter valid numbers for all fields.";
+        return;
+    }
+
+    // Weekly and monthly work hours
+    const weeklyHours = hoursPerDay * daysPerWeek;
+    const monthlyHours = weeklyHours * 4;
+
+    // Weekly and monthly target based on desired salary
+    const weeklyTarget = desiredSalary / 52;
+    const monthlyTarget = desiredSalary / 12;
+
+    // Suggested items to sell
+    const itemsPerWeekHigh = Math.ceil(weeklyTarget / avgPriceHigh);
+    const itemsPerWeekMid = Math.ceil(weeklyTarget / avgPriceMid);
+    const itemsPerWeekLow = Math.ceil(weeklyTarget / avgPriceLow);
+    const itemsPerMonthHigh = Math.ceil(monthlyTarget / avgPriceHigh);
+    const itemsPerMonthMid = Math.ceil(monthlyTarget / avgPriceMid);
+    const itemsPerMonthLow = Math.ceil(monthlyTarget / avgPriceLow);
+
+    document.getElementById('salaryGoalResult').innerHTML = 
+        "Weekly Target: $" + weeklyTarget.toFixed(2) + "<br>" +
+        "Monthly Target: $" + monthlyTarget.toFixed(2) + "<br><br>" +
+        "Suggested Items to Sell Per Week:<br>" +
+        "- " + itemsPerWeekHigh + " item(s) at $" + avgPriceHigh.toFixed(2) + " (high price)<br>" +
+        "- " + itemsPerWeekMid + " item(s) at $" + avgPriceMid.toFixed(2) + " (mid price)<br>" +
+        "- " + itemsPerWeekLow + " item(s) at $" + avgPriceLow.toFixed(2) + " (low price)<br><br>" +
+        "Suggested Items to Sell Per Month:<br>" +
+        "- " + itemsPerMonthHigh + " item(s) at $" + avgPriceHigh.toFixed(2) + " (high price)<br>" +
+        "- " + itemsPerMonthMid + " item(s) at $" + avgPriceMid.toFixed(2) + " (mid price)<br>" +
+        "- " + itemsPerMonthLow + " item(s) at $" + avgPriceLow.toFixed(2) + " (low price)"
+    ;
+}
+
+
 
 /* --- PRICE YO WORK CALCULATOR --- */
 
@@ -660,6 +721,7 @@ function updateClickCount() {
 }
 
 // Function to attach event listeners to specific buttons
+
 function attachButtonClickListeners() {
     // IDs of the buttons you want to track
     const buttonIds = [
@@ -674,7 +736,9 @@ function attachButtonClickListeners() {
         'calculateFeeByWeight',
         'calculateShrinkRate',
         'calculateCostToFire',
-        'calculateShrinkTest'
+        'calculateShrinkTest',
+        'calculatePriceOfWork',
+        'calculateSalaryPlan'
     ];
 
     // Attach the updateClickCount function to each button

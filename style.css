@@ -274,12 +274,12 @@ li a {
     padding: 20px 20px;
     text-decoration: none;
 }
-#fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active, #projectReferenceGuideLink.active, #priceYourWorkLink.active {
+#salaryLink.active, #fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active, #projectReferenceGuideLink.active, #priceYourWorkLink.active {
     color: #1f1c1c;
     border-left: solid #FD5523;
     margin-left: 10px;
 }
-#fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover, #projectReferenceGuideLink:hover, #priceYourWorkLink:hover {
+#salaryLink:hover, #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover, #projectReferenceGuideLink:hover, #priceYourWorkLink:hover {
     text-decoration: underline;
 }
 #break {
@@ -643,6 +643,12 @@ footer {
     border-top: none;
     border-radius: 0px 0px 6px 6px;
     padding: 10px;
+}
+#calcPageFooter {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 #calcPageFooter {
     grid-row-start: 3;
