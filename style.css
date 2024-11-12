@@ -554,16 +554,16 @@ footer {
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none; /* This prevents the overlay from blocking future clicks */
+    pointer-events: none;
 }
 
 .instagram-handle {
     color: #d6f74c;
     font-size: 3.1em;
-    font-family: "Rubik Pixels", system-ui;
+    font-family: "Jacquard 12", system-ui;
     font-weight: 400;
     font-style: normal;
-    pointer-events: auto; /* Makes the link clickable */
+    pointer-events: auto;
     text-decoration: none;
 }
 
