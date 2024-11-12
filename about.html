@@ -25,6 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap" rel="stylesheet">
     <title>About Clay Calculator</title>
 </head>
 <body>
@@ -53,7 +54,49 @@
     </header>
     <div id="aboutSection">
         <section id="aboutSection1" class="responsive">
+            <div class="image-container">
             <img style="margin-bottom: 2%;" class="responsive" src="images/aboutSection.jpg" loading="lazy"/>
+            <div class="overlay">
+                <a class="instagram-handle" href="https://www.instagram.com/haleynoelle__/profilecard/">@haleynoelle__</a>
+                <br>
+                <a class="instagram-handle" href="https://www.instagram.com/haleynoelle__/profilecard/">@haleynoelle__</a>
+                <br>
+                <a class="instagram-handle" href="https://www.instagram.com/haleynoelle__/profilecard/">@haleynoelle__</a>
+                <br>
+                <a class="instagram-handle" href="https://www.instagram.com/haleynoelle__/profilecard/">@haleynoelle__</a>
+                <br>
+                <a class="instagram-handle" href="https://www.instagram.com/haleynoelle__/profilecard/">@haleynoelle__</a>
+
+            </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const container = document.querySelector('.image-container');
+                    const overlay = document.querySelector('.overlay');
+                    const instagramLink = document.querySelector('.instagram-handle');
+                    let timeoutId;
+                
+                    container.addEventListener('click', function(e) {
+                        if (e.target === instagramLink) {
+                            // Don't start the hide timer if clicking the Instagram handle
+                            return;
+                        }
+                        
+                        overlay.classList.add('show-overlay');
+                        
+                        // Clear any existing timeout
+                        if (timeoutId) {
+                            clearTimeout(timeoutId);
+                        }
+                        
+                        // Hide the overlay after 2 seconds
+                        timeoutId = setTimeout(() => {
+                            overlay.classList.remove('show-overlay');
+                        }, 2000);
+                    });
+                });
+                </script>
+
             <div id="stripeBuyButton">
                 <script async
                   src="https://js.stripe.com/v3/buy-button.js">
