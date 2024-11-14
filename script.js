@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
         document.getElementById("clearPlasticCalculatorButton").addEventListener("click", clearInputs);
-
         document.getElementById("clearCalculatorButton").addEventListener("click", clearInputs);
+
 
 });
 /* --- REACH YO GOALS --- */
@@ -65,45 +65,36 @@ function calculateSalaryGoal() {
 
     // Calculate weekly, monthly, and annual hours
     const weeklyHours = hoursPerDay * daysPerWeek;
-    const monthlyHours = weeklyHours * 4;
     const annualHours = weeklyHours * 52;
 
-    // Calculate hourly rate based on desired salary
     const hourlyRate = desiredSalary / annualHours;
 
-    // Calculate weekly and monthly target based on desired salary
     const weeklyTarget = desiredSalary / 52;
     const monthlyTarget = desiredSalary / 12;
 
-    // Suggested items to sell
     const itemsPerWeekHigh = Math.ceil(weeklyTarget / avgPriceHigh);
     const itemsPerWeekLow = Math.ceil(weeklyTarget / avgPriceLow);
     const itemsPerMonthHigh = Math.ceil(monthlyTarget / avgPriceHigh);
     const itemsPerMonthLow = Math.ceil(monthlyTarget / avgPriceLow);
 
-    // Display results
     document.getElementById('salaryGoalResult').innerHTML = 
         "Hourly Rate: $" + hourlyRate.toFixed(2) + "<br><br>" +
         "Weekly Target: $" + weeklyTarget.toFixed(2) + "<br>" +
         "Monthly Target: $" + monthlyTarget.toFixed(2) + "<br><br>" +
         "Suggested Items to Sell Per Week:<br>" +
-        "- " + itemsPerWeekHigh + " item(s) at $" + avgPriceHigh.toFixed(2) + " (high price)<br>" +
+        "- " + itemsPerWeekHigh + " item(s) at $" + avgPriceHigh.toFixed(2) + " (high price)<br>" + " or <br>" +
         "- " + itemsPerWeekLow + " item(s) at $" + avgPriceLow.toFixed(2) + " (low price)<br><br>" +
         "Suggested Items to Sell Per Month:<br>" +
-        "- " + itemsPerMonthHigh + " item(s) at $" + avgPriceHigh.toFixed(2) + " (high price)<br>" +
+        "- " + itemsPerMonthHigh + " item(s) at $" + avgPriceHigh.toFixed(2) + " (high price)<br>" + " or <br>" +
         "- " + itemsPerMonthLow + " item(s) at $" + avgPriceLow.toFixed(2) + " (low price)"
     ;
 }
-
 
 // Function to clear form inputs and result
 function clearForm() {
     document.getElementById("salaryForm").reset();
     document.getElementById("salaryGoalResult").innerHTML = "";
 }
-
-
-
 
 /* --- PRICE YO WORK CALCULATOR --- */
 
@@ -647,6 +638,8 @@ function calculateCostToFire() {
     document.getElementById("costToFireResult").innerHTML = "Your cost to fire is $" + costToFire.toFixed(2);
 }
 
+/* ---- Menu Dropdown ----  */ 
+
 function menuFunction() {
     var links = document.getElementById("myLinks");
     if (links.style.display === "block") {
@@ -665,13 +658,7 @@ document.addEventListener("click", function(event) {
     }
 });
 
-function showAntiSocialModal() {
-    document.getElementById('antiSocialModal').style.display = 'block';
-}
 
-function closeAntiSocialModal() {
-    document.getElementById('antiSocialModal').style.display = 'none';
-}
 /* SHARE FUNCTION */
 document.addEventListener("DOMContentLoaded", function() {
     const viewBtn = document.querySelector(".view-modal"),
@@ -732,14 +719,13 @@ function updateClickCount() {
 // Function to attach event listeners to specific buttons
 
 function attachButtonClickListeners() {
-    // IDs of the buttons you want to track
+    // IDs of the buttons I want to track
     const buttonIds = [
         'calculateRVolume',
         'calculateCVolume',
         'calculateFVolume',
         'calculateHVolume',
         'calculateEVolume',
-        'calculateShrinkRate',
         'calculateFeeBySquareInch',
         'calculateFeeByCubicInch',
         'calculateFeeByWeight',

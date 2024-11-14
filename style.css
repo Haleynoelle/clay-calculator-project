@@ -3,6 +3,20 @@ body {
     background-color: #Faf8f6;
     font-family: "Roboto Mono", monospace;
 }
+/*discord*/
+#discordVisual {
+    grid-row-start: 2;
+    grid-row-end:3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: #Faf8f6;
+    border-radius: 6px;
+    border: solid #1f1c1c;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .babyFace {
     display: flex;
