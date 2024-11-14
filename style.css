@@ -37,6 +37,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('images/Clay House Discord.png'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    overflow: hidden; 
+    position: relative;
+}
+#discordJoinServer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 225, 248, 0.543);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+#discordTagline {
+    position: relative;
+    z-index: 2;
 }
 
 .babyFace {
@@ -1011,9 +1033,19 @@ img#visualBlock {
         border-radius: 6px;
         border-width: 1px;
         border: solid #1f1c1c;
-        padding: 1px;
+        padding: 10px;
         height: 20vh;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
     }
+    
+    #discordTagline {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Adds space between the text and button */
+    }
+    
 
 }
 @media screen and (max-width: 650px) { 
