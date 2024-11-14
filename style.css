@@ -236,9 +236,9 @@ body {
     border-width: 1.5px;
     border-top: none;
     border-radius: 0px 0px 6px 6px;
-    min-width: 200px;
+    min-width: 300px;
     z-index: 1;
-    left: -209px;
+    left: -290px;
     top: 42px;
     background-color: rgba(249, 249, 249, .6);
     backdrop-filter: blur(10px);
@@ -247,7 +247,7 @@ body {
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 12px 12px;
     text-decoration: none;
     display: block;
 }
@@ -288,12 +288,12 @@ li a {
     padding: 20px 20px;
     text-decoration: none;
 }
-#salaryLink.active, #fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active, #projectReferenceGuideLink.active, #priceYourWorkLink.active {
+#discordLink.active, #salaryLink.active, #fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active, #projectReferenceGuideLink.active, #priceYourWorkLink.active {
     color: #1f1c1c;
     border-left: solid #FD5523;
     margin-left: 10px;
 }
-#salaryLink:hover, #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover, #projectReferenceGuideLink:hover, #priceYourWorkLink:hover {
+#discordLink:hover, #salaryLink:hover, #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover, #projectReferenceGuideLink:hover, #priceYourWorkLink:hover {
     text-decoration: underline;
 }
 #break {
@@ -666,6 +666,7 @@ footer {
     margin-bottom: 10px;
     justify-content: space-evenly;
 }
+
 #stripeBuyButton {
     display: flex;
     flex-direction: column;
