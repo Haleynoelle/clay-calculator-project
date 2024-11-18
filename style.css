@@ -847,6 +847,7 @@ input {
     border-width: 1px;
     font-family: "Roboto Mono", monospace;
     padding: 10px;
+    font-size: 16px;
 }
 .result {
     display: flex;
