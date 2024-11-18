@@ -996,7 +996,10 @@ img#visualBlock {
         border-width: 1px;
         border: solid #1f1c1c;
         padding: 10px;
-        height: 20vh;
+        height: 30vh;
+    }
+    input {
+        width: 50vw;
     }
 
     #discordVisual {
