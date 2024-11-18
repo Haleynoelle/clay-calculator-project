@@ -638,6 +638,57 @@ function calculateCostToFire() {
     document.getElementById("costToFireResult").innerHTML = "Your cost to fire is $" + costToFire.toFixed(2);
 }
 
+/* ---  CLAY RECIPE CALCULATOR --- */
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("calculateRecipe").addEventListener("click", calculateClayRecipe);
+    document.getElementById("clearCalculatorButton").addEventListener("click", clearForm);
+
+    const inputs = document.querySelectorAll('#clayRecipeForm input');
+
+    inputs.forEach(input => {
+        input.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                calculateClayRecipe();
+            }
+        });
+    });
+});
+
+function calculateClayRecipe() {
+    const recipeInput = document.getElementById("recipe").value;
+    const totalWeight = parseFloat(document.getElementById("totalWeight").value);
+    const resultContainer = document.getElementById("recipeResult");
+
+    // Clear previous results
+    resultContainer.innerHTML = "";
+
+    if (!recipeInput || isNaN(totalWeight) || totalWeight <= 0) {
+        resultContainer.innerText = "Please enter valid recipe percentages and total weight.";
+        return;
+    }
+
+    const percentages = recipeInput.split(',').map(Number);
+    if (percentages.some(isNaN) || percentages.reduce((a, b) => a + b, 0) !== 100) {
+        resultContainer.innerText = "Ensure the recipe percentages add up to 100.";
+        return;
+    }
+
+    const amounts = percentages.map(p => ((p / 100) * totalWeight).toFixed(2));
+    resultContainer.innerHTML = amounts
+        .map((amt, idx) => `Ingredient ${idx + 1}: ${amt} lbs`)
+        .join('<br>');
+}
+
+function clearForm() {
+    document.getElementById("recipe").value = "";
+    document.getElementById("totalWeight").value = "";
+    document.getElementById("recipeResult").innerHTML = "";
+}
+
+
+
 /* ---- Menu Dropdown ----  */ 
 
 function menuFunction() {
@@ -733,7 +784,8 @@ function attachButtonClickListeners() {
         'calculateCostToFire',
         'calculateShrinkTest',
         'calculatePriceOfWork',
-        'calculateSalaryGoal'
+        'calculateSalaryGoal',
+        'calculateRecipe'
     ];
 
     // Attach the updateClickCount function to each button

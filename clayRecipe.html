@@ -12,8 +12,8 @@
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="ceramics, clay calculator, ceramics calculator, pottery, shrink rate, kiln cost, ceramics pricing calculator, ceramics price, pottery tools">
-        <meta name="description" content="Digital Tools to help you build ceramics with accuracy. Calculate costs, prices, project volume, size, firing fees, shrink rates, and more.">
+        <meta name="keywords" content="shrink calculator, pottery, shrink rate, kiln cost, pottery, clay calculator">
+        <meta name="description" content="Pottery Shrink Rate Calculator">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
         <link rel="icon" href="images/ms-icon-310x310.png" type="image/icon type">
@@ -23,12 +23,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-        <title>Price Your Work</title>
+        <title>Clay Recipe Calculator</title>
 </head>
-
-
-
-
 <body>
     <div id="columnContainer">
         <header id="navContainer">
@@ -47,8 +43,8 @@
                     <a id="fireFeeLink" href="firingFeeCalculator.html">Calculate Fire Fee</a>
                     <a id="shrinkTestLink" href="shrinkTest.html">Calculate Shrink Rate</a>
                     <a id="costToFireLink" href="costToFire.html">Calculate Cost to Fire a Kiln</a>
-                    <a id="clayRecipeLink" href="clayRecipe.html">Calculate Clay Recipe</a>
-                    <a id="priceYourWorkLink" class="active" href="priceYourWork.html">Calculate the Price of Your Work</a>
+                    <a id="clayRecipeLink" class="active" href="clayRecipe.html">Calculate Clay Recipe</a>
+                    <a id="priceYourWorkLink" href="priceYourWork.html">Calculate the Price of Your Work</a>
                     <a id="salaryLink" href="incomeGoals.html">Calculate Income Goals</a>
                     <a id="projectReferenceGuideLink" href="projectReferenceGuide.html">Project Reference Guide</a>
                     <a id="discordLink" href="discord.html">Clay House Discord Server<img style="width: 20px;height: 20px; padding-left: 7px; vertical-align: middle;" src="images/Clyde Black Icon.svg"></a>
@@ -56,29 +52,20 @@
             </div>
             </nav>
         </header>
-        <h2 id="calculatorName">Ceramics Pricing Calculator</h2>
+        <h2 id="calculatorName">Clay Recipe Calculator</h2>
         <div id="calculatorPageGrid">
             <section id="calculatorHeader">
-                <h1 id="calculatorTitle">Ceramics Pricing Calculator</h1>
-                <p id="calculatorAbout">This tool is designed to help ceramicists determine fair and profitable prices for their work
-
-                    by taking into account various factors that contribute to the overall cost and value of your ceramic pieces, including: <br>
-                    <br>
-                    &#8865;	Material costs (clay, glazes, etc.) <br>
-                    &#8865;	 Labor time and your desired hourly rate<br>
-                    &#8865;	 Overhead costs (studio rent, utilities, equipment depreciation)<br>
-                    &#8865;  Desired profit margin<br>
-                    <br>
-                    By considering these factors, this calculator helps you set prices that not only cover your costs, but also reflect the true value of your artistic work and craftsmanship.
-                    <br>
-                    <p style="font-style: italic; width: 70%; margin-left: 1%;">This calculator provides a suggested retail price, you should also consider market factors, your target audience, and the uniqueness of you & your work when making final pricing decisions.</p>
+                <h1 id="calculatorTitle">Clay Recipe Calculator</h1>
+                <p id="calculatorAbout">
+                    This calculator will scale clay recipes based on the amount of clay you need. Enter your clay recipe as percentages, along with the desired weight of the final clay batch.
+                </p>   
                 <br>
                 <div class="share-container">
                     <button class="view-modal">Share this calculator</button>
                     <div class="popup">
                        <div class="close"><i class="uil uil-times"></i></div>
                        <div class="content">
-                           <p>Share the pricing calculator via:</p>
+                           <p>Share the shrink rate calculator via:</p>
                            <ul class="icons">
                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://claycalculators.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
                             <a href="fb-messenger://share/?link=https://claycalculators.com" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
@@ -93,82 +80,55 @@
                            <p>Or copy link:</p>
                            <div class="field">
                                <i class="url-icon uil uil-link"></i>
-                               <input type="text" readonly value="https://www.claycalculators.com/shrinkRateCalculator">
+                               <input type="text" readonly value="https://www.claycalculators.com/shrinkTest">
                                <button>Copy</button>
                            </div>
                        </div>
                    </div>
                    </div>
-                   <script src="script.js"></script>
+                   <script src="script.js"></script>    
+            </section>
+            <section id="formContainerGrid">
+                <form id="clayRecipeForm" class="responsive"> 
+                    <div id="recipeInputs">
+                        <label for="recipe">Clay Recipe (comma-separated percentages):</label><br>
+                        <input type="text" id="recipe" name="recipe" placeholder="e.g., 25, 25, 25, 25"><br>
+                        <label for="totalWeight">Desired Total Weight (lbs):</label><br>
+                        <input type="number" id="totalWeight" name="totalWeight" placeholder="e.g., 10"><br>
+                    </div>
+                </form>
+                <div id="calculatorButtons" class="responsive">
+                    <button class="responsive" type="button" id="calculateRecipe">Submit</button>
+                    <button class="responsive" type="button" id="clearCalculatorButton">CLEAR</button>
+                </div>
+            </section>
+            <section id="calculatorVisualize">
+                <img id="visualBlock" src="images/clayRecipeVisual.png" class="responsive" style="max-width: 250px; max-height: 250px;">
+            </section>
+            <section id="results" class="responsive">
+                <p>Your Clay Recipe:</p>
+                <div class="result" id="recipeResult"></div>
             </section>
 
-        <section id="formContainerGrid">
-        <div id="break"></div>
-
-        <p class="responsive"></p>
-        
-        <form id="pricingForm" class="responsive">
-            <div>
-            <label for="materialCost">Material Cost ($):</label>
-            <input type="text" id="materialCost" required min="0" step="0.01">
+        <footer id="calcPageFooter">
+            <!-- <p>product of <a id="space" href="http://www.claycatalog.com" style="color: #004225;">Clay Catalog</a></p> -->
+            <!-- <p>support the page/me so i can keep building ceramic apps for you </p> -->
+            <div id="footerLinks">
+             <p>&copy; 2024 Clay Calculator</p>
+             <!--<a href="termsOfUse.html"><p>Terms of Use</p></a>-->
+             <a href="policies/privacyPolicy.html"><p>Privacy Policy</p></a>
+             <a href="policies/cookies.html"><p>Cookies</p></a>
             </div>
-            <div>
-            <label for="laborHours">Labor Hours:</label>
-            <input type="text" id="laborHours" required min="0" step="0.25">
+            <div class="responsive" id="clickCountContainer">
+                <div id="clickCountSection1">
+                    <p>you hit submit:</p>
+                </div>
+                <div id="clickCountSection2">
+                    <p id="clickCountDisplay"></p>
+                </div>
             </div>
-            <div>
-            <label for="hourlyRate">Your Hourly Rate ($):</label>
-            <input type="text" id="hourlyRate" required min="0" step="0.01">
-            </div>
-            <div>
-            <label for="overheadCost">Overhead Cost ($):</label>
-            <input type="text" id="overheadCost" required min="0" step="0.01">
-            </div>
-            <div>
-            <label for="profitMargin">Desired Profit Margin (%):</label>
-            <input type="text" id="profitMargin" required min="0" max="100" step="1">
-            </div>
-            <div id="break"></div>
-            <div id="calculatorButtons" class="responsive">
-                <button class="responsive" type="button" id="calculatePriceOfWork">Submit</button>
-                <button class="responsive" type="button" id="clearPriceButton">CLEAR</button>
-            </div>
-            <div id="break"></div>        
-        </form>
-        <div id="break"></div>
-    </section>
-    <section id="calculatorVisualize">
-        <img id="visualBlock" src="images/priceSheet.png" class="responsive" style="max-width: 250px; max-height: 250px;">
-    </section>
-    <section id="results" class="responsive">
-        <p>Pricing:</p>
-        <div class="result" id="priceWorkResult"></div>
-    </section>
-
-
-
-
-
-    <footer id="calcPageFooter">
-        <!-- <p>product of <a id="space" href="http://www.claycatalog.com" style="color: #004225;">Clay Catalog</a></p> -->
-        <!-- <p>support the page/me so i can keep building ceramic apps for you </p> -->
-        <div id="footerLinks">
-         <p>&copy; 2024 Clay Calculator</p>
-         <!--<a href="termsOfUse.html"><p>Terms of Use</p></a>-->
-         <a href="policies/privacyPolicy.html"><p>Privacy Policy</p></a>
-         <a href="policies/cookies.html"><p>Cookies</p></a>
-        </div>
-        <div class="responsive" id="clickCountContainer">
-            <div id="clickCountSection1">
-                <p>You hit submit:</p>
-            </div>
-            <div id="clickCountSection2">
-                <p id="clickCountDisplay"></p>
-            </div>
-        </div>
-    </footer>
-</div>
-</div>
-
+        </footer>
+    </div>
+    </div>
 </body>
 </html>

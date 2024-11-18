@@ -331,12 +331,12 @@ li a {
     padding: 20px 20px;
     text-decoration: none;
 }
-#discordLink.active, #salaryLink.active, #fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active, #projectReferenceGuideLink.active, #priceYourWorkLink.active {
+#clayRecipeLink.active, #discordLink.active, #salaryLink.active, #fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active, #projectReferenceGuideLink.active, #priceYourWorkLink.active {
     color: #1f1c1c;
     border-left: solid #FD5523;
     margin-left: 10px;
 }
-#discordLink:hover, #salaryLink:hover, #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover, #projectReferenceGuideLink:hover, #priceYourWorkLink:hover {
+#clayRecipeLink:hover, #discordLink:hover, #salaryLink:hover, #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover, #projectReferenceGuideLink:hover, #priceYourWorkLink:hover {
     text-decoration: underline;
 }
 #break {
@@ -388,7 +388,7 @@ footer {
     justify-self: end;
     text-align: start;
 }
-#homeTagline {
+#homeTagline, #supportTagline {
     display: flex;
     flex-direction: row;
     align-items: baseline;
