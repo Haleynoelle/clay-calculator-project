@@ -291,6 +291,37 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.nested-menu {
+    position: relative;
+}
+
+.toggle-button-menu {
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.nested-content {
+    display: none;
+    position: relative;
+    padding: 0;
+}
+
+.toggle-button:focus + .nested-content,
+.nested-menu .nested-content.active {
+    display: block;
+}
+
+.nested-content a {
+    padding: 8px 16px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+
 header {
     color:#FD5523;
 }
@@ -325,12 +356,12 @@ li a {
     padding: 20px 20px;
     text-decoration: none;
 }
-#aboutLink.active, #feedbackLink.active, #clayRecipeLink.active, #discordLink.active, #salaryLink.active, #fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active, #projectReferenceGuideLink.active, #priceYourWorkLink.active {
+#menuToggle.active, #aboutLink.active, #feedbackLink.active, #clayRecipeLink.active, #discordLink.active, #salaryLink.active, #fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active, #projectReferenceGuideLink.active, #priceYourWorkLink.active {
     color: #1f1c1c;
     border-left: solid #FD5523;
     margin-left: 10px;
 }
-#aboutLink:hover, #feedbackLink:hover, #clayRecipeLink:hover, #discordLink:hover, #salaryLink:hover, #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover, #projectReferenceGuideLink:hover, #priceYourWorkLink:hover {
+#menuToggle:hover, #aboutLink:hover, #feedbackLink:hover, #clayRecipeLink:hover, #discordLink:hover, #salaryLink:hover, #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover, #projectReferenceGuideLink:hover, #priceYourWorkLink:hover {
     text-decoration: underline;
 }
 #break {

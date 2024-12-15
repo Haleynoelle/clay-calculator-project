@@ -38,24 +38,47 @@
                         <span>N</span><span>U</span>
                     </div>
                 </a>
-            <nav>
-                <div id="myLinks" class="dropdown-content">
-                    <!--<a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a> -->
-                    <a id="aboutLink" href="about.html">About</a>
-                    <a id="volumeLink" href="volumeCalculator.html">Calculate Volume</a>
-                    <a id="shrinkLink" href="shrinkRateCalculator.html">Calculate Dimensions</a>
-                    <a id="fireFeeLink" class="active"  href="firingFeeCalculator.html">Calculate Fire Fee</a>
-                    <a id="shrinkTestLink" href="shrinkTest.html">Calculate Shrink Rate</a>
-                    <a id="costToFireLink" href="costToFire.html">Calculate Cost to Fire a Kiln</a>
-                    <a id="clayRecipeLink" href="clayRecipe.html">Calculate Clay Recipe</a>
-                    <a id="priceYourWorkLink" href="priceYourWork.html">Calculate the Price of Your Work</a>
-                    <a id="salaryLink" href="incomeGoals.html">Calculate Income Goals</a>
-                    <a id="projectReferenceGuideLink" href="projectReferenceGuide.html">Project Reference Guide</a>
-                    <a id="discordLink" href="clayHouseDiscord.html">Clay House Discord Server<img style="width: 20px;height: 20px; padding-left: 7px; vertical-align: middle;" src="images/Clyde Black Icon.svg"></a>
-                    <a style="color: #8c9eff;" id="feedbackLink" href="https://foregoing-dart-74c.notion.site/153a07138b8381ffa933dd9aa7350fef?pvs=105">Give Feedback!</a>
-                </div>
-            </div>
-            </nav>
+                <nav>
+                    <div id="myLinks" class="dropdown-content">
+                        <a id="aboutLink" href="about.html">About</a>
+                
+                        <div class="nested-menu">
+                            <a id="menuToggle" class="toggle-button-menu">Calculators//</a>
+                            <div class="nested-content">
+                                <a id="volumeLink" href="volumeCalculator.html">Volume</a>
+                                <a id="shrinkLink" href="shrinkRateCalculator.html">Dimensions</a>
+                                <a id="fireFeeLink" class="active" href="firingFeeCalculator.html">Firing Fee</a>
+                                <a id="shrinkTestLink" href="shrinkTest.html">Shrink Rate</a>
+                                <a id="costToFireLink" href="costToFire.html">Cost to Fire a Kiln</a>
+                                <a id="clayRecipeLink" href="clayRecipe.html">Clay Recipe</a>
+                                <a id="priceYourWorkLink" href="priceYourWork.html">Price Your Work</a>
+                                <a id="salaryLink" href="incomeGoals.html">Income Goals</a>
+                            </div>
+                        </div>
+                
+                        <div class="nested-menu">
+                            <a id="menuToggle" class="toggle-button-menu">Resources//</a>
+                            <div class="nested-content">
+                                <a id="projectReferenceGuideLink" href="projectReferenceGuide.html">Project Reference Guide</a>
+                                <a id="discordLink" href="clayHouseDiscord.html">
+                                    Clay House Discord Server
+                                    <img style="width: 20px; height: 20px; padding-left: 7px; vertical-align: middle;" src="images/Clyde Black Icon.svg">
+                                </a>
+                            </div>
+                        </div>
+                
+                        <a style="color: #8c9eff;" id="feedbackLink" href="https://foregoing-dart-74c.notion.site/153a07138b8381ffa933dd9aa7350fef?pvs=105">Give Me Feedback</a>
+                    </div>
+                </nav>
+                <script>
+                    document.querySelectorAll('.toggle-button-menu').forEach(button => {
+                        button.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            const content = this.nextElementSibling;
+                            content.classList.toggle('active');
+                        });
+                    });
+                </script>
         </header>
     <h2 id="calculatorName">Firing Fee Calculator</h2>
     <div id="calculatorPageGrid">
