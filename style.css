@@ -227,8 +227,29 @@ body {
     font-weight: bolder;
     background: #efedea;
 }
+
+#menuIconGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 40px; 
+    height: 40px; 
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    background-color: #Faf8f6;
+    cursor: pointer;
+}
+
+#menuIconGrid span {
+    font-family: "Roboto Mono", monospace;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
 .icon {
-    color: #FD5523;
+    color: #Faf8f6;
 }
 .icon:focus {
     color: #1f1c1c;
@@ -239,7 +260,7 @@ body {
 #myLinks {
     display: none;
 }
-.gg-menu-grid-r {
+/*.gg-menu-grid-r {
     box-sizing: border-box;
     position: relative;
     display: block;
@@ -264,7 +285,7 @@ body {
     6px 0 0,
     12px 0 0,
     0 12px 0;
-} 
+} */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -662,7 +683,7 @@ footer {
   }
 .orangeCircle {
         background: #FD5523;
-        animation: glowing 1000ms infinite;
+        /*animation: glowing 1000ms infinite;*/
         border-radius: 50%;
         width: 15px;
         height: 15px;
@@ -700,7 +721,7 @@ footer {
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
-    border-bottom: solid;
+   /* border-bottom: solid;*/
 }
 #lineup2 {
     display: flex;
