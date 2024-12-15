@@ -352,12 +352,12 @@ li a {
     padding: 20px 20px;
     text-decoration: none;
 }
-#feedbackLink.active, #clayRecipeLink.active, #discordLink.active, #salaryLink.active, #fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active, #projectReferenceGuideLink.active, #priceYourWorkLink.active {
+#aboutLink.active, #feedbackLink.active, #clayRecipeLink.active, #discordLink.active, #salaryLink.active, #fireFeeLink.active, #volumeLink.active, #shrinkLink.active, #costToFireLink.active, #shrinkTestLink.active, #projectReferenceGuideLink.active, #priceYourWorkLink.active {
     color: #1f1c1c;
     border-left: solid #FD5523;
     margin-left: 10px;
 }
-#feedbackLink:hover, #clayRecipeLink:hover, #discordLink:hover, #salaryLink:hover, #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover, #projectReferenceGuideLink:hover, #priceYourWorkLink:hover {
+#aboutLink:hover, #feedbackLink:hover, #clayRecipeLink:hover, #discordLink:hover, #salaryLink:hover, #fireFeeLink:hover, #volumeLink:hover, #shrinkLink:hover,#costToFireLink:hover ,#shrinkTestLink:hover, #projectReferenceGuideLink:hover, #priceYourWorkLink:hover {
     text-decoration: underline;
 }
 #break {
