@@ -239,21 +239,20 @@ body {
     justify-items: center;
     background-color: #Faf8f6;
     cursor: pointer;
+    gap: 2px;
 }
 
 #menuIconGrid span {
     font-family: "Roboto Mono", monospace;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: bolder;
     color: #FD5523;
 }
 
 .icon {
     color: #Faf8f6;
 }
-.icon:focus {
-    color: #1f1c1c;
-}
+
 #navTitle {
     text-decoration: none;
 }
