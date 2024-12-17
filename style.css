@@ -908,13 +908,6 @@ img#visualBlock {
     max-height: 300px;
 }
 
-
-/* Shrink Rate Calculator */
-
-/* Volume Calculator */
-
-/* Firing Fee Calculator */
-
 @media screen and (min-width: 801px) { 
     #calculatorName {
         display: none;
@@ -942,11 +935,18 @@ img#visualBlock {
     #formContainer.responsive {
         position: relative;
     }
+    #cardFilter {
+        padding-left: 7%;
+    }
     #calculatorCards {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        width: 90%;
+        align-items: center;  /* vertical centering */
+        min-height: 100%;
+        padding-left: 5%;      
     }
+
     #heroSection {
         grid-template-columns: 1fr;
     }
@@ -1099,10 +1099,17 @@ img#visualBlock {
     }
     #heroH1 {
         font-size: 38px;
+        margin-bottom: 10px;
     }
     #card:hover {
         border-left: solid #FD5523;
         background-color: #Faf8f6;
+    }
+    #card {
+        padding-left: 5%;
+    }
+    #homeTagline, #bmacbutton {
+        font-size: smaller;
     }
 }
 @media screen and (max-width: 900px) {
