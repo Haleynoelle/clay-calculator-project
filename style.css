@@ -1083,6 +1083,25 @@ img#visualBlock {
         width: 300px;
         padding: 20px;
     }
+    #clickCountContainer {
+        border: solid #1f1c1c;
+        margin-top: 14px;
+        padding: 5px;
+        font-size: 12px;
+    }
+    #clickContainer {
+        justify-self: end;
+    }
+    #clickCountSection2 {
+        border: solid #1f1c1c;
+        border-radius: 6px;
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+        background: #efedea;
+    }
 }
 
 @media screen and (max-width: 500px) {
