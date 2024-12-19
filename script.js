@@ -801,7 +801,7 @@ function attachButtonClickListeners() {
 document.addEventListener('DOMContentLoaded', () => {
     let clickCount = localStorage.getItem('submitClickCount') || 0;
     document.getElementById('clickCountDisplay').textContent = 
-        `${clickCount}x`;
+        `Ceramic calculations completed: ${clickCount} and counting!`;
 
     // Attach event listeners to the buttons
     attachButtonClickListeners();
