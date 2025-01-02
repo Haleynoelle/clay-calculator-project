@@ -254,20 +254,22 @@
         <!-- <p>product of <a id="space" href="http://www.claycatalog.com" style="color: #004225;">Clay Catalog</a></p> -->
         <!-- <p>support the page/me so i can keep building ceramic apps for you </p> -->
         <div id="footerLinks">
-         <p>&copy; 2024 Clay Calculator</p>
-         <!--<a href="termsOfUse.html"><p>Terms of Use</p></a>-->
+            <p>&copy; <span id="year"></span> Clay Calculator by Art Department LLC</p>
+            <!--<a href="termsOfUse.html"><p>Terms of Use</p></a>-->
          <a href="policies/privacyPolicy.html"><p>Privacy Policy</p></a>
          <a href="policies/cookies.html"><p>Cookies</p></a>
         </div>
-        <div class="responsive" id="clickCountContainer">
-            <div id="clickCountSection1">
-                <p>you hit submit:</p>
+        <div class="click-container">
+            <div class="responsive" id="clickCountContainer">
+                <div class="responsive" id="clickCountSection2">
+                    <p id="clickCountDisplay"></p>
+                </div>
             </div>
-            <div id="clickCountSection2">
-                <p id="clickCountDisplay"></p>
-            </div>
-        </div>
+        </div> 
     </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </div>
 </div>
 </div>

@@ -159,19 +159,21 @@
         </section>
         <footer id="calcPageFooter">
             <div id="footerLinks">
-                <p>&copy; 2024 Clay Calculator</p>
+                <p>&copy; <span id="year"></span> Clay Calculator by Art Department LLC</p>
                 <a href="policies/privacyPolicy.html"><p>Privacy Policy</p></a>
                 <a href="policies/cookies.html"><p>Cookies</p></a>
             </div>
-            <div class="responsive" id="clickCountContainer">
-                <div id="clickCountSection1">
-                    <p>You hit submit:</p>
+            <div class="click-container">
+                <div class="responsive" id="clickCountContainer">
+                    <div class="responsive" id="clickCountSection2">
+                        <p id="clickCountDisplay"></p>
+                    </div>
                 </div>
-                <div id="clickCountSection2">
-                    <p id="clickCountDisplay"></p>
-                </div>
-            </div>
+            </div> 
         </footer>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
     </div>
 </div>
 
