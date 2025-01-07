@@ -178,19 +178,19 @@ body {
 }
 
 #bmacbutton {
-    background-color: #8c9eff;
-    color: #Faf8f6;
+    color: #1f1c1c;
     padding: 7px;
     height: fit-content;
     width: fit-content;
-    box-shadow: 6px 6px #d6f74c;
-
 }
 
 #bmacbutton:hover {
     cursor: pointer;
     color: #1f1c1c;
     background-color: #Faf8f6;
+    border: solid #8c9dff;
+    box-shadow: 4px 4px 8px rgba(249, 174, 77, 0.634);
+    transition: background-color 0.4s ease-in-out;
 }
 #clickCountContainer {
     display: grid;
@@ -540,10 +540,22 @@ footer {
     color: #1f1c1c;
 }
 
-#card:hover {
+#card:hover,
+#card:active,
+#card:focus {
     border: solid #8c9eff;
-    background-color: #d6f74c;
+    box-shadow: 4px 4px 8px rgba(249, 174, 77, 0.634);
     transition: background-color 0.4s ease-in-out;
+}
+
+/* For touch devices */
+@media (hover: none) {
+    #card:active,
+    #card:focus {
+        border: solid #8c9eff;
+        box-shadow: 4px 4px 8px rgba(249, 174, 77, 0.634);
+        transition: background-color 0.4s ease-in-out;
+    }
 }
 #space {
     padding-left: 3px;
