@@ -449,7 +449,7 @@ footer {
 }
 
 #resourcesCard {
-    border: solid #8c9eff;
+    border: 1.5px solid #8c9eff;
     background-color: #Faf8f6;
     padding: 5%;
     padding-left: 15%;
@@ -1116,6 +1116,9 @@ img#visualBlock {
         font-weight: bolder;
         background: #efedea;
     }
+    #resourcesCard h1{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1135,6 +1138,9 @@ img#visualBlock {
     }
     #homeTagline, #bmacbutton {
         font-size: smaller;
+    }
+    #resourcesCard {
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 900px) {
