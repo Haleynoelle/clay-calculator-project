@@ -740,7 +740,7 @@ footer {
     grid-column-start: 1;
     grid-column-end: 4;
     background-color: #8c9eff;
-    border: solid #1f1c1c;
+    border: 1.5px solid #1f1c1c;
     border-top: none;
     border-radius: 0px 0px 6px 6px;
     padding: 10px;
@@ -772,7 +772,7 @@ footer {
     grid-column-end: 2;
     background-color: #Faf8f6;
     border-radius: 6px;
-    border: solid #1f1c1c;
+    border: 1.5px solid #1f1c1c;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -786,7 +786,7 @@ footer {
     background-color: #Faf8f6;
     border-radius: 6px;
     border-width: 1px;
-    border: solid #1f1c1c;
+    border: 1.5px solid #1f1c1c;
     padding: 10px;
     overflow-y: auto;
 }
@@ -800,11 +800,6 @@ footer {
     background-color: hsl(30, 29%, 97%);
     width: 80vw;
 }
-#calculatorVisual {
-    background-color: #FD5523;
-    width: 40vw;
-    border: solid #FD5523;
-}
 #calculatorButtons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -816,7 +811,7 @@ button {
     background-color: #Faf8f6;
     font-weight: 200;
     font-size: small;
-    border: solid #FD5523;
+    border: 1.5px solid #FD5523;
     border-radius: 4px;
     color: #FD5523;
     margin-bottom: 10px;
@@ -826,7 +821,7 @@ button {
 button:focus {
     color:#Faf8f6;
     background-color: #FD5523;
-    border: solid #FD5523;
+    border: 1.5px solid #FD5523;
 }
 #buttonContainer {
     display: flex;
@@ -862,7 +857,7 @@ input {
 }
 #resultBlock {
     background-color: #Faf8f6;
-    border: solid #1f1c1c;
+    border: 1.5px solid #1f1c1c;
     width: 40vw;
     max-width: 300px;
     border-radius: 6px;
@@ -880,7 +875,7 @@ input {
     margin-right: 10px;
     padding: 10px;
     width: 40vw;
-    border-width: 1px;
+    border-width: 1.5px;
 }
 img#visualBlock {
     max-width: 300px;
@@ -949,7 +944,7 @@ img#visualBlock {
         grid-column-start: 1;
         grid-column-end: 4;
         background-color: #8c9eff;
-        border: solid #1f1c1c;
+        border: 1.5px solid #1f1c1c;
         border-radius: 6px;
         padding: 10px;
     }
@@ -960,7 +955,7 @@ img#visualBlock {
         grid-column-start: 1;
         grid-column-end: 4;
         background-color: #8c9eff;
-        border: solid #1f1c1c;
+        border: 1.5px solid #1f1c1c;
         border-radius: 6px;
         padding: 10px;
     }
@@ -977,7 +972,7 @@ img#visualBlock {
         grid-column-end: 4;
         background-color: #Faf8f6;
         border-radius: 6px;
-        border: solid #1f1c1c;
+        border: 1.5px solid #1f1c1c;
         padding: 15px;
     }
     #calculatorVisualize {
@@ -987,7 +982,7 @@ img#visualBlock {
         grid-column-end: 4;
         background-color: #Faf8f6;
         border-radius: 6px;
-        border: solid #1f1c1c;
+        border: 1.5px solid #1f1c1c;
         padding: 10px;
     
     }
@@ -1000,7 +995,7 @@ img#visualBlock {
         background-color: #Faf8f6;
         border-radius: 6px;
         border-width: 1px;
-        border: solid #1f1c1c;
+        border: 1.5px solid #1f1c1c;
         padding: 10px;
         height: 30vh;
     }
@@ -1015,7 +1010,7 @@ img#visualBlock {
         grid-column-end: 4;
         background-color: #Faf8f6;
         border-radius: 6px;
-        border: solid #1f1c1c;
+        border: 1.5px solid #1f1c1c;
         padding: 10px;
     }
     
@@ -1031,7 +1026,7 @@ img#visualBlock {
         grid-column-end: 4;
         background-color: #Faf8f6;
         border-radius: 6px;
-        border: solid #1f1c1c;
+        border: 1.5px solid #1f1c1c;
         padding: 15px;
     }
     
@@ -1043,7 +1038,7 @@ img#visualBlock {
         background-color: #Faf8f6;
         border-radius: 6px;
         border-width: 1px;
-        border: solid #1f1c1c;
+        border: 1.5px solid #1f1c1c;
         padding: 10px;
         height: 20vh;
         justify-content: space-between;
