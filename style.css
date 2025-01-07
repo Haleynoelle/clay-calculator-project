@@ -437,7 +437,7 @@ footer {
     padding-right: 1%;
 }
 #card {
-    border: solid #1f1c1c;
+    border: 1.5px solid #1f1c1c;
     background-color: #Faf8f6;
     padding: 5%;
     padding-left: 15%;
