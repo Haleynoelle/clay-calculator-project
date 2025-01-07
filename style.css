@@ -548,7 +548,15 @@ footer {
     transition: background-color 0.4s ease-in-out;
 }
 
-
+/* For touch devices */
+@media (hover: none) {
+    #card:active,
+    #card:focus {
+        border: solid #8c9eff;
+        box-shadow: 4px 4px 8px rgba(249, 174, 77, 0.634);
+        transition: background-color 0.4s ease-in-out;
+    }
+}
 #space {
     padding-left: 3px;
 }
@@ -940,8 +948,7 @@ img#visualBlock {
         width: 90%;
         align-items: center;  /* vertical centering */
         min-height: 100%;
-        padding-left: 5%;    
-        border: solid;  
+        padding-left: 5%;      
     }
 
     #heroSection {
@@ -1077,16 +1084,6 @@ img#visualBlock {
     
 
 }
-
-@media (hover: none) {
-    #card:active,
-    #card:focus {
-        border: solid #8c9eff;
-        box-shadow: 4px 4px 8px rgba(249, 174, 77, 0.634);
-        transition: background-color 0.4s ease-in-out;
-    }
-}
-
 @media screen and (max-width: 650px) { 
     #aboutSection {
         display: flex;
@@ -1129,7 +1126,10 @@ img#visualBlock {
         font-size: 38px;
         margin-bottom: 10px;
     }
-
+    #card:hover {
+        border-left: solid #FD5523;
+        background-color: #Faf8f6;
+    }
     #card {
         padding-left: 5%;
     }
