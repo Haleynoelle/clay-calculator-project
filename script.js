@@ -800,8 +800,8 @@ function attachButtonClickListeners() {
 /* Display the current count on page load */
 document.addEventListener('DOMContentLoaded', () => {
     let clickCount = localStorage.getItem('submitClickCount') || 0;
-    document.getElementById('clickCountDisplay').textContent = 
-        `Ceramic calculations completed: ${clickCount} and counting!`;
+    document.getElementById('clickCountDisplay').innerHTML = 
+    `Ceramic calculations completed: <span class="highlight">${clickCount}</span> and counting!`;
 
     // Attach event listeners to the buttons
     attachButtonClickListeners();

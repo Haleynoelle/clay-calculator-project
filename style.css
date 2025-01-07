@@ -60,7 +60,7 @@ body {
     position: relative;
     z-index: 2;
 }
-
+/* baby face */
 .babyFace {
     display: flex;
     flex-direction: row;
@@ -74,6 +74,7 @@ body {
     width: auto;
     top: 0;
 }
+/* about */
 .activeCircle {
     background: #6cafe1;
     border-radius: 50%;
@@ -149,7 +150,7 @@ body {
     width: auto;
     z-index: 100;
 }
-.antiSocialModal {
+/*.antiSocialModal {
     display: none;
     position: fixed;
     left: 50%;
@@ -175,7 +176,7 @@ body {
 }
 .antiSocialModal-close:hover {
     color: #1f1c1c;
-}
+}*/
 
 #bmacbutton {
     color: #1f1c1c;
@@ -183,7 +184,6 @@ body {
     height: fit-content;
     width: fit-content;
 }
-
 #bmacbutton:hover {
     cursor: pointer;
     color: #1f1c1c;
@@ -192,34 +192,6 @@ body {
     box-shadow: 4px 4px 8px rgba(249, 174, 77, 0.634);
     transition: background-color 0.4s ease-in-out;
 }
-#clickCountContainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    border: solid #1f1c1c;
-    margin-top: 14px;
-    padding: 5px;
-    height: fit-content;
-    width: fit-content;
-    font-size: 14px;
-    background: #8c9dff;
-    justify-self: end;
-
-}
-#clickContainer {
-    justify-self: end;
-}
-#clickCountSection2 {
-    border: solid #1f1c1c;
-    border-radius: 6px;
-    padding: 5px;
-    margin: 5px;
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
-    background: #efedea;
-}
-
 #menuIconGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -312,6 +284,9 @@ body {
     text-decoration: none;
     color: black;
 }
+.highlight {
+    font-weight: bolder;
+} /*applies to click count*/
 
 
 header {
@@ -1079,9 +1054,8 @@ img#visualBlock {
     #discordTagline {
         display: flex;
         flex-direction: column;
-        gap: 10px; /* Adds space between the text and button */
+        gap: 10px; 
     }
-    
 
 }
 @media screen and (max-width: 650px) { 
@@ -1094,27 +1068,6 @@ img#visualBlock {
     #aboutSection1 {
         width: 300px;
         padding: 20px;
-    }
-    #clickCountContainer {
-        border: solid #1f1c1c;
-        border-width: 1px;
-        margin-top: 14px;
-        padding: 5px;
-        font-size: 12px;
-    }
-    #clickContainer {
-        justify-self: end;
-    }
-    #clickCountSection2 {
-        border: solid #1f1c1c;
-        border-width: 1px;
-        border-radius: 6px;
-        padding: 5px;
-        margin: 5px;
-        display: flex;
-        align-items: center;
-        font-weight: bolder;
-        background: #efedea;
     }
     #resourcesCard h1{
         font-size: 16px;
