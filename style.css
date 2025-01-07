@@ -1131,6 +1131,7 @@ img#visualBlock {
     }
     #card {
         padding-left: 5%;
+        border: solid 1.5px;
     }
     #homeTagline, #bmacbutton {
         font-size: smaller;
