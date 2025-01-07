@@ -923,7 +923,7 @@ img#visualBlock {
         position: relative;
     }
     #cardFilter {
-        padding-left: 7%;
+        padding-left: 5%;
     }
     #calculatorCards {
         display: grid;
@@ -1095,6 +1095,9 @@ img#visualBlock {
     #card {
         padding-left: 5%;
         border: solid 1.5px;
+    }
+    #cardFilter {
+        font-size: smaller;
     }
     #homeTagline, #bmacbutton {
         font-size: smaller;
