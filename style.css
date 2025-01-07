@@ -385,7 +385,21 @@ footer {
     flex-direction: row;
     align-items: baseline;
     gap: 5px;
-    padding-left: 10%;
+}
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(100vw); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move off-screen to the left */
+    }
+}
+.scroll-container {
+    overflow: hidden; /* Hide text outside of the container */
+    width: 96vw; /* Full viewport width */
+    position: relative;
+    white-space: nowrap; /* Prevent text wrapping */
+    margin-top: 10px;
 }
 
 #heroSection2 {
@@ -739,7 +753,6 @@ footer {
     grid-row-end: 1;
     grid-column-start: 1;
     grid-column-end: 4;
-    background-color: #8c9eff;
     border: 1.5px solid #1f1c1c;
     border-top: none;
     border-radius: 0px 0px 6px 6px;
@@ -954,7 +967,6 @@ img#visualBlock {
         grid-row-end: 7;
         grid-column-start: 1;
         grid-column-end: 4;
-        background-color: #8c9eff;
         border: 1.5px solid #1f1c1c;
         border-radius: 6px;
         padding: 10px;
@@ -1142,9 +1154,9 @@ img#visualBlock {
 
 .view-modal {
     position: relative;
-    color: #8c9eff;
+    color: #FD5523;
     background-color: #Faf8f6;
-    border-color: #8c9eff;
+    border-color: #FD5523;
     transition: background 0.1s linear, border-color 0.1s linear, color 0.1s linear;
 }
 .popup {
