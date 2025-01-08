@@ -446,6 +446,7 @@ footer {
     text-decoration: none;
     color: #1f1c1c;
     position: relative;
+    font-size: 14px;
 }
 
 #resourcesCard a {
