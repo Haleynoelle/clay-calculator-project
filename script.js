@@ -751,7 +751,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /* TRACK SUBMIT FUNCTION */
-function updateClickCount() {
+/*function updateClickCount() {
     // Retrieve the current count from local storage, or start at 0 if it doesn't exist
     let clickCount = localStorage.getItem('submitClickCount') || 0;
     clickCount = parseInt(clickCount, 10);
@@ -765,7 +765,7 @@ function updateClickCount() {
     // Display the updated count to the user
     document.getElementById('clickCountDisplay').textContent = 
         `${clickCount}x`;
-}
+} delete by feb 1, 2025*/
 
 // Function to attach event listeners to specific buttons
 
