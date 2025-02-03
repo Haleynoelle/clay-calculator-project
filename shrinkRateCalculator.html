@@ -87,7 +87,7 @@
         <div id="calculatorPageGrid">
             <section id="calculatorHeader">
                 <h1 id="calculatorTitle">Dimensions Calculator</h1>
-                <p id="calculatorAbout">This calculator helps you easily determine how your clay projects will change in size based on your clay's current state and shrink rate. By inputting the dimensions of a piece in its fired or plastic state, this tool calculates the equivalent size in the other form. This allows you to accurately plan for size changes, ensuring your work turns out just the way you envision it to.</p> 
+                <p id="calculatorAbout">This calculator helps you easily determine how your clay projects will change in size based on your clay's current stage and shrink rate. By inputting the dimensions of a piece in its fired or plastic stage, this tool calculates the equivalent size in the other form. This allows you to accurately plan for size changes, ensuring your work turns out just the way you envision it to.</p> 
                 <br>
                 <div class="share-container">
                     <button class="view-modal">Share this calculator</button>
@@ -120,6 +120,8 @@
 
         <section id="formContainerGrid">
         <div id="break"></div>
+        <h2>Choose Stage & Input Dimensions:</h2>
+
 
         <div id="buttonContainer">
             <button class="responsive" id="shapeChoiceRectangle" autofocus onclick="firedToPlasticDimensionFunction()">Fired to Plastic</button>
@@ -127,7 +129,7 @@
         </div>
 
         <div id="dimensionForm1">
-    <p class="responsive">Enter the desired dimensions of your piece after firing.</p>
+    <p class="responsive">Enter the dimensions of a fired piece.</p>
         <form id="clayShrinkRateForm" class="responsive"> 
             <div id="preferredWidthInput">
                 <label for="preferredWidth">Width <a style="font-size: smaller;">[in]</a></label><br>
@@ -157,7 +159,7 @@
 
 
 <div id="dimensionForm2">
-        <p class="responsive">Enter the dimensions of your piece in its plastic state.</p>
+        <p class="responsive">Enter the dimensions of a piece in its plastic stage.</p>
 <form id="plasticDimensionsForm" class="responsive"> 
     <div id="plasticWidthInput">
         <label for="plasticWidth">Width <a style="font-size: smaller;">[in]</a></label><br>
@@ -192,6 +194,7 @@
         <img id="visualBlock" src="images/dimensions.png" class="responsive" style="max-width: 250px; max-height: 250px;">
     </section>
     <section id="results" class="responsive">
+        <h2>Results:</h2>
         <div class="result" id="dimensionResult"></div>
     </section>
     <footer id="calcPageFooter">

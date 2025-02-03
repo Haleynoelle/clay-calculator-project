@@ -120,9 +120,11 @@
                    <script src="script.js"></script>    
             </section>
             <section id="formContainerGrid">
+                <h2>Input Percentage of Each Material:</h2>
+
                 <form id="clayRecipeForm" class="responsive"> 
                     <div id="recipeInputs">
-                        <label for="recipe">Clay Recipe (comma-separated percentages):</label><br>
+                        <label for="recipe">Clay Recipe:</label><br>
                         <input type="text" id="recipe" name="recipe" placeholder="e.g., 25, 25, 25, 25"><br>
                         <label for="totalWeight">Desired Total Weight (lbs):</label><br>
                         <input type="number" id="totalWeight" name="totalWeight" placeholder="e.g., 10"><br>
@@ -137,7 +139,7 @@
                 <img id="visualBlock" src="images/clayRecipeVisual.png" class="responsive" style="max-width: 250px; max-height: 250px;">
             </section>
             <section id="results" class="responsive">
-                <p>Your Clay Recipe:</p>
+                <h2>Your Clay Recipe:</h2>
                 <div class="result" id="recipeResult"></div>
             </section>
 

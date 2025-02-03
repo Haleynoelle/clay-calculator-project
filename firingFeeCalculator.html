@@ -123,14 +123,13 @@
 
     <section id="formContainerGrid">
         <div id="break"></div>
+        <h2>Choose Cost Model & Input Your Details:</h2>
         <div id="buttonContainer" class="responsive">
         <button class="responsive" id="studioPrefersWeight" autofocus onclick="studioPreferenceWeightFunction()">Weight</button>
         <button class="responsive" id="studioPrefersCubicInch" onclick="studioPreferenceCubicInchFunction()">Cubic Inch</button>
         <button class="responsive" id="studioPrefersSquareInch" onclick="studioPreferenceSquareInchFunction()">Square Inch</button>
         </div>
         <form id="weightForm" class="responsive">
-            <h2 class="responsive"></h2>
-
             <div id="poundsInput">
                 <label for="pounds">Pounds</label>
                 <input type="text" id="pounds" name="pounds">
@@ -214,7 +213,7 @@
             <img id="visualBlock" src="images/fire.png" class="responsive" style="max-width: 250px; max-height: 250px;">
     </section>
     <section id="results" class="responsive">
-            <p>your cost to fire:</p>
+            <h2>Your Cost to Fire:</h2>
             <div class="result" id="feeByWeightResult"></div>
             <div class="result" id="cubicInchResult"></div>
             <div class="result" id="squareInchResult"></div>
