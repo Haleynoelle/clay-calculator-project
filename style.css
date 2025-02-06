@@ -372,13 +372,11 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     font-family: "Space Grotesk", serif;
-    font-weight: 300;
-    font-style: normal;
     padding-bottom: 5%;
     padding-top: 2%;
 }
 #heroH1 {
-    font-size: 56px;
+    font-size: 60px;
     padding-left: 10%;
     justify-self: end;
     text-align: start;
