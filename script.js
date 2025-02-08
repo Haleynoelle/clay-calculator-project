@@ -806,3 +806,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Attach event listeners to the buttons
     attachButtonClickListeners();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.pathname.includes("clay-house")) {
+        document.body.classList.add("clay-house");
+    }
+});

@@ -12,8 +12,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="ceramics, clay calculator, notion template, ceramics calculator, pottery, shrink rate, kiln cost, pottery tools">
-    <meta name="description" content="Digital Tools to help you build ceramics with accuracy. Calculate project volume, clay shrinkage, firing fees, kiln electricity costs, and more.">
+    <meta name="keywords" content="ceramics, pottery, clay calculator, pottery calculator, ceramic tools, pottery tools, kiln firing costs, clay shrinkage calculator, notion template for ceramics, pottery studio management, kiln cost estimator, firing fee calculator, glaze recipe tracker, ceramic artist tools, pottery business, handmade ceramics, ceramic studio organization">
+    <meta name="description" content="Clay Calculator and Clay House provide powerful digital tools for ceramic artists and pottery studios. Accurately calculate clay shrinkage, firing costs, glaze recipes, kiln electricity expenses, and more. Organize your studio workflow with Notion templates designed for ceramicists.">    
     <meta name="p:domain_verify" content="61d265d65723ec56eef4e80d487825dd"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
@@ -51,16 +51,32 @@
         }
     </script>
 </head>
+<style>
+    @media screen and (max-width: 800px) {
+        #heroSection2 {
+        display: none;
+    }
+}
+</style>
 <body>
     <header id="navContainer">
         <a href="index.html"><img id="homeLogo" src="images/Logo.png" alt="Button Image" style="width:25px;height:25px;"></a>
-        <a href="index.html" id="navTitle"><h1>Clay Calculator</h1></a>
-        <div class="dropdown">
+        <div id="navToggle">
+            <a href="index.html" id="clayCalculatorLink">
+                <h1>Clay Calculator</h1>
+            </a>
+            <span class="toggle-divider">|</span>
+            <a href="clay-house-notion.html" id="clayHouseLink">
+                <h1 style="font-size: smaller;">Clay House</h1>
+            </a>
+        </div>        <div class="dropdown">
             
             <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
                 <div id="menuIconGrid">
+                <div>
                     <span>M</span><span>E</span>
                     <span>N</span><span>U</span>
+                </div>
                 </div>
             </a>
             <nav>
@@ -145,7 +161,7 @@
             <article>
                     <img class="responsive" src="images/frustum.png" style="width:200px;height:200px;">
                     <div class="contentContainer">
-                        <h4><b>Volume Calculator</b></h4>
+                        <h4>Volume Calculator</h4>
                         <p>Calculate how many ounces your project can hold.
                         </p>
                     </div>
@@ -158,7 +174,7 @@
             <article>
                     <img class="responsive" src="images/dimensions.png" style="width:200px;height:200px;">
                     <div class="contentContainer">
-                        <h4><b>Dimensions Calculator</b></h4>
+                        <h4>Dimensions Calculator</h4>
                         <p>Calculate the size change of your project based on clay shrink rate, selecting either plastic to fired state or fired to plastic state.</p>                    </div>
                     <div id="arrow">&#10132;</div>
             </article>
@@ -168,7 +184,7 @@
             <article>
                     <img class="responsive" src="images/fire.png" style="width:200px;height:200px;">
                     <div class="contentContainer">
-                        <h4><b>Fire Fee Calculator</b></h4>
+                        <h4>Fire Fee Calculator</h4>
                         <p>Calculate the cost to fire your work.</p>
                     </div>
                     <div id="arrow">&#10132;</div>
@@ -180,7 +196,7 @@
             <article>
                     <img class="responsive" src="images/shrink.png" style="width:200px;height:200px;">
                     <div class="contentContainer">
-                        <h4><b>Shrink Rate Calculator</b></h4>
+                        <h4>Shrink Rate Calculator</h4>
                         <p>Calculate the shrink rate of your clay.</p>
                     </div>
                     <div id="arrow">&#10132;</div>
@@ -192,7 +208,7 @@
             <article>
                     <img class="responsive" src="images/kiln.png" style="width:200px;height:200px;">
                     <div class="contentContainer">
-                        <h4><b>Cost to Fire a Kiln Calculator</b></h4>
+                        <h4>Cost to Fire a Kiln Calculator</h4>
                         <p>Calculate the electricity cost to fire a kiln.</p>
                     </div>
                     <div id="arrow">&#10132;</div>
@@ -203,7 +219,7 @@
             <article>
                     <img class="responsive" src="images/clayRecipeVisual.png" style="width:200px;height:200px;">
                     <div class="contentContainer">
-                        <h4><b>Clay Recipe Calculator</b></h4>
+                        <h4>Clay Recipe Calculator</h4>
                         <p>Calculate a custom clay recipe tailored to your preferred total weight.
                         </p>
                     </div>
@@ -215,7 +231,7 @@
             <article>
                 <img class="responsive" src="images/priceSheet.png" style="width:200px;height:200px;">
                 <div class="contentContainer">
-                    <h4><b>Price Calculator</b></h4>
+                    <h4>Price Calculator</h4>
                     <p>Calculate a retail price for your work.</p>
                 </div>
                 <div id="arrow">&#10132;</div>
@@ -225,7 +241,7 @@
             <article>
                 <img class="responsive" src="images/CCalc growth.png" style="width:200px;height:200px;">
                 <div class="contentContainer">
-                    <h4><b>Income Goal Calculator</b></h4>
+                    <h4>Income Goal Calculator</h4>
                     <p>Calculate a way to reach your income goal.</p>
                 </div>
                 <div id="arrow">&#10132;</div>
