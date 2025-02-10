@@ -616,6 +616,8 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+
 .image-container {
     position: relative;
     width: fit-content;
@@ -1372,12 +1374,12 @@ header .close{
 }
 
 /* Default Active & Muted Styles */
-#clayCalculatorLink h1 { color: #FD5523; }  /* Clay Calculator Active */
+#clayCalculatorLink h1 {color: #1f1c1c}  /* Clay Calculator Active */
 #clayHouseLink h1 { color: #517b6abb; } /* Clay House Muted */
 
 /* When on Clay House Page */
 body.clay-house #clayCalculatorLink h1 { color: #FDA588; } /* Clay Calculator Muted */
-body.clay-house #clayHouseLink h1 { color: #034833; } /* Clay House Active */
+body.clay-house #clayHouseLink h1 { color: #073a2b; } /* Clay House Active */
 
 
 #notionFAQ {
