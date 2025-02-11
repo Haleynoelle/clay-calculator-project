@@ -411,7 +411,7 @@ function calculateRectangleVol() {
 
     var rectangleVolume = ((rectangleWidth *  rectangleHeight * rectangleLength) * 0.554113);
 
-    document.getElementById("rectangleResult").innerHTML = "Volume in oz = " + rectangleVolume.toFixed(2);
+    document.getElementById("rectangleResult").innerHTML = "Rectangle volume in oz = " + rectangleVolume.toFixed(2);
 };
 
 function calculateCylinderVol() {
@@ -425,7 +425,7 @@ function calculateCylinderVol() {
     var cylinderRadius = (cylinderDiameter / 2) 
     var cylinderVolume = ((Math.PI * Math.pow(cylinderRadius, 2) * cylinderHeight) * 0.554113);
 
-    document.getElementById("cylinderResult").innerHTML = "Volume in oz = " + cylinderVolume.toFixed(2);
+    document.getElementById("cylinderResult").innerHTML = "Cylinder volume in oz = " + cylinderVolume.toFixed(2);
 };
 
 function calculateFrustumVol() {
@@ -439,7 +439,7 @@ function calculateFrustumVol() {
     }
     var frustumVolume = ((1/3) * Math.PI * frustumHeight * (Math.pow(frustumTopRadius, 2) + frustumTopRadius * frustumBaseRadius + Math.pow(frustumBaseRadius, 2)) * 0.554112);
 
-    document.getElementById("frustumResult").innerHTML = "Volume in oz = " + frustumVolume.toFixed(2);
+    document.getElementById("frustumResult").innerHTML = "Frustum volume in oz = " + frustumVolume.toFixed(2);
 };
 
 function calculateHemisphereVol() {
@@ -452,7 +452,7 @@ function calculateHemisphereVol() {
     
     var hemisphereVolume = (2/3 * Math.PI * Math.pow(hemisphereRadius, 3) * 0.554113);
 
-    document.getElementById("hemisphereResult").innerHTML = "Volume in oz = " + hemisphereVolume.toFixed(2);
+    document.getElementById("hemisphereResult").innerHTML = "Hemisphere volume in oz = " + hemisphereVolume.toFixed(2);
 
 }
 
