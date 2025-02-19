@@ -89,11 +89,25 @@
                 });
             </script>
     </header>
-
+<style>
+    @media screen and (max-width: 500px) {
+        #about-sectionColumn {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            padding: 5px;
+            width: 100%;
+        }
+        #about-section {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    }
+</style>
     <div id="about-section">
         <h2>A Reference Guide for Getting Started</h2>
         <div id="about-sectionColumn">
-            <p style="width: 80%;">If you have questions like…
+            <p style="width: 90%;">If you have questions like…
                 <br>
                 <br>
                 &#8865; What’s the standard size of a serving bowl?<br>
