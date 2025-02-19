@@ -30,12 +30,20 @@
 </head>
 <body>
     <header id="navContainer">
-        <a href="index.html">
-            <img id="homeLogo" src="images/Logo.png" alt="Button Image" style="width:25px;height:25px;">
-        </a>
-        <a href="index.html" id="navTitle">
-            <h1>Clay Calculator</h1>
-        </a>
+        <a href="index.html"><img id="homeLogo" src="images/Logo.png" alt="Button Image" style="width:25px;height:25px;"></a>
+        <div id="navToggle">
+            <a href="index.html" id="clayCalculatorLink">
+                <h1 style="font-size: smaller;">Clay Calculator</h1>
+            </a>
+            <span class="toggle-divider">|</span>
+            <a href="clay-house-notion.html" id="clayHouseLink">
+                <h1 style="font-size: smaller;">Clay House</h1>
+            </a>
+            <span class="toggle-divider">|</span>
+            <a href="about.html" id="aboutLink" style="text-decoration: none;">
+                <h1>About</h1>
+            </a>
+        </div> 
         <div class="dropdown">
             <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
                 <div id="menuIconGrid">

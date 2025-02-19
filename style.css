@@ -1366,21 +1366,15 @@ header .close{
 #navToggle h1 {
     font-size: 1.5rem;
     margin: 0;
+    text-decoration: none;
 }
 
 .toggle-divider {
-    font-size: 1.5rem;
+    font-size: .5rem;
     color: #1f1c1c; /* Muted color for divider */
 }
 
 /* Default Active & Muted Styles */
-#clayCalculatorLink h1 {color: #1f1c1c}  /* Clay Calculator Active */
-#clayHouseLink h1 { color: #517b6abb; } /* Clay House Muted */
-
-/* When on Clay House Page */
-body.clay-house #clayCalculatorLink h1 { color: #FDA588; } /* Clay Calculator Muted */
-body.clay-house #clayHouseLink h1 { color: #073a2b; } /* Clay House Active */
-
 
 #notionFAQ {
     border-bottom: solid 2px #1f1c1c;
