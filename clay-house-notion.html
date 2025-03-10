@@ -79,6 +79,24 @@
             font-size: medium;
         }
 
+        #card:hover,
+        #card:active,
+        #card:focus {
+            border: 1.5px solid #59b3ef71;
+            box-shadow: 4px 4px 8px #11824276;
+            transition: background-color 0.4s ease-in-out;
+        }
+
+/* For touch devices */
+@media (hover: none) {
+        #card:active,
+        #card:focus {
+            border: 1.5px solid #59b3ef71;
+            box-shadow: 4px 4px 8px #11824276;
+            transition: background-color 0.4s ease-in-out;
+        }
+    }
+
 
     @media screen and (max-width: 900px) {
         #heroSection {
@@ -109,7 +127,7 @@
         </a>
         <span class="toggle-divider">|</span>
         <a href="clay-house-notion.html" id="clayHouseLink">
-            <h1>Clay House</h1>
+            <h1 style="color: #118242;">Clay House</h1>
         </a>
     </div>        
         <div class="dropdown">
@@ -117,8 +135,8 @@
             <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
                 <div id="menuIconGrid">
                 <div>
-                    <span style="color: #034833;">M</span><span style="color: #034833;">E</span>
-                    <span style="color: #034833;">N</span><span style="color: #034833;">U</span>
+                    <span style="color: #118242;">M</span><span style="color: #118242;">E</span>
+                    <span style="color: #118242;">N</span><span style="color: #118242;">U</span>
                 </div>
                 </div>
             </a> 
@@ -341,7 +359,6 @@
 
     <footer>
        <div id="footerLinks">
-        <p id="clickCountDisplay"></p>
         <p>&copy; <span id="year"></span> Clay Calculator by Art Department LLC</p>
         <!--<a href="termsOfUse.html"><p>Terms of Use</p></a>-->
         <a href="policies/privacyPolicy.html"><p>Privacy Policy</p></a>
