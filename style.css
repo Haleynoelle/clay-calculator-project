@@ -190,7 +190,7 @@ body {
     cursor: pointer;
     color: #1f1c1c;
     background-color: #Faf8f6;
-    border: solid #8c9dff;
+    border: solid #8c9dff66;
     box-shadow: 4px 4px 8px rgba(249, 174, 77, 0.634);
     transition: background-color 0.4s ease-in-out;
 }
