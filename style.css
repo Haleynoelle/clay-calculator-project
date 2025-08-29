@@ -457,10 +457,6 @@ footer {
     font-size: 14px;
 }
 
-#resourcesCard a {
-    border-bottom: solid 1px #1f1c1c;
-}
-
 #adSpaceCard {
     display: flex;
     justify-content: center;
