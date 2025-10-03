@@ -444,6 +444,22 @@ footer {
 #card:hover {
     transform: scale(1.03);
 }
+#cardbmac {
+    display: block;
+    border: 1.5px solid #1f1c1c;
+    background-color: #Faf8f6;
+    justify-content: center;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #1f1c1c;
+    position: inherit;
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+#cardbmac:hover {
+    transform: scale(1.03);
+}
 
 #resourcesCard {
     border: 1.5px solid #8c9eff;
@@ -547,6 +563,23 @@ footer {
 @media (hover: none) {
     #card:active,
     #card:focus {
+        border: 1.5px solid #8c9eff;
+        box-shadow: 4px 4px 8px rgba(249, 174, 77, 0.634);
+        transition: background-color 0.4s ease-in-out;
+    }
+}
+#cardbmac:hover,
+#cardbmac:active,
+#cardbmac:focus {
+    border: 1.5px solid #8c9eff;
+    box-shadow: 4px 4px 8px rgba(249, 174, 77, 0.634);
+    transition: background-color 0.4s ease-in-out;
+}
+
+/* For touch devices */
+@media (hover: none) {
+    #cardbmac:active,
+    #cardbmac:focus {
         border: 1.5px solid #8c9eff;
         box-shadow: 4px 4px 8px rgba(249, 174, 77, 0.634);
         transition: background-color 0.4s ease-in-out;
