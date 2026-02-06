@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <script defer data-domain="claycalculators.com" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="ceramics, pottery, clay calculations, ceramics guide, pottery reference, shrink rate calculator, kiln cost calculator, pottery making, clay amounts, wall thickness, pottery tools, ceramic materials, studio guide">  
+        <meta name="description" content="A comprehensive ceramics reference guide with standard dimensions, clay weight estimates, and material-specific recommendations for pottery projects. Perfect for ceramic artists, potters, and studio owners.">          
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="icon" href="images/ms-icon-310x310.png" type="image/icon type">
+        <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-grid-r.css' rel='stylesheet'>
+        <script src="script.js"></script>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">    
+        <title>Read Me</title>
+        <script>
+            function toggleTable(id) {
+                const table = document.getElementById(id);
+                table.style.display = (table.style.display === 'none' || table.style.display === '') ? 'table' : 'none';                
+            }
+        </script>
+</head>
+<body>
+    <header id="navContainer">
+        <a href="index.html"><img id="homeLogo" src="images/Logo.png" alt="Button Image" style="width:25px;height:25px;"></a>
+        <a href="index.html" id="navTitle"><h1>Clay Calculator</h1></a>
+        <div class="dropdown">
+            
+            <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+                <div id="menuIconGrid">
+                <div>
+                    <span>M</span><span>E</span>
+                    <span>N</span><span>U</span>
+                </div>
+                </div>
+            </a>
+            <nav>
+                <div id="myLinks" class="dropdown-content">
+                    <a id="aboutLink" href="about.html">About</a>
+            
+                    <div class="nested-menu">
+                        <a id="menuToggle" class="toggle-button-menu">Calculators//</a>
+                        <div class="nested-content">
+                            <a id="volumeLink" href="volumeCalculator.html">Volume</a>
+                            <a id="shrinkLink" href="shrinkRateCalculator.html">Dimensions</a>
+                            <a id="fireFeeLink" href="firingFeeCalculator.html">Firing Fee</a>
+                            <a id="shrinkTestLink" href="shrinkTest.html">Shrink Rate</a>
+                            <a id="costToFireLink" href="costToFire.html">Cost to Fire a Kiln</a>
+                            <a id="clayRecipeLink" href="clayRecipe.html">Clay Recipe</a>
+                            <a id="priceYourWorkLink" href="priceYourWork.html">Price Your Work</a>
+                            <a id="salaryLink" href="incomeGoals.html">Income Goals</a>
+                        </div>
+                    </div>
+            
+                    <div class="nested-menu">
+                        <a id="menuToggle" class="toggle-button-menu">Resources//</a>
+                        <div class="nested-content">
+                            <a id="projectReferenceGuideLink" class="active" href="projectReferenceGuide.html">Project Reference Guide</a>
+                            <a id="notionLink" href="https://affiliate.notion.so/clayhouse">Notion Templates</a>
+                            <a id="discordLink" href="https://www.reddit.com/r/PotteryBusiness/">r/PotteryBusiness<img style="width: 20px; height: 20px; padding-left: 7px; vertical-align: middle;" src="images/Reddit Avatar from Clay House.png">
+                            </a>
+
+                        </div>
+                    </div>
+            
+                    <a style="color: #8c9eff;" id="feedbackLink" href="https://foregoing-dart-74c.notion.site/153a07138b8381ffa933dd9aa7350fef?pvs=105">Give Me Feedback</a>
+                </div>
+            </nav>
+            <script>
+                document.querySelectorAll('.toggle-button-menu').forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const content = this.nextElementSibling;
+                        content.classList.toggle('active');
+                    });
+                });
+            </script>
+    </header>
+<style>
+    @media screen and (max-width: 500px) {
+        #about-sectionColumn {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            padding: 5px;
+            width: 100%;
+        }
+        #about-section {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    }
+</style>
+    <div id="about-section">
+        <h2>Read me something nice</h2>
+    </div>
+    <div>
+        <span class="toggle-button" onclick="toggleTable('beerGlass')">Do you even art market? <img src="images/beer.png" style="width:20px;height:25px;"></span>
+        <table id="beerGlass" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>3-4 inches (8-10 cm) diameter, 6-8 inches (15-20 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>0.5-1 lbs (225-450 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 1-1.5 lbs (450-680 g) <br>stoneware: 1.5-2 lbs (680-900 g) <br>earthenware: 2-2.5 lbs (900-1150 g)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span class="toggle-button" onclick="toggleTable('americanButterDish')">How do I price my ceramics? <img src="images/butter.png" style="width:50px;height:20px;"></span>
+        <table id="americanButterDish" class="item-table">
+            <tr>
+                <td>dimensions</td>
+                <td>6 to 7 inches (15-18 cm) length <br> 3 to 4 inches (7.5-10 cm) width <br> 2 to 3 inches (5-7.5 cm) height</td>
+            </tr>
+            <tr>
+                <td>weight</td>
+                <td>1-2 lbs (450-900 g)</td>
+            </tr>
+            <tr>
+                <td>wall thickness</td>
+                <td>1/8-1/4 inch (3-6 mm)</td>
+            </tr>
+            <tr>
+                <td>clay needed</td>
+                <td>porcelain: 2-2.5 lbs (900-1150 g) <br>stoneware: 2.5-3 lbs (1150-1350 g) <br>earthenware: 3-3.5 lbs (1350-1600 g)</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+
+
+    <footer id="calcPageFooter">
+        <div id="footerLinks">
+            <a href="about.html"><p>About</p></a>
+        <p>&copy; <span id="year"></span> Clay Calculator -- built by <a style="color: #8c9eff;" href="https://affiliate.notion.so/clayhouse">Clay House. A growing space catering to people that create things.</a></p>
+         <a href="policies/privacyPolicy.html"><p>Privacy Policy</p></a>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
